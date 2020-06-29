@@ -119,7 +119,7 @@
                 </div>
             </div>
         </nav>
-        <main class="d-flex align-items-center bgGrey">
+        <main class="d-flex align-items-center bggrey">
           <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-1"></div>
@@ -132,11 +132,11 @@
                   <div id="wizard">
                   <h3>Step 1 Title</h3>
                   <section>
-                   <h2 class="section-heading text-center mb-3">Select Solo or Duo</h2>
+                   <h2 class="section-heading text-center mb-3 text-light">Select Solo or Duo</h2>
                    <div class="purpose-radios-wrapper text-center" id="solo-duo-input">
                       <div class="purpose-radio">
                           <input type="radio" name="solo-duo" id="solo" class="purpose-radio-input" value="Solo" selected="unselected">
-                         <label for="solo" class="purpose-radio-label">
+                         <label for="solo" class="purpose-radio-label bg-light">
                            <span class="label-icon">
                              <i class="fas fa-user label-icon-default" alt="solo-division-icon"></i>
                              <i class="fas fa-user label-icon-active" alt="solo-division-icon"></i>
@@ -146,7 +146,7 @@
                         </div>
                         <div class="purpose-radio">
                            <input type="radio" name="solo-duo" id="duo" class="purpose-radio-input" value="Duo" selected="unselected">
-                          <label for="duo" class="purpose-radio-label">
+                          <label for="duo" class="purpose-radio-label bg-light">
                             <span class="label-icon">
                               <i class="fas fa-user-friends label-icon-default" alt="duo-division-icon"></i>
                               <i class="fas fa-user-friends label-icon-active" alt="duo-division-icon"></i>
@@ -160,26 +160,26 @@
                   </section>
                   <h3>Step 2 Title</h3>
                   <section>
-                    <h2 class="section-heading text-center mb-3">Select Order Type</h2>
+                    <h2 class="section-heading text-center mb-3 text-light">Select Order Type</h2>
                     <div id='solo-orders'>
                       <div class="purpose-radios-wrapper text-center">
                          <div class="purpose-radio">
                              <input type="radio" name="solo-type" id="solo-division" class="purpose-radio-input" value="Solo Division">
-                            <label for="solo-division" class="purpose-radio-label">
+                            <label for="solo-division" class="purpose-radio-label bg-light">
 
                               <span class="label-text text-center">Solo Division Boost</span>
                             </label>
                            </div>
                            <div class="purpose-radio">
                               <input type="radio" name="solo-type" id="solo-net" class="purpose-radio-input" value="Solo Net Wins">
-                             <label for="solo-net" class="purpose-radio-label">
+                             <label for="solo-net" class="purpose-radio-label bg-light">
 
                                <span class="label-text text-center">Solo Net Win Boost</span>
                              </label>
                             </div>
                             <div class="purpose-radio">
                                <input type="radio" name="solo-type" id="solo-placement" class="purpose-radio-input" value="Solo Placement">
-                              <label for="solo-placement" class="purpose-radio-label">
+                              <label for="solo-placement" class="purpose-radio-label bg-light">
 
                                 <span class="label-text text-center">Solo Placements Boost</span>
                               </label>
@@ -191,21 +191,21 @@
                       <div class="purpose-radios-wrapper text-center">
                          <div class="purpose-radio">
                              <input type="radio" name="duo-type" id="duo-division" class="purpose-radio-input" value="Duo Division">
-                            <label for="duo-division" class="purpose-radio-label">
+                            <label for="duo-division" class="purpose-radio-label bg-light">
 
                               <span class="label-text text-center">Duo Division Boost</span>
                             </label>
                            </div>
                            <div class="purpose-radio">
                               <input type="radio" name="duo-type" id="duo-net" class="purpose-radio-input" value="Duo Net Wins">
-                             <label for="duo-net" class="purpose-radio-label">
+                             <label for="duo-net" class="purpose-radio-label bg-light">
 
                                <span class="label-text text-center">Duo Net Win Boost</span>
                              </label>
                             </div>
                             <div class="purpose-radio">
                                <input type="radio" name="duo-type" id="duo-placement" class="purpose-radio-input" value="Duo Placement">
-                              <label for="duo-placement" class="purpose-radio-label">
+                              <label for="duo-placement" class="purpose-radio-label bg-light">
 
                                 <span class="label-text text-center">Duo Placements Boost</span>
                               </label>
@@ -217,7 +217,7 @@
                   <h3>Step 3 Title</h3>
                   <section>
                     <div id="division-solo">
-                      <h2 class="section-heading text-center mb-3">Select Divisions</h2>
+                      <h2 class="section-heading text-center mb-3 text-light">Select Divisions</h2>
                       <div class="row justify-content-start">
                         <div class="col-sm-6 text-center">
                           <div id="iron-icon-1">
@@ -280,9 +280,9 @@
                       <div class="row" id="rankSelect">
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="rank-1">Current Rank</label>
+                            <label class="text-light" for="rank-1">Current Rank</label>
 
-                            <select class="custom-select bg-dark" name="rank-1" id="rank-1">
+                            <select class="custom-select bg-light" name="rank-1" id="rank-1">
                               <option value="I" selected="selected">Iron</option>
                               <option value="B">Bronze</option>
                               <option value="S">Silver</option>
@@ -298,8 +298,8 @@
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="rank-2">Desired Rank</label>
-                            <select class="custom-select bg-dark" name="rank-2" id="rank-2">
+                            <label class="text-light"  for="rank-2">Desired Rank</label>
+                            <select class="custom-select bg-light" name="rank-2" id="rank-2">
                               <option value="I">Iron</option>
                               <option value="B" selected="selected">Bronze</option>
                               <option value="S">Silver</option>
@@ -317,8 +317,8 @@
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="division-1">Current Division</label>
-                            <select class="custom-select bg-dark" id="division-1">
+                            <label class="text-light"  for="division-1">Current Division</label>
+                            <select class="custom-select bg-light" id="division-1">
                               <option value="4" selected="selected">Division 4</option>
                               <option value="3">Division 3</option>
                               <option value="2">Division 2</option>
@@ -328,8 +328,8 @@
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="division-2">Desired Division</label>
-                            <select class="custom-select bg-dark" id="division-2">
+                            <label class="text-light"  for="division-2">Desired Division</label>
+                            <select class="custom-select bg-light" id="division-2">
                               <option value="4" selected="selected">Division 4</option>
                               <option value="3">Division 3</option>
                               <option value="2">Division 2</option>
@@ -341,8 +341,8 @@
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="startinglp_1">Current LP</label>
-                            <select class="custom-select bg-dark" id="startinglp_1">
+                            <label class="text-light"  for="startinglp_1">Current LP</label>
+                            <select class="custom-select bg-light" id="startinglp_1">
                               <option value="0" selected="selected">0-20</option>
                               <option value="21">21-40</option>
                               <option value="41">41-60</option>
@@ -354,8 +354,8 @@
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="lpg-1">LP Gains</label>
-                            <select class="custom-select bg-dark" id="lpg_1">
+                            <label class="text-light"  for="lpg-1">LP Gains</label>
+                            <select class="custom-select bg-light" id="lpg_1">
                               <option value="19" selected="selected">19 Or Higher</option>
                               <option value="16">16 to 18</option>
                               <option value="15">15 Or Lower</option>
@@ -367,7 +367,7 @@
 
                     </div>
                     <div id="division-duo">
-                      <h2 class="section-heading text-center mb-3">Select Divisions</h2>
+                      <h2 class="section-heading text-center mb-3 text-light">Select Divisions</h2>
                       <div class="row">
                         <div class="col-sm-6 text-center">
                           <div id="iron-icon-10">
@@ -432,8 +432,8 @@
                       <div class="row" id="rankSelect">
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="rank-10">Current Rank</label>
-                            <select class="custom-select bg-dark" name="rank-10" id="rank-10">
+                            <label class="text-light"  for="rank-10">Current Rank</label>
+                            <select class="custom-select bg-light" name="rank-10" id="rank-10">
                               <option value="I" selected="selected">Iron</option>
                               <option value="B">Bronze</option>
                               <option value="S">Silver</option>
@@ -449,8 +449,8 @@
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="rank-11">Desired Rank</label>
-                            <select class="custom-select bg-dark" namee="rank-11" id="rank-11">
+                            <label class="text-light"  for="rank-11">Desired Rank</label>
+                            <select class="custom-select bg-light" namee="rank-11" id="rank-11">
                               <option value="I">Iron</option>
                               <option value="B" selected="selected">Bronze</option>
                               <option value="S">Silver</option>
@@ -468,8 +468,8 @@
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="division-10">Current Division</label>
-                            <select class="custom-select bg-dark" id="division-10">
+                            <label class="text-light"  for="division-10">Current Division</label>
+                            <select class="custom-select bg-light" id="division-10">
                               <option value="4" selected="selected">Division 4</option>
                               <option value="3">Division 3</option>
                               <option value="2">Division 2</option>
@@ -479,8 +479,8 @@
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="division-11">Desired Division</label>
-                            <select class="custom-select bg-dark" id="division-11">
+                            <label class="text-light"  for="division-11">Desired Division</label>
+                            <select class="custom-select bg-light" id="division-11">
                               <option value="4" selected="selected">Division 4</option>
                               <option value="3">Division 3</option>
                               <option value="2">Division 2</option>
@@ -492,8 +492,8 @@
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="startinglp-10">Current LP</label>
-                            <select class="custom-select bg-dark" id="startinglp_10">
+                            <label class="text-light"  for="startinglp-10">Current LP</label>
+                            <select class="custom-select bg-light" id="startinglp_10">
                               <option value="0" selected="selected">0-20</option>
                               <option value="21">21-40</option>
                               <option value="41">41-60</option>
@@ -513,8 +513,8 @@
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group text-center">
-                            <label for="lpg_10">LP Gains</label>
-                            <select class="custom-select bg-dark" id="lpg_10">
+                            <label class="text-light"  for="lpg_10">LP Gains</label>
+                            <select class="custom-select bg-light" id="lpg_10">
                               <option value="19" selected="selected">19 Or Higher</option>
                               <option value="16">16 to 18</option>
                               <option value="15">15 Or Lower</option>
@@ -528,7 +528,7 @@
                       </div>
                     </div>
                     <div id="netwin-solo">
-                      <h2 class="section-heading text-center mb-3">Select Net Wins</h2>
+                      <h2 class="section-heading text-center mb-3 text-light">Select Net Wins</h2>
                         <div class="row align-items-center">
                           <div class="col">
                             <div class="row">
@@ -572,8 +572,8 @@
                                 <div class="container-fluid">
 
                                   <div class="form-group container-fluid text-center">
-                                    <label for="rank-3">Current Rank</label>
-                                    <select class="custom-select bg-dark" name="rank-3" id="rank-3">
+                                    <label class="text-light"  for="rank-3">Current Rank</label>
+                                    <select class="custom-select bg-light" name="rank-3" id="rank-3">
                                       <option value="I" selected="selected">Iron</option>
                                       <option value="B">Bronze</option>
                                       <option value="S">Silver</option>
@@ -594,8 +594,8 @@
                               <div class="row container-fluid">
                                 <div class="container-fluid">
                                 <div class="form-group container-fluid text-center">
-                                  <label for="division-3">Current Division</label>
-                                  <select class="custom-select bg-dark" id="division-3">
+                                  <label class="text-light"  for="division-3">Current Division</label>
+                                  <select class="custom-select bg-light" id="division-3">
                                     <option value="4" selected="selected">Division 4</option>
                                     <option value="3">Division 3</option>
                                     <option value="2">Division 2</option>
@@ -611,13 +611,13 @@
                     <div class="row">
 
                       <div class="col-sm-10">
-                        <label for="net-selector">Number of Net Wins</label>
+                        <label class="text-light"  for="net-selector">Number of Net Wins</label>
                         <input type="range" class="custom-range" id="net-selector" value="1" min="1" max="6" step="1">
                       </div>
                       <div class="col-sm-2">
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
-                          <div class="card-body text-white bg-dark text-center">
+                          <div class="card-body text-white bg-light text-center">
                             <h5 class="card-title" id="net-number-solo">1</h5>
                           </div>
                         </div>
@@ -625,7 +625,7 @@
                     </div>
                     </div>
                     <div id="netwin-duo">
-                      <h2 class="section-heading text-center mb-3">Select Net Wins</h2>
+                      <h2 class="section-heading text-center mb-3 text-light">Select Net Wins</h2>
                         <div class="row align-items-center">
                           <div class="col">
                             <div class="row">
@@ -669,8 +669,8 @@
                                 <div class="container-fluid">
 
                                   <div class="form-group container-fluid text-center">
-                                    <label for="rank-4">Current Rank</label>
-                                    <select class="custom-select bg-dark" name="rank-4" id="rank-4">
+                                    <label class="text-light"  for="rank-4">Current Rank</label>
+                                    <select class="custom-select bg-light" name="rank-4" id="rank-4">
                                       <option value="I" selected="selected">Iron</option>
                                       <option value="B">Bronze</option>
                                       <option value="S">Silver</option>
@@ -691,9 +691,9 @@
                               <div class="row container-fluid">
                                 <div class="container-fluid">
                                 <div class="form-group container-fluid text-center">
-                                  <label for="division-4">Current Division</label>
+                                  <label class="text-light"  for="division-4">Current Division</label>
 
-                                  <select class="custom-select bg-dark" id="division-4">
+                                  <select class="custom-select bg-light" id="division-4">
                                     <option value="4" selected="selected">Division 4</option>
                                     <option value="3">Division 3</option>
                                     <option value="2">Division 2</option>
@@ -709,13 +709,13 @@
                     <div class="row">
 
                       <div class="col-sm-10">
-                        <label for="net-selector">Number of Net Wins</label>
+                        <label class="text-light"  for="net-selector">Number of Net Wins</label>
                         <input type="range" class="custom-range" id="net-selector-duo" value="1" min="1" max="6" step="1">
                       </div>
                       <div class="col-sm-2">
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
-                          <div class="card-body text-white bg-dark text-center ">
+                          <div class="card-body text-white bg-light text-center ">
                             <h5 class="card-title" id="net-number-duo">1</h5>
                           </div>
                         </div>
@@ -725,7 +725,7 @@
 
                     </div>
                     <div id="placement-solo">
-                      <h2 class="section-heading text-center mb-3">Select Placements</h2>
+                      <h2 class="section-heading text-center mb-3 text-light">Select Placements</h2>
                         <div class="row align-items-center">
                           <div class="col">
                             <div class="row">
@@ -769,9 +769,9 @@
                                 <div class="container-fluid">
 
                                   <div class="form-group container-fluid text-center">
-                                    <label for="rank-5">Last Season Rank</label>
+                                    <label class="text-light"  for="rank-5">Last Season Rank</label>
 
-                                    <select class="custom-select bg-dark" name="rank-5" id="rank-5">
+                                    <select class="custom-select bg-light" name="rank-5" id="rank-5">
                                       <option value="I" selected="selected">Iron</option>
                                       <option value="B">Bronze</option>
                                       <option value="S">Silver</option>
@@ -797,13 +797,13 @@
                     <div class="row">
 
                       <div class="col-sm-10">
-                        <label for="placement-selector-solo">Number of Placement Games</label>
+                        <label class="text-light"  for="placement-selector-solo">Number of Placement Games</label>
                         <input type="range" class="custom-range" id="placement-selector-solo" value="1" min="1" max="10" step="1">
                       </div>
                       <div class="col-sm-2">
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
-                          <div class="card-body text-white bg-dark text-center ">
+                          <div class="card-body text-white bg-light text-center ">
                             <h5 class="card-title" id="placement-number-solo">1</h5>
                           </div>
                         </div>
@@ -812,7 +812,7 @@
                     </div>
 
                     <div id="placement-duo">
-                      <h2 class="section-heading text-center mb-3">Select Placements</h2>
+                      <h2 class="section-heading text-center mb-3 text-light">Select Placements</h2>
                         <div class="row align-items-center">
                           <div class="col">
                             <div class="row">
@@ -856,8 +856,8 @@
                                 <div class="container-fluid">
 
                                   <div class="form-group container-fluid text-center">
-                                    <label for="rank-6">Last Season Rank</label>
-                                    <select class="custom-select bg-dark" name="rank-6" id="rank-6">
+                                    <label class="text-light"  for="rank-6">Last Season Rank</label>
+                                    <select class="custom-select bg-light" name="rank-6" id="rank-6">
                                       <option value="I" selected="selected">Iron</option>
                                       <option value="B">Bronze</option>
                                       <option value="S">Silver</option>
@@ -883,13 +883,13 @@
                     <div class="row">
 
                       <div class="col-sm-10">
-                        <label for="placement-selector-duo">Number of Placement Games</label>
+                        <label class="text-light"  for="placement-selector-duo">Number of Placement Games</label>
                         <input type="range" class="custom-range" id="placement-selector-duo" value="1" min="1" max="10" step="1">
                       </div>
                       <div class="col-sm-2">
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
-                          <div class="card-body text-white bg-dark text-center ">
+                          <div class="card-body text-white bg-light text-center ">
                             <h5 class="card-title" id="placement-number-duo">1</h5>
                           </div>
                         </div>
@@ -902,11 +902,11 @@
                   <h3>Step 4 Title</h3>
                   <section>
 
-                  <h2 class="section-heading mb-5 text-center">Customize Your Order</h2>
+                  <h2 class="section-heading mb-5 text-center text-light">Customize Your Order</h2>
                   <div id="solo-options">
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col-6">
-                        <h5 class="text-bold">Offline Mode (+10%)</h5>
+                        <h5 class="text-bold text-light">Offline Mode (+10%)</h5>
                       </div>
                       <div class="col-3">
                         <div class="custom-switch custom-switch-label-yesno">
@@ -922,7 +922,7 @@
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col-6">
-                        <h5 class="text-bold">Express Order (+25%)</h5>
+                        <h5 class="text-bold text-light">Express Order (+25%)</h5>
                       </div>
                       <div class="col-3">
                         <div class="custom-switch custom-switch-label-yesno">
@@ -939,10 +939,10 @@
 
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col-6">
-                        <h5 class="text-bold">Server (Required)</h5>
+                        <h5 class="text-bold text-light">Server (Required)</h5>
                       </div>
                       <div class="col">
-                        <select class="custom-select bg-dark" name="regionSel" id="regionSel">
+                        <select class="custom-select bg-light" name="regionSel" id="regionSel">
                           <option value="na" selected="selected">NA</option>
                           <option value="euw">EUW</option>
                           <option value="eune">EUNE</option>
@@ -960,10 +960,10 @@
 
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col-6">
-                        <h5 class="text-bold">Primary Role (Complimentary)</h5>
+                        <h5 class="text-bold text-light">Primary Role (Complimentary)</h5>
                       </div>
                       <div class="col">
-                        <select class="custom-select bg-dark" name="primary_role" id="primary_role">
+                        <select class="custom-select bg-light" name="primary_role" id="primary_role">
                           <option value="Top" selected="selected">Top</option>
                           <option value="Jungle">Jungle</option>
                           <option value="Mid">Mid</option>
@@ -975,10 +975,10 @@
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col-6">
-                        <h5 class="text-bold">Secondary Role (Complimentary)</h5>
+                        <h5 class="text-bold text-light">Secondary Role (Complimentary)</h5>
                       </div>
                       <div class="col">
-                        <select class="custom-select bg-dark" name="secondary_role" id="secondary_role">
+                        <select class="custom-select bg-light" name="secondary_role" id="secondary_role">
                           <option value="Top">Top</option>
                           <option value="Jungle" selected="selected">Jungle</option>
                           <option value="Mid">Mid</option>
@@ -990,10 +990,10 @@
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col-6">
-                        <h5 class="text-bold">Preffered Keyset (Complimentary)</h5>
+                        <h5 class="text-bold text-light">Preffered Keyset (Complimentary)</h5>
                       </div>
                       <div class="col">
-                        <select class="custom-select bg-dark" name="keyset" id="keyset">
+                        <select class="custom-select bg-light" name="keyset" id="keyset">
                           <option value="Flash on F" selected="selected">Flash on F</option>
                           <option value="Flash on D">Flash on D</option>
 
@@ -1007,7 +1007,7 @@
 
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col">
-                        <h5 class="text-bold">Express Order (+25%)</h5>
+                        <h5 class="text-bold text-light">Express Order (+25%)</h5>
                       </div>
                       <div class="col-3 d-flex justify-content-center">
                         <div class="custom-switch custom-switch-label-yesno">
@@ -1022,10 +1022,10 @@
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col">
-                        <h5 class="text-bold">Server (Required)</h5>
+                        <h5 class="text-bold text-light">Server (Required)</h5>
                       </div>
                       <div class="col-3">
-                        <select class="custom-select bg-dark" name="regionSel" id="regionSel">
+                        <select class="custom-select bg-light" name="regionSel" id="regionSel">
                           <option value="na" selected="selected">NA</option>
                           <option value="euw">EUW</option>
                           <option value="eune">EUNE</option>
@@ -1042,10 +1042,10 @@
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col">
-                        <h5 class="text-bold">Your Primary Role (Complimentary)</h5>
+                        <h5 class="text-bold text-light">Your Primary Role (Complimentary)</h5>
                       </div>
                       <div class="col-3">
-                        <select class="custom-select bg-dark" name="primary_role" id="primary_role-2">
+                        <select class="custom-select bg-light" name="primary_role" id="primary_role-2">
                           <option value="Top" selected="selected">Top</option>
                           <option value="Jungle">Jungle</option>
                           <option value="Mid">Mid</option>
@@ -1056,10 +1056,10 @@
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col">
-                        <h5 class="text-bold">Your Secondary Role (Complimentary)</h5>
+                        <h5 class="text-bold text-light">Your Secondary Role (Complimentary)</h5>
                       </div>
                       <div class="col-3">
-                        <select class="custom-select bg-dark" name="secondary_role" id="secondary_role-2">
+                        <select class="custom-select bg-light" name="secondary_role" id="secondary_role-2">
                           <option value="Top">Top</option>
                           <option value="Jungle" selected="selected">Jungle</option>
                           <option value="Mid">Mid</option>
@@ -1073,73 +1073,73 @@
                   </section>
                   <h3>Step 5 Title</h3>
                   <section>
-                      <h2 class="section-heading mb-5">Enter Your Order Information</h2>
+                      <h2 class="section-heading mb-5 text-light">Enter Your Order Information</h2>
 
                       <div id="solo-info">
                         <div class="form-group">
-                          <label for="username" >Account Username</label>
+                          <label class="text-light"  for="username" >Account Username</label>
                           <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
                           <span class="invalid-feedback preUserSoloError" role="alert">
-                              <strong>Username is required.</strong>
+                              <strong class="text-light" >Username is required.</strong>
                           </span>
                         </div>
                         <div class="form-group">
-                          <label for="password" >Account Password</label>
+                          <label class="text-light"  for="password" >Account Password</label>
                           <input type="text" name="password" id="password" class="form-control" placeholder="Password" required>
                           <span class="invalid-feedback prePassSoloError" role="alert">
-                              <strong>Password is required.</strong>
+                              <strong class="text-light" >Password is required.</strong>
                           </span>
                         </div>
 
                         <div class="form-group">
-                          <label for="summonerName" >Summoner Name <i class="fas fa-info-circle" alt="info-tool" data-toggle="tooltip" data-placement="top" title="Your Summoner Name is used to track your order in your Dashboard after ordering."></i></label>
+                          <label class="text-light"  for="summonerName" >Summoner Name <i class="fas fa-info-circle" alt="info-tool" data-toggle="tooltip" data-placement="top" title="Your Summoner Name is used to track your order in your Dashboard after ordering."></i></label>
                           <input type="text" name="summonerName" id="summonerName" class="form-control" placeholder="Summoner Name" required>
                           <span class="invalid-feedback preSummSoloError" role="alert">
-                              <strong>Summoner Name is required.</strong>
+                              <strong class="text-light" >Summoner Name is required.</strong>
                           </span>
                         </div>
 
                         <div class="form-group">
-                          <label for="emailAddress" >Email Address</label>
+                          <label class="text-light"  for="emailAddress" >Email Address</label>
                           <input type="email" name="emailAddress" id="emailAddress" class="form-control" placeholder="Email Address" required>
                           <span class="invalid-feedback preEmailSoloError" role="alert">
-                              <strong>Entered Email is invalid.</strong>
+                              <strong class="text-light" >Entered Email is invalid.</strong>
                           </span>
                         </div>
 
                         <div class="form-group">
-                          <label for="discord" >Discord ID (optional)</label>
+                          <label class="text-light"  for="discord" >Discord ID (optional)</label>
                           <input type="text" name="discord" id="discord" class="form-control" placeholder="Temp#1234">
                         </div>
 
                         <div class="form-group">
-                          <label for="orderMessage">Order Message (optional)</label>
+                          <label class="text-light"  for="orderMessage">Order Message (optional)</label>
                           <input type="text" name="orderMessage" id="orderMessage" class="form-control" placeholder="Message">
                         </div>
                       </div>
                       <div id="duo-info">
                         <div class="form-group">
-                          <label for="summonerName">Summoner Name</label>
+                          <label class="text-light"  for="summonerName">Summoner Name</label>
                           <input type="text" name="summonerName" id="summonerName2" class="form-control" placeholder="Summoner Name" >
                           <span class="invalid-feedback preSummDuoError" role="alert">
-                              <strong>Summoner Name is required.</strong>
+                              <strong class="text-light" >Summoner Name is required.</strong>
                           </span>
                         </div>
 
                         <div class="form-group">
-                          <label for="emailAddress" >Email Address</label>
+                          <label class="text-light"  for="emailAddress" >Email Address</label>
                           <input type="email" name="emailAddress" id="emailAddress2" class="form-control" placeholder="Email Address" >
                           <span class="invalid-feedback preEmailDuoError" role="alert">
-                              <strong>Entered Email is invalid.</strong>
+                              <strong class="text-light" >Entered Email is invalid.</strong>
                           </span>
                         </div>
 
                         <div class="form-group">
-                          <label for="discord" >Discord ID (optional)</label>
+                          <label class="text-light"  for="discord" >Discord ID (optional)</label>
                           <input type="text" name="discord" id="discord2" class="form-control" placeholder="Temp#1234">
                         </div>
                         <div class="form-group">
-                          <label for="orderMessage">Order Message (optional)</label>
+                          <label class="text-light"  for="orderMessage">Order Message (optional)</label>
                           <input type="text" name="orderMessage" id="orderMessage2" class="form-control" placeholder="Message">
                         </div>
                       </div>
@@ -1150,7 +1150,7 @@
                   </section>
                   <h3>Step 6 Title</h3>
                   <section>
-                      <h2 class="section-heading mb-5">Review your Order and Submit</h2>
+                      <h2 class="section-heading mb-5 text-light">Review your Order and Submit</h2>
                       <h3 class="text-muted">Order Summary</h3>
                       <table class="table table-bordered table-hover table-striped table-dark mb-5">
                       <thead>
@@ -1186,7 +1186,7 @@
 
                       <div class="row container-sm">
                         <div class="col-7">
-                          <label for="orderMessage" class="sr-only">Discount Code</label>
+                          <label for="orderMessage" class="sr-only text-light">Discount Code</label>
                           <input type="text" name="discount_code" id="discount_code" class="form-control" placeholder="Discount Code">
                         </div>
                         <div class="col-3 align-self-center">
