@@ -21,6 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="dist/css/component-custom-switch.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/bd-wizard.css">
 
@@ -105,7 +106,7 @@
                         </li>
                         <li class="nav-item dropdown ml-2 mr-2">
                             <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item text-light" href="https://bmsboosting.com/tos">
                                     Terms of Service
                                 </a>

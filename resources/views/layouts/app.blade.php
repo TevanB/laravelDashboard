@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bd-wizard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -77,7 +78,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -102,7 +103,7 @@
                       </li>
                       <li class="nav-item dropdown ml-2 mr-2">
                           <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
                               <a class="dropdown-item text-light" href="https://bmsboosting.com/tos">
                                   Terms of Service
                               </a>
