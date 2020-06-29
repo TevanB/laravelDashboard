@@ -79,33 +79,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                          <a class="nav-link text-light" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
-                      </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        <li class="nav-item">
+                        <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light" href="https://bmsboosting.com">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light" href="https://bmsboosting.com/coaching">Coaching</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light" href="https://bmsboosting.com/account-selling">Accounts</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light" href="https://bmsboosting.com/reviews">Reviews</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light" href="https://bmsboosting.com/team">Team</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ml-2 mr-2">
                             <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item text-light" href="https://bmsboosting.com/tos">
@@ -121,6 +119,10 @@
                                     Join Our Team
                                 </a>
                             </div>
+                        </li>
+                        <li class="nav-item ml-2 mr-2">
+                          <i class="fas fa-shopping-cart" href="https://bmsboosting.com/cart"></i>
+
                         </li>
                         @guest
                             <li class="nav-item">
