@@ -119,7 +119,7 @@
                 </div>
             </div>
         </nav>
-        <main class="d-flex align-items-center">
+        <main class="d-flex align-items-center bgGrey">
           <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-1"></div>
