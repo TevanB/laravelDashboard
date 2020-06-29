@@ -87,36 +87,36 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light" href="https://bmsboosting.com">Home</a>
+                            <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
+                            <a class="nav-link text-light menuFont" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light" href="https://bmsboosting.com/coaching">Coaching</a>
+                            <a class="nav-link text-light menuFont" href="https://bmsboosting.com/coaching">Coaching</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light" href="https://bmsboosting.com/account-selling">Accounts</a>
+                            <a class="nav-link text-light menuFont" href="https://bmsboosting.com/account-selling">Accounts</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light" href="https://bmsboosting.com/reviews">Reviews</a>
+                            <a class="nav-link text-light menuFont" href="https://bmsboosting.com/reviews">Reviews</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light" href="https://bmsboosting.com/team">Team</a>
+                            <a class="nav-link text-light menuFont" href="https://bmsboosting.com/team">Team</a>
                         </li>
                         <li class="nav-item dropdown ml-2 mr-2">
-                            <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
+                            <a id="navbarDropdown" class="nav-link text-light dropdown-toggle menuFont" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
                             <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-light" href="https://bmsboosting.com/tos">
+                                <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/tos">
                                     Terms of Service
                                 </a>
-                                <a class="dropdown-item text-light" href="https://bmsboosting.com/faq">
+                                <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/faq">
                                     F.A.Q.
                                 </a>
-                                <a class="dropdown-item text-light" href="https://bmsboosting.com/contact-us">
+                                <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/contact-us">
                                     Contact Us
                                 </a>
-                                <a class="dropdown-item text-light" href="https://bmsboosting.com/booster-applications">
+                                <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/booster-applications">
                                     Join Our Team
                                 </a>
                             </div>
@@ -127,21 +127,21 @@
                         </li>
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-light menuFont" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-light menuFont" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle menuFont" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item text-light" href="{{ route('logout') }}"
+                                    <a class="dropdown-item text-light menuFont" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
