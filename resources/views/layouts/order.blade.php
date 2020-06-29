@@ -67,10 +67,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md bggrey shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="/logo.png" width="197" height="180" alt="BMS Boosting Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -80,20 +80,55 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item">
-                          <a class="nav-link" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
+                          <a class="nav-link text-light" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
                       </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://bmsboosting.com">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://bmsboosting.com/coaching">Coaching</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://bmsboosting.com/account-selling">Accounts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://bmsboosting.com/reviews">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://bmsboosting.com/team">Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-light" href="https://bmsboosting.com/tos">
+                                    Terms of Service
+                                </a>
+                                <a class="dropdown-item text-light" href="https://bmsboosting.com/faq">
+                                    F.A.Q.
+                                </a>
+                                <a class="dropdown-item text-light" href="https://bmsboosting.com/contact-us">
+                                    Contact Us
+                                </a>
+                                <a class="dropdown-item text-light" href="https://bmsboosting.com/booster-applications">
+                                    Join Our Team
+                                </a>
+                            </div>
+                        </li>
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-light" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -103,7 +138,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item text-light" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -136,7 +171,7 @@
                    <div class="purpose-radios-wrapper text-center" id="solo-duo-input">
                       <div class="purpose-radio">
                           <input type="radio" name="solo-duo" id="solo" class="purpose-radio-input" value="Solo" selected="unselected">
-                         <label for="solo" class="purpose-radio-label bg-light">
+                         <label for="solo" class="purpose-radio-label bg-light border">
                            <span class="label-icon">
                              <i class="fas fa-user label-icon-default" alt="solo-division-icon"></i>
                              <i class="fas fa-user label-icon-active" alt="solo-division-icon"></i>
@@ -146,7 +181,7 @@
                         </div>
                         <div class="purpose-radio">
                            <input type="radio" name="solo-duo" id="duo" class="purpose-radio-input" value="Duo" selected="unselected">
-                          <label for="duo" class="purpose-radio-label bg-light">
+                          <label for="duo" class="purpose-radio-label bg-light border">
                             <span class="label-icon">
                               <i class="fas fa-user-friends label-icon-default" alt="duo-division-icon"></i>
                               <i class="fas fa-user-friends label-icon-active" alt="duo-division-icon"></i>
@@ -165,21 +200,21 @@
                       <div class="purpose-radios-wrapper text-center">
                          <div class="purpose-radio">
                              <input type="radio" name="solo-type" id="solo-division" class="purpose-radio-input" value="Solo Division">
-                            <label for="solo-division" class="purpose-radio-label bg-light">
+                            <label for="solo-division" class="purpose-radio-label bg-light border">
 
                               <span class="label-text text-center">Solo Division Boost</span>
                             </label>
                            </div>
                            <div class="purpose-radio">
                               <input type="radio" name="solo-type" id="solo-net" class="purpose-radio-input" value="Solo Net Wins">
-                             <label for="solo-net" class="purpose-radio-label bg-light">
+                             <label for="solo-net" class="purpose-radio-label bg-light border">
 
                                <span class="label-text text-center">Solo Net Win Boost</span>
                              </label>
                             </div>
                             <div class="purpose-radio">
                                <input type="radio" name="solo-type" id="solo-placement" class="purpose-radio-input" value="Solo Placement">
-                              <label for="solo-placement" class="purpose-radio-label bg-light">
+                              <label for="solo-placement" class="purpose-radio-label bg-light border">
 
                                 <span class="label-text text-center">Solo Placements Boost</span>
                               </label>
@@ -191,21 +226,21 @@
                       <div class="purpose-radios-wrapper text-center">
                          <div class="purpose-radio">
                              <input type="radio" name="duo-type" id="duo-division" class="purpose-radio-input" value="Duo Division">
-                            <label for="duo-division" class="purpose-radio-label bg-light">
+                            <label for="duo-division" class="purpose-radio-label bg-light border">
 
                               <span class="label-text text-center">Duo Division Boost</span>
                             </label>
                            </div>
                            <div class="purpose-radio">
                               <input type="radio" name="duo-type" id="duo-net" class="purpose-radio-input" value="Duo Net Wins">
-                             <label for="duo-net" class="purpose-radio-label bg-light">
+                             <label for="duo-net" class="purpose-radio-label bg-light border">
 
                                <span class="label-text text-center">Duo Net Win Boost</span>
                              </label>
                             </div>
                             <div class="purpose-radio">
                                <input type="radio" name="duo-type" id="duo-placement" class="purpose-radio-input" value="Duo Placement">
-                              <label for="duo-placement" class="purpose-radio-label bg-light">
+                              <label for="duo-placement" class="purpose-radio-label bg-light border">
 
                                 <span class="label-text text-center">Duo Placements Boost</span>
                               </label>
@@ -618,7 +653,7 @@
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
                           <div class="card-body text-white bg-light text-center">
-                            <h5 class="card-title" id="net-number-solo">1</h5>
+                            <h5 class="card-title text-dark" id="net-number-solo">1</h5>
                           </div>
                         </div>
                       </div>
@@ -716,7 +751,7 @@
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
                           <div class="card-body text-white bg-light text-center ">
-                            <h5 class="card-title" id="net-number-duo">1</h5>
+                            <h5 class="card-title text-dark" id="net-number-duo">1</h5>
                           </div>
                         </div>
                       </div>
@@ -804,7 +839,7 @@
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
                           <div class="card-body text-white bg-light text-center ">
-                            <h5 class="card-title" id="placement-number-solo">1</h5>
+                            <h5 class="card-title text-dark" id="placement-number-solo">1</h5>
                           </div>
                         </div>
                       </div>
@@ -890,7 +925,7 @@
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
 
                           <div class="card-body text-white bg-light text-center ">
-                            <h5 class="card-title" id="placement-number-duo">1</h5>
+                            <h5 class="card-title text-dark" id="placement-number-duo">1</h5>
                           </div>
                         </div>
                       </div>
@@ -1038,7 +1073,6 @@
                           <option value="ru">RU</option>
                         </select>
                       </div>
-                      <div class="col-2"></div>
                     </div>
                     <div class="row align-items-center mt-4 mb-4">
                       <div class="col">
@@ -1080,14 +1114,14 @@
                           <label class="text-light"  for="username" >Account Username</label>
                           <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
                           <span class="invalid-feedback preUserSoloError" role="alert">
-                              <strong class="text-light" >Username is required.</strong>
+                              <strong class="text-danger" >Username is required.</strong>
                           </span>
                         </div>
                         <div class="form-group">
                           <label class="text-light"  for="password" >Account Password</label>
                           <input type="text" name="password" id="password" class="form-control" placeholder="Password" required>
                           <span class="invalid-feedback prePassSoloError" role="alert">
-                              <strong class="text-light" >Password is required.</strong>
+                              <strong class="text-danger" >Password is required.</strong>
                           </span>
                         </div>
 
@@ -1095,7 +1129,7 @@
                           <label class="text-light"  for="summonerName" >Summoner Name <i class="fas fa-info-circle" alt="info-tool" data-toggle="tooltip" data-placement="top" title="Your Summoner Name is used to track your order in your Dashboard after ordering."></i></label>
                           <input type="text" name="summonerName" id="summonerName" class="form-control" placeholder="Summoner Name" required>
                           <span class="invalid-feedback preSummSoloError" role="alert">
-                              <strong class="text-light" >Summoner Name is required.</strong>
+                              <strong class="text-danger" >Summoner Name is required.</strong>
                           </span>
                         </div>
 
@@ -1103,7 +1137,7 @@
                           <label class="text-light"  for="emailAddress" >Email Address</label>
                           <input type="email" name="emailAddress" id="emailAddress" class="form-control" placeholder="Email Address" required>
                           <span class="invalid-feedback preEmailSoloError" role="alert">
-                              <strong class="text-light" >Entered Email is invalid.</strong>
+                              <strong class="text-danger" >Entered Email is invalid.</strong>
                           </span>
                         </div>
 
@@ -1122,7 +1156,7 @@
                           <label class="text-light"  for="summonerName">Summoner Name</label>
                           <input type="text" name="summonerName" id="summonerName2" class="form-control" placeholder="Summoner Name" >
                           <span class="invalid-feedback preSummDuoError" role="alert">
-                              <strong class="text-light" >Summoner Name is required.</strong>
+                              <strong class="text-danger" >Summoner Name is required.</strong>
                           </span>
                         </div>
 
@@ -1130,7 +1164,7 @@
                           <label class="text-light"  for="emailAddress" >Email Address</label>
                           <input type="email" name="emailAddress" id="emailAddress2" class="form-control" placeholder="Email Address" >
                           <span class="invalid-feedback preEmailDuoError" role="alert">
-                              <strong class="text-light" >Entered Email is invalid.</strong>
+                              <strong class="text-danger" >Entered Email is invalid.</strong>
                           </span>
                         </div>
 
