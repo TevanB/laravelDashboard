@@ -162,9 +162,9 @@
             </div>
         </nav>
         <main class="d-flex bggrey">
-          <div class="container-fluid mt-5">
-          <div class="row align-items-center">
-            <div id="carouselExampleSlidesOnly" class="carousel slide carBack" data-ride="carousel">
+          <div class="container-fluid">
+          <div class="row align-items-center justify-content-center carBack">
+            <div id="carouselExampleSlidesOnly" class="carousel slide mt-5 mb-5" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
