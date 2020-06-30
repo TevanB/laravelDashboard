@@ -1466,7 +1466,7 @@
       <!-- Footer Links -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© <a href="https://bmsboosting.com">BMS Boosting</a>   |   All Rights Reserved   |    admin@bmsboosting.com   |   Website By <a href="https://bmswebdesign.com">BMS Web Design</a>    |   League of Legends is a registered trademark of Riot Games, Inc. We are in no way affiliated with, associated with or endorsed by Riot Games, Inc.
+      <div class="footer-copyright text-center py-3">© <a class="footerLink" href="https://bmsboosting.com">BMS Boosting</a>   |   All Rights Reserved   |    admin@bmsboosting.com   |   Website By <a class="footerLink" href="https://bmswebdesign.com">BMS Web Design</a>    |   League of Legends is a registered trademark of Riot Games, Inc. We are in no way affiliated with, associated with or endorsed by Riot Games, Inc.
 
       </div>
       <!-- Copyright -->
