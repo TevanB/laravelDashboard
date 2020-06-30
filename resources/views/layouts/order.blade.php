@@ -73,11 +73,11 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/img/profile/profile.png" width="197" height="180" alt="BMS Boosting Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="fas fa-bars white"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
