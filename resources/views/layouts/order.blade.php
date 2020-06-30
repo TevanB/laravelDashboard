@@ -164,6 +164,16 @@
         <main class="d-flex bggrey">
           <div class="container-fluid mt-5">
           <div class="row align-items-center">
+            <div id="carouselExample" class="carousel slide carouselExample" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center">
             <div class="col-1"></div>
             <div class="col align-items-center">
               <div class="row">
@@ -1361,7 +1371,6 @@
                 <section class="section wow fadeIn" data-wow-delay="0.3s">
 
                       <!--Section heading-->
-                      <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
                       <!--Section description-->
                       <p class="text-center text-muted text-light mb-5 mx-auto w-responsive lead">Our team has developed a streamlined process to provide you with a stress-free experience from this page where you order your boost, to the end of your order which you can manage in your custom dashboard.</p>
 
@@ -1472,7 +1481,7 @@
 
     </div>
     <!-- Footer -->
-    <footer class="page-footer font-small bggrey pt-4">
+    <footer class="page-footer font-small footerBg pt-4">
 
       <!-- Footer Links -->
       <div class="container-fluid text-center text-md-left">
@@ -1576,7 +1585,7 @@
       <!-- Footer Links -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© <a class="footerLink" href="https://bmsboosting.com">BMS Boosting</a>   |   All Rights Reserved   |    admin@bmsboosting.com   |   Website By <a class="footerLink" href="https://bmswebdesign.com">BMS Web Design</a>    |   League of Legends is a registered trademark of Riot Games, Inc. We are in no way affiliated with, associated with or endorsed by Riot Games, Inc.
+      <div class="footer-copyright text-center py-3 copyBg">© <a class="footerLink" href="https://bmsboosting.com">BMS Boosting</a>   |   All Rights Reserved   |    admin@bmsboosting.com   |   Website By <a class="footerLink" href="https://bmswebdesign.com">BMS Web Design</a>    |   League of Legends is a registered trademark of Riot Games, Inc. We are in no way affiliated with, associated with or endorsed by Riot Games, Inc.
 
       </div>
       <!-- Copyright -->

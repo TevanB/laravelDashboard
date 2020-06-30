@@ -37,6 +37,18 @@ nav-item:hover, dropdown-item:hover{
 .footerLink{
   color: $white;
 }
+.footerBg{
+  background-color: #1e1e1e;
+}
+.carouselExample{
+  backgroumd-image: url('/img/mecharengar.jpg');
+}
+.copyBg{
+  background-color: #505152;
+}
+.bgWhite{
+  background-color: $white;
+}
 .dropdown{
   height: auto !important;
   overflow: visible !important;
