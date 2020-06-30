@@ -1371,7 +1371,7 @@
         <div class="row">
 
           <!-- Grid column -->
-          <div class="col-md-6 mt-md-0 mt-3">
+          <div class="col-md-3 mt-md-0 mt-3">
 
             <!-- Content -->
             <img src="/img/profile/profile.png" width="197" height="180" alt="BMS Boosting Logo">
@@ -1386,7 +1386,7 @@
           <div class="col-md-3 mb-md-0 mb-3">
 
             <!-- Links -->
-            <h5 class="text-uppercase">ELO BOOSTING AND COACHING</h5>
+            <h5 class="text-uppercase footerTitle">ELO BOOSTING AND COACHING</h5>
 
             <ul class="list-unstyled">
               <li>
@@ -1405,7 +1405,7 @@
           <div class="col-md-3 mb-md-0 mb-3">
 
             <!-- Links -->
-            <h5 class="text-uppercase">Account Selling</h5>
+            <h5 class="text-uppercase footerTitle">Account Selling</h5>
 
             <ul class="list-unstyled">
               <li>
@@ -1446,7 +1446,7 @@
           <div class="col-md-3 mb-md-0 mb-3">
 
             <!-- Links -->
-            <h5 class="text-uppercase">Help Centre</h5>
+            <h5 class="text-uppercase footerTitle">Help Centre</h5>
 
             <ul class="list-unstyled">
               <li>
@@ -1463,7 +1463,7 @@
               </li>
             </ul>
 
-        
+
 
           </div>
           <!-- Grid column -->
@@ -1475,8 +1475,8 @@
       <!-- Footer Links -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      <div class="footer-copyright text-center py-3">© <a href="https://bmsboosting.com">BMS Boosting</a>   |   All Rights Reserved   |    admin@bmsboosting.com   |   Website By <a href="https://bmswebdesign.com">BMS Web Design</a>    |   League of Legends is a registered trademark of Riot Games, Inc. We are in no way affiliated with, associated with or endorsed by Riot Games, Inc.
+
       </div>
       <!-- Copyright -->
 
