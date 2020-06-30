@@ -170,7 +170,7 @@
 
                 <div class="container mt-5">
 
-                  <div id="wizard">
+                  <div id="wizard" class="mb-5">
                   <h3>Step 1 Title</h3>
                   <section>
                    <h2 class="section-heading text-center mb-3 text-light">Select Solo or Duo</h2>
