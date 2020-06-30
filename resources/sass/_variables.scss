@@ -34,6 +34,12 @@ nav-item:hover, dropdown-item:hover{
 .bggrey{
   background-color: $bgGrey;
 }
+.footerLink{
+  color: $white;
+}
+a.footerLink:hover{
+  color: #357edd;
+}
 .footerTitle{
   color: #357edd;
   font-family: "Open Sane", Arial, Helvetica, sans-serif;
