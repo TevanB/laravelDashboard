@@ -164,10 +164,10 @@
         <main class="d-flex bggrey">
           <div class="container-fluid mt-5">
           <div class="row align-items-center">
-            <div id="carouselExample" class="carousel slide carouselExample" data-ride="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
+                  <img class="d-block w-100" src="..." alt="First slide">
                 </div>
 
               </div>
