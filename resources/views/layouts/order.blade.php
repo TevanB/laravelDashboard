@@ -1355,114 +1355,117 @@
               </div>
             </div>
             </div>
-            <div class="col-1"></div>
-            <div class="col">
-              <section class="section wow fadeIn" data-wow-delay="0.3s">
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col">
+                <section class="section wow fadeIn" data-wow-delay="0.3s">
 
-                    <!--Section heading-->
-                    <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
-                    <!--Section description-->
-                    <p class="text-center text-muted text-light mb-5 mx-auto w-responsive lead">Our team has developed a streamlined process to provide you with a stress-free experience from this page where you order your boost, to the end of your order which you can manage in your custom dashboard.</p>
+                      <!--Section heading-->
+                      <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
+                      <!--Section description-->
+                      <p class="text-center text-muted text-light mb-5 mx-auto w-responsive lead">Our team has developed a streamlined process to provide you with a stress-free experience from this page where you order your boost, to the end of your order which you can manage in your custom dashboard.</p>
 
-                    <!--Grid row-->
-                    <div class="row">
+                      <!--Grid row-->
+                      <div class="row">
 
-                      <!--Grid column-->
-                      <div class="col-md-4">
+                        <!--Grid column-->
+                        <div class="col-md-4">
 
-                        <!--Grid row-->
-                        <div class="row mb-2">
-                          <div class="col-2">
-                            <i class="fas fa-2x fa-user-tie blue"></i>
+                          <!--Grid row-->
+                          <div class="row mb-2">
+                            <div class="col-2">
+                              <i class="fas fa-2x fa-user-tie blue"></i>
+                            </div>
+                            <div class="col-10">
+                              <h5 class="font-weight-bold mb-4 text-light">Management At Every Step</h5>
+                              <p class="text-secondary">Unlike other services, we designed our ordering process so our veteran management team will be monitoring and verifying the status of your order at every stage..</p>
+                            </div>
                           </div>
-                          <div class="col-10">
-                            <h5 class="font-weight-bold mb-4 text-light">Management At Every Step</h5>
-                            <p class="text-secondary">Unlike other services, we designed our ordering process so our veteran management team will be monitoring and verifying the status of your order at every stage..</p>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row mb-2">
+                            <div class="col-2">
+                              <i class="fas fa-2x fa-eye blue"></i>
+                            </div>
+                            <div class="col-10">
+                              <h5 class="font-weight-bold mb-4 text-light">Track Your Order</h5>
+                              <p class="text-secondary">You will be able to track your account's rank in your Order Dashboard after ordering.</p>
+                            </div>
                           </div>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row mb-2">
+                            <div class="col-2">
+                              <i class="fas fa-2x fa-comment-alt blue"></i>
+                            </div>
+                            <div class="col-10">
+                              <h5 class="font-weight-bold mb-4 text-light">Chat with your booster</h5>
+                              <p class="text-secondary">After ordering, you will have a private channel to message your booster throughout the duration of the order.</p>
+                            </div>
+                          </div>
+                          <!--Grid row-->
+
                         </div>
-                        <!--Grid row-->
+                        <!--Grid column-->
 
-                        <!--Grid row-->
-                        <div class="row mb-2">
-                          <div class="col-2">
-                            <i class="fas fa-2x fa-eye blue"></i>
-                          </div>
-                          <div class="col-10">
-                            <h5 class="font-weight-bold mb-4 text-light">Track Your Order</h5>
-                            <p class="text-secondary">You will be able to track your account's rank in your Order Dashboard after ordering.</p>
-                          </div>
+                        <!--Grid column-->
+                        <div class="col-md-4 mb-2 text-center text-md-left flex-center">
+                          <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0">
                         </div>
-                        <!--Grid row-->
+                        <!--Grid column-->
 
-                        <!--Grid row-->
-                        <div class="row mb-2">
-                          <div class="col-2">
-                            <i class="fas fa-2x fa-comment-alt blue"></i>
+                        <!--Grid column-->
+                        <div class="col-md-4">
+
+                          <!--Grid row-->
+                          <div class="row mb-2">
+                            <div class="col-2">
+                              <i class="fas fa-2x fa-pause blue"></i>
+                            </div>
+                            <div class="col-10">
+                              <h5 class="font-weight-bold mb-4 text-light">Pause Your Order</h5>
+                              <p class="text-secondary">We offer clients the ability to pause/unpause their order for all order options.</p>
+                            </div>
                           </div>
-                          <div class="col-10">
-                            <h5 class="font-weight-bold mb-4 text-light">Chat with your booster</h5>
-                            <p class="text-secondary">After ordering, you will have a private channel to message your booster throughout the duration of the order.</p>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row mb-2">
+                            <div class="col-2">
+                              <i class="fas fa-2x fa-lock blue"></i>
+                            </div>
+                            <div class="col-10">
+                              <h5 class="font-weight-bold mb-4 text-light">Secure Ordering Experience</h5>
+                              <p class="text-secondary">Our ordering process was designed from scratch with a priority in User Experience and Security for a private ordering experience.</p>
+                            </div>
                           </div>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row mb-2">
+                            <div class="col-2">
+                              <i class="fas fa-2x fa-robot blue"></i>
+                            </div>
+                            <div class="col-10">
+                              <h5 class="font-weight-bold mb-4 text-light">Automated Process</h5>
+                              <p class="text-secondary">We developed a special program that accelerates the process of getting an ELO Booster assigned to your order, and provides you with order updates to your email or dashboard.</p>
+                            </div>
+                          </div>
+                          <!--Grid row-->
+
                         </div>
-                        <!--Grid row-->
+                        <!--Grid column-->
 
                       </div>
-                      <!--Grid column-->
+                      <!--Grid row-->
 
-                      <!--Grid column-->
-                      <div class="col-md-4 mb-2 text-center text-md-left flex-center">
-                        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0">
-                      </div>
-                      <!--Grid column-->
-
-                      <!--Grid column-->
-                      <div class="col-md-4">
-
-                        <!--Grid row-->
-                        <div class="row mb-2">
-                          <div class="col-2">
-                            <i class="fas fa-2x fa-pause blue"></i>
-                          </div>
-                          <div class="col-10">
-                            <h5 class="font-weight-bold mb-4 text-light">Pause Your Order</h5>
-                            <p class="text-secondary">We offer clients the ability to pause/unpause their order for all order options.</p>
-                          </div>
-                        </div>
-                        <!--Grid row-->
-
-                        <!--Grid row-->
-                        <div class="row mb-2">
-                          <div class="col-2">
-                            <i class="fas fa-2x fa-lock blue"></i>
-                          </div>
-                          <div class="col-10">
-                            <h5 class="font-weight-bold mb-4 text-light">Secure Ordering Experience</h5>
-                            <p class="text-secondary">Our ordering process was designed from scratch with a priority in User Experience and Security for a private ordering experience.</p>
-                          </div>
-                        </div>
-                        <!--Grid row-->
-
-                        <!--Grid row-->
-                        <div class="row mb-2">
-                          <div class="col-2">
-                            <i class="fas fa-2x fa-robot blue"></i>
-                          </div>
-                          <div class="col-10">
-                            <h5 class="font-weight-bold mb-4 text-light">Automated Process</h5>
-                            <p class="text-secondary">We developed a special program that accelerates the process of getting an ELO Booster assigned to your order, and provides you with order updates to your email or dashboard.</p>
-                          </div>
-                        </div>
-                        <!--Grid row-->
-
-                      </div>
-                      <!--Grid column-->
-
-                    </div>
-                    <!--Grid row-->
-
-                  </section>
+                    </section>
+              </div>
+              <div class="col-1"></div>
             </div>
-            <div class="col-1"></div>
+
           </div>
         </div>
         </main>
