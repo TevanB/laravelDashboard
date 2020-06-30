@@ -1390,11 +1390,11 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="https://www.bms-dash.herokuapp.com/boosting">Boosting</a>
+                <a class="footerLink" href="https://www.bms-dash.herokuapp.com/boosting">Boosting</a>
               </li>
 
               <li>
-                <a href="https://www.bmsboosting.com/coaching/">Coaching</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/coaching/">Coaching</a>
               </li>
             </ul>
 
@@ -1409,17 +1409,12 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="https://www.bmsboosting.com/account-selling/">Accounts Store</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/account-selling/">Accounts Store</a>
               </li>
               <li>
-                <a href="https://www.bmsboosting.com/cart/">Accounts Cart</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/cart/">Accounts Cart</a>
               </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
+
             </ul>
 
             <!-- Links -->
@@ -1427,16 +1422,12 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="https://www.bmsboosting.com/reviews/">Reviews</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/reviews/">Reviews</a>
               </li>
               <li>
-                <a href="https://www.bmsboosting.com/team">Our Team</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/team">Our Team</a>
               </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
+
               </li>
             </ul>
 
@@ -1450,16 +1441,16 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="https://www.bmsboosting.com/tos/">Terms of Service</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/tos/">Terms of Service</a>
               </li>
               <li>
-                <a href="https://www.bmsboosting.com/faq/">F.A.Q.</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/faq/">F.A.Q.</a>
               </li>
               <li>
-                <a href="https://www.bmsboosting.com/contact-us">Contact Us</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/contact-us">Contact Us</a>
               </li>
               <li>
-                <a href="https://www.bmsboosting.com/booster-applications/">Booster Applications</a>
+                <a class="footerLink" href="https://www.bmsboosting.com/booster-applications/">Booster Applications</a>
               </li>
             </ul>
 
