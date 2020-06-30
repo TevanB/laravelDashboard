@@ -22,7 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="dist/css/component-custom-switch.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" id="avada-stylesheet-css" href="https://www.bmsboosting.com/wp-content/themes/Avada/assets/css/style.min.css?ver=5.7.1" type="text/css" media="all">
     <link rel="stylesheet" href="assets/css/bd-wizard.css">
 
 

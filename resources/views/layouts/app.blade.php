@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bd-wizard.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" id="avada-stylesheet-css" href="https://www.bmsboosting.com/wp-content/themes/Avada/assets/css/style.min.css?ver=5.7.1" type="text/css" media="all">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -98,7 +98,7 @@
                       <li class="nav-item ml-2 mr-2">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com/reviews">Reviews</a>
                       </li>
-          
+
                       <li class="nav-item dropdown ml-2 mr-2">
                           <a id="navbarDropdown" class="nav-link text-light dropdown-toggle  menuFont" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
                           <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
