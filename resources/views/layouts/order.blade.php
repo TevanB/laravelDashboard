@@ -126,11 +126,11 @@
 
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link text-light menuFont" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-light menuFont ml-5" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-light menuFont" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-light menuFont mr-3" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -152,8 +152,8 @@
                                 </div>
                             </li>
                         @endguest
-                        <li class="nav-item ml-2 mr-2">
-                          <i class="fas fa-shopping-cart white align-bottom" href="https://bmsboosting.com/cart"></i>
+                        <li class="nav-item">
+                          <i class="fas fa-shopping-cart white align-bottom ml-4 mr-4" href="https://bmsboosting.com/cart"></i>
 
                         </li>
                     </ul>
