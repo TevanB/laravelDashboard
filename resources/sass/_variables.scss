@@ -18,12 +18,58 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $bgGrey: #29292a;
+$white: #ffffff;
+
+nav-item:hover, dropdown-item:hover{
+  color: $blue
+}
+.fusion-footer-widget-area {
+    background-color: #1e1e1e;
+    border-color: #403f3f;
+    border-top-color: rgb(64, 63, 63);
+    border-right-color: rgb(64, 63, 63);
+    border-bottom-color: rgb(64, 63, 63);
+    border-left-color: rgb(64, 63, 63);
+    border-top-width: 1px;
+    padding-top: 95px;
+    padding-bottom: 85px;
+}
+.fusion-footer-parallax .fusion-footer-widget-area {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+.fusion-footer-widget-area, .fusion-footer-widget-area .jtwt, .fusion-footer-widget-area .jtwt .jtwt_tweet, .fusion-footer-widget-area .widget li.recentcomments, .fusion-footer-widget-area .widget_archive li, .fusion-footer-widget-area .widget_categories li, .fusion-footer-widget-area .widget_layered_nav li, .fusion-footer-widget-area .widget_links li, .fusion-footer-widget-area .widget_meta li, .fusion-footer-widget-area .widget_nav_menu li, .fusion-footer-widget-area .widget_pages li, .fusion-footer-widget-area .widget_product_categories li, .fusion-footer-widget-area .widget_recent_entries li, .fusion-footer-widget-area article.col {
+    color: #ededed;
+}
+.fusion-footer-widget-area {
+    overflow: hidden;
+    position: relative;
+    padding: 43px 10px 40px;
+    border-top: 12px solid #e9eaee;
+    border-top-width: 12px;
+    border-top-style: solid;
+    border-top-color: rgb(233, 234, 238);
+    background: #363839;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(54, 56, 57);
+    color: #8c8989;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 .blue{
   color: $blue;
 }
 .menuFont{
   font-family: 'Open Sans', sans-serif;
-  font-size: 36;
+  font-size: 20px;
 }
 .bggrey{
   background-color: $bgGrey;
@@ -31,7 +77,9 @@ $bgGrey: #29292a;
 .indigo{
   color: $indigo;
 }
-
+.white{
+  color: $white;
+}
 .purple{
   color: $purple;
 }

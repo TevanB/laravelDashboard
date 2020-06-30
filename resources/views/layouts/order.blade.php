@@ -101,12 +101,14 @@
                         <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com/reviews">Reviews</a>
                         </li>
-                        <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light menuFont" href="https://bmsboosting.com/team">Team</a>
-                        </li>
+
                         <li class="nav-item dropdown ml-2 mr-2">
                             <a id="navbarDropdown" class="nav-link text-light dropdown-toggle menuFont" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
                             <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/team">
+                                  Team
+                                </a>
+
                                 <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/tos">
                                     Terms of Service
                                 </a>
@@ -121,10 +123,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="nav-item ml-2 mr-2">
-                          <i class="fas fa-shopping-cart" href="https://bmsboosting.com/cart"></i>
 
-                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link text-light menuFont" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -153,12 +152,16 @@
                                 </div>
                             </li>
                         @endguest
+                        <li class="nav-item ml-2 mr-2">
+                          <i class="fas fa-shopping-cart white align-bottom" href="https://bmsboosting.com/cart"></i>
+
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main class="d-flex align-items-center bggrey">
-          <div class="container-fluid">
+        <main class="d-flex bggrey">
+          <div class="container-fluid mt-5">
           <div class="row align-items-center">
             <div class="col-1"></div>
             <div class="col align-items-center">
@@ -1357,6 +1360,49 @@
         </main>
 
     </div>
+    <footer role="contentinfo" class="fusion-footer-widget-area fusion-widget-area">
+      <div class="fusion-row">
+      <div class="fusion-columns fusion-columns-5 fusion-widget-area">
+      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
+      <section id="media_image-9" class="fusion-footer-widget-column widget widget_media_image"><img width="197" height="180" src="https://www.bmsboosting.com/wp-content/uploads/2018/07/BMS_Boosting07-2-e1507843293515.png" class="image wp-image-2077  attachment-full size-full" alt="BMS Boosting" style="max-width: 100%; height: auto;"><div style="clear:both;"></div></section> </div>
+      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
+      </div>
+      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
+      <section id="text-19" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">ELO Boosting and Coaching</h4> <div class="textwidget"><ul style="margin-top: -7px;">
+      <li><a href="https://www.bmsboosting.com/solo-division-boosting">Solo Division Boosting</a></li>
+      <li><a href="https://www.bmsboosting.com/duo-division-boosting">Duo Division Boosting</a></li>
+      <li><a href="https://www.bmsboosting.com/solo-net-wins">Solo Net Wins</a></li>
+      <li><a href="https://www.bmsboosting.com/duo-net-wins">Duo Net Wins</a></li>
+      <li><a href="https://www.bmsboosting.com/placements">Placements</a></li>
+      <li><a href="https://www.bmsboosting.com/coaching/">Coaching</a></li>
+      </ul>
+      </div>
+      <div style="clear:both;"></div></section> </div>
+      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
+      <section id="text-25" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">Account Selling</h4> <div class="textwidget"><ul>
+      <li><a href="https://www.bmsboosting.com/account-selling/">Accounts Store</a></li>
+      <li><a href="https://www.bmsboosting.com/cart/">Accounts Cart</a></li>
+      </ul>
+      </div>
+      <div style="clear:both;"></div></section><section id="text-22" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">About Us</h4> <div class="textwidget"><ul>
+      <li><a href="https://www.bmsboosting.com/reviews/">Reviews</a></li>
+      <li><a href="https://www.bmsboosting.com/team">Our Team</a></li>
+      </ul>
+      </div>
+      <div style="clear:both;"></div></section> </div>
+      <div class="fusion-column fusion-column-last col-lg-2 col-md-2 col-sm-2">
+      <section id="text-20" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">Help Centre</h4> <div class="textwidget"><ul>
+      <li><a href="https://www.bmsboosting.com/tos/">Terms of Service</a></li>
+      <li><a href="https://www.bmsboosting.com/faq/">F.A.Q.</a></li>
+      <li><a href="https://www.bmsboosting.com/contact-us">Contact Us</a></li>
+      <li><a href="https://www.bmsboosting.com/booster-applications/">Booster Applications</a></li>
+      </ul>
+      </div>
+      <div style="clear:both;"></div></section> </div>
+      <div class="fusion-clearfix"></div>
+      </div>
+      </div>
+</footer>
     <script src="{{'js/app.js'}}"></script>
     <script src="{{'./resources/js/app.js'}}"></script>
 

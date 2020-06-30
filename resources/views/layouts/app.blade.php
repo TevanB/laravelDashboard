@@ -98,12 +98,12 @@
                       <li class="nav-item ml-2 mr-2">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com/reviews">Reviews</a>
                       </li>
-                      <li class="nav-item ml-2 mr-2">
-                          <a class="nav-link text-light menuFont" href="https://bmsboosting.com/team">Team</a>
-                      </li>
+          
                       <li class="nav-item dropdown ml-2 mr-2">
                           <a id="navbarDropdown" class="nav-link text-light dropdown-toggle  menuFont" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
                           <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/team">Team</a>
+
                               <a class="dropdown-item text-light menuFont" href="https://bmsboosting.com/tos">
                                   Terms of Service
                               </a>
@@ -118,10 +118,7 @@
                               </a>
                           </div>
                       </li>
-                      <li class="nav-item ml-2 mr-2">
-                        <i class="fas fa-shopping-cart" href="https://bmsboosting.com/cart"></i>
 
-                      </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -151,6 +148,10 @@
                                 </div>
                             </li>
                         @endguest
+                        <li class="nav-item ml-2 mr-2">
+                          <i class="fas fa-shopping-cart white align-bottom" href="https://bmsboosting.com/cart"></i>
+
+                        </li>
                     </ul>
                 </div>
             </div>
