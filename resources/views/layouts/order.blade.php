@@ -1360,11 +1360,9 @@
               <section class="section wow fadeIn" data-wow-delay="0.3s">
 
                     <!--Section heading-->
-                    <h1 class="font-weight-bold text-center h1 my-5">Why is it so great?</h1>
+                    <h1 class="font-weight-bold text-center h1 my-5 text-light">New LoL ELO Boosting Experience</h1>
                     <!--Section description-->
-                    <p class="text-center grey-text mb-5 mx-auto w-responsive lead">Lorem ipsum dolor sit amet, consectetur
-                      adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas
-                      nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+                    <p class="text-center text-muted text-light mb-5 mx-auto w-responsive lead">Our team has developed a streamlined process to provide you with a stress-free experience from this page where you order your boost, to the end of your order which you can manage in your custom dashboard.</p>
 
                     <!--Grid row-->
                     <div class="row">
@@ -1375,12 +1373,11 @@
                         <!--Grid row-->
                         <div class="row mb-2">
                           <div class="col-2">
-                            <i class="fas fa-2x fa-flag-checkered indigo-text"></i>
+                            <i class="fas fa-2x fa-user-tie blue"></i>
                           </div>
                           <div class="col-10">
-                            <h5 class="font-weight-bold mb-4">International</h5>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                              nam, aperiam minima assumenda.</p>
+                            <h5 class="font-weight-bold mb-4 text-light">Management At Every Step</h5>
+                            <p class="text-secondary">Unlike other services, we designed our ordering process so our veteran management team will be monitoring and verifying the status of your order at every stage..</p>
                           </div>
                         </div>
                         <!--Grid row-->
@@ -1388,12 +1385,11 @@
                         <!--Grid row-->
                         <div class="row mb-2">
                           <div class="col-2">
-                            <i class="fas fa-2x fa-flask blue-text"></i>
+                            <i class="fas fa-2x fa-eye blue"></i>
                           </div>
                           <div class="col-10">
-                            <h5 class="font-weight-bold mb-4">Experimental</h5>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                              nam, aperiam minima assumenda.</p>
+                            <h5 class="font-weight-bold mb-4 text-light">Track Your Order</h5>
+                            <p class="text-secondary">You will be able to track your account's rank in your Order Dashboard after ordering.</p>
                           </div>
                         </div>
                         <!--Grid row-->
@@ -1401,12 +1397,11 @@
                         <!--Grid row-->
                         <div class="row mb-2">
                           <div class="col-2">
-                            <i class="fas fa-2x fa-glass-martini cyan-text"></i>
+                            <i class="fas fa-2x fa-comment-alt blue"></i>
                           </div>
                           <div class="col-10">
-                            <h5 class="font-weight-bold mb-4">Relaxing</h5>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                              nam, aperiam minima assumenda.</p>
+                            <h5 class="font-weight-bold mb-4 text-light">Chat with your booster</h5>
+                            <p class="text-secondary">After ordering, you will have a private channel to message your booster throughout the duration of the order.</p>
                           </div>
                         </div>
                         <!--Grid row-->
@@ -1426,12 +1421,11 @@
                         <!--Grid row-->
                         <div class="row mb-2">
                           <div class="col-2">
-                            <i class="fas fa-2x fa-heart deep-purple-text"></i>
+                            <i class="fas fa-2x fa-pause blue"></i>
                           </div>
                           <div class="col-10">
-                            <h5 class="font-weight-bold mb-4">Beloved</h5>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                              nam, aperiam minima assumenda.</p>
+                            <h5 class="font-weight-bold mb-4 text-light">Pause Your Order</h5>
+                            <p class="text-secondary">We offer clients the ability to pause/unpause their order for all order options.</p>
                           </div>
                         </div>
                         <!--Grid row-->
@@ -1439,12 +1433,11 @@
                         <!--Grid row-->
                         <div class="row mb-2">
                           <div class="col-2">
-                            <i class="fas fa-2x fa-bolt purple-text"></i>
+                            <i class="fas fa-2x fa-lock blue"></i>
                           </div>
                           <div class="col-10">
-                            <h5 class="font-weight-bold mb-4">Rapid</h5>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                              nam, aperiam minima assumenda.</p>
+                            <h5 class="font-weight-bold mb-4 text-light">Secure Ordering Experience</h5>
+                            <p class="text-secondary">Our ordering process was designed from scratch with a priority in User Experience and Security for a private ordering experience.</p>
                           </div>
                         </div>
                         <!--Grid row-->
@@ -1452,12 +1445,11 @@
                         <!--Grid row-->
                         <div class="row mb-2">
                           <div class="col-2">
-                            <i class="fas fa-2x fa-magic pink-text"></i>
+                            <i class="fas fa-2x fa-robot blue"></i>
                           </div>
                           <div class="col-10">
-                            <h5 class="font-weight-bold mb-4">Magical</h5>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                              nam, aperiam minima assumenda.</p>
+                            <h5 class="font-weight-bold mb-4 text-light">Automated Process</h5>
+                            <p class="text-secondary">We developed a special program that accelerates the process of getting an ELO Booster assigned to your order, and provides you with order updates to your email or dashboard.</p>
                           </div>
                         </div>
                         <!--Grid row-->
