@@ -11,7 +11,7 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "heroku-postbuild": "npm run prod",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
 
     "devDependencies": {
