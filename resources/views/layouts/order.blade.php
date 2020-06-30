@@ -173,7 +173,7 @@
               </div>
             </div>
           </div>
-          <div class="row align-items-center">
+          <div class="row align-items-center mt-5">
             <div class="col-1"></div>
             <div class="col align-items-center">
               <div class="row">
@@ -1365,7 +1365,7 @@
               </div>
             </div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-1"></div>
               <div class="col">
                 <section class="section wow fadeIn" data-wow-delay="0.3s">
