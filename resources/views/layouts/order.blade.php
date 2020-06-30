@@ -153,8 +153,9 @@
                             </li>
                         @endguest
                         <li class="nav-item">
-                          <i class="fas fa-shopping-cart white align-bottom ml-4 mr-4" href="https://bmsboosting.com/cart"></i>
-
+                          <a href="https://bmsboosting.com/cart">
+                          <i class="fas fa-shopping-cart white align-bottom ml-4 mr-4"></i>
+                          </a>
                         </li>
                     </ul>
                 </div>
@@ -1360,49 +1361,127 @@
         </main>
 
     </div>
-    <footer role="contentinfo" class="fusion-footer-widget-area fusion-widget-area">
-      <div class="fusion-row">
-      <div class="fusion-columns fusion-columns-5 fusion-widget-area">
-      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
-      <section id="media_image-9" class="fusion-footer-widget-column widget widget_media_image"><img width="197" height="180" src="https://www.bmsboosting.com/wp-content/uploads/2018/07/BMS_Boosting07-2-e1507843293515.png" class="image wp-image-2077  attachment-full size-full" alt="BMS Boosting" style="max-width: 100%; height: auto;"><div style="clear:both;"></div></section> </div>
-      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
+    <!-- Footer -->
+    <footer class="page-footer font-small bggrey pt-4">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+
+            <!-- Content -->
+            <img src="/img/profile/profile.png" width="197" height="180" alt="BMS Boosting Logo">
+
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">ELO BOOSTING AND COACHING</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.bms-dash.herokuapp.com/boosting">Boosting</a>
+              </li>
+
+              <li>
+                <a href="https://www.bmsboosting.com/coaching/">Coaching</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Account Selling</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.bmsboosting.com/account-selling/">Accounts Store</a>
+              </li>
+              <li>
+                <a href="https://www.bmsboosting.com/cart/">Accounts Cart</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+
+            <!-- Links -->
+            <h5 class="text-uppercase">About Us</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.bmsboosting.com/reviews/">Reviews</a>
+              </li>
+              <li>
+                <a href="https://www.bmsboosting.com/team">Our Team</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Help Centre</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.bmsboosting.com/tos/">Terms of Service</a>
+              </li>
+              <li>
+                <a href="https://www.bmsboosting.com/faq/">F.A.Q.</a>
+              </li>
+              <li>
+                <a href="https://www.bmsboosting.com/contact-us">Contact Us</a>
+              </li>
+              <li>
+                <a href="https://www.bmsboosting.com/booster-applications/">Booster Applications</a>
+              </li>
+            </ul>
+
+        
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
       </div>
-      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
-      <section id="text-19" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">ELO Boosting and Coaching</h4> <div class="textwidget"><ul style="margin-top: -7px;">
-      <li><a href="https://www.bmsboosting.com/solo-division-boosting">Solo Division Boosting</a></li>
-      <li><a href="https://www.bmsboosting.com/duo-division-boosting">Duo Division Boosting</a></li>
-      <li><a href="https://www.bmsboosting.com/solo-net-wins">Solo Net Wins</a></li>
-      <li><a href="https://www.bmsboosting.com/duo-net-wins">Duo Net Wins</a></li>
-      <li><a href="https://www.bmsboosting.com/placements">Placements</a></li>
-      <li><a href="https://www.bmsboosting.com/coaching/">Coaching</a></li>
-      </ul>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
       </div>
-      <div style="clear:both;"></div></section> </div>
-      <div class="fusion-column col-lg-2 col-md-2 col-sm-2">
-      <section id="text-25" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">Account Selling</h4> <div class="textwidget"><ul>
-      <li><a href="https://www.bmsboosting.com/account-selling/">Accounts Store</a></li>
-      <li><a href="https://www.bmsboosting.com/cart/">Accounts Cart</a></li>
-      </ul>
-      </div>
-      <div style="clear:both;"></div></section><section id="text-22" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">About Us</h4> <div class="textwidget"><ul>
-      <li><a href="https://www.bmsboosting.com/reviews/">Reviews</a></li>
-      <li><a href="https://www.bmsboosting.com/team">Our Team</a></li>
-      </ul>
-      </div>
-      <div style="clear:both;"></div></section> </div>
-      <div class="fusion-column fusion-column-last col-lg-2 col-md-2 col-sm-2">
-      <section id="text-20" class="fusion-footer-widget-column widget widget_text"><h4 class="widget-title" data-fontsize="14" data-lineheight="21">Help Centre</h4> <div class="textwidget"><ul>
-      <li><a href="https://www.bmsboosting.com/tos/">Terms of Service</a></li>
-      <li><a href="https://www.bmsboosting.com/faq/">F.A.Q.</a></li>
-      <li><a href="https://www.bmsboosting.com/contact-us">Contact Us</a></li>
-      <li><a href="https://www.bmsboosting.com/booster-applications/">Booster Applications</a></li>
-      </ul>
-      </div>
-      <div style="clear:both;"></div></section> </div>
-      <div class="fusion-clearfix"></div>
-      </div>
-      </div>
-</footer>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
     <script src="{{'js/app.js'}}"></script>
     <script src="{{'./resources/js/app.js'}}"></script>
 
