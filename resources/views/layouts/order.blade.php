@@ -1378,7 +1378,7 @@
                             </div>
                             <div class="col-10">
                               <h5 class="font-weight-bold mb-4 text-light">Management At Every Step</h5>
-                              <p class="text-secondary">Unlike other services, we designed our ordering process so our veteran management team will be monitoring and verifying the status of your order at every stage..</p>
+                              <p class="text-light">Unlike other services, we designed our ordering process so our veteran management team will be monitoring and verifying the status of your order at every stage..</p>
                             </div>
                           </div>
                           <!--Grid row-->
@@ -1390,7 +1390,7 @@
                             </div>
                             <div class="col-10">
                               <h5 class="font-weight-bold mb-4 text-light">Track Your Order</h5>
-                              <p class="text-secondary">You will be able to track your account's rank in your Order Dashboard after ordering.</p>
+                              <p class="text-light">You will be able to track your account's rank in your Order Dashboard after ordering.</p>
                             </div>
                           </div>
                           <!--Grid row-->
@@ -1402,7 +1402,7 @@
                             </div>
                             <div class="col-10">
                               <h5 class="font-weight-bold mb-4 text-light">Chat with your booster</h5>
-                              <p class="text-secondary">After ordering, you will have a private channel to message your booster throughout the duration of the order.</p>
+                              <p class="text-light">After ordering, you will have a private channel to message your booster throughout the duration of the order.</p>
                             </div>
                           </div>
                           <!--Grid row-->
@@ -1426,7 +1426,7 @@
                             </div>
                             <div class="col-10">
                               <h5 class="font-weight-bold mb-4 text-light">Pause Your Order</h5>
-                              <p class="text-secondary">We offer clients the ability to pause/unpause their order for all order options.</p>
+                              <p class="text-light">We offer clients the ability to pause/unpause their order for all order options.</p>
                             </div>
                           </div>
                           <!--Grid row-->
@@ -1438,7 +1438,7 @@
                             </div>
                             <div class="col-10">
                               <h5 class="font-weight-bold mb-4 text-light">Secure Ordering Experience</h5>
-                              <p class="text-secondary">Our ordering process was designed from scratch with a priority in User Experience and Security for a private ordering experience.</p>
+                              <p class="text-light">Our ordering process was designed from scratch with a priority in User Experience and Security for a private ordering experience.</p>
                             </div>
                           </div>
                           <!--Grid row-->
@@ -1450,7 +1450,7 @@
                             </div>
                             <div class="col-10">
                               <h5 class="font-weight-bold mb-4 text-light">Automated Process</h5>
-                              <p class="text-secondary">We developed a special program that accelerates the process of getting an ELO Booster assigned to your order, and provides you with order updates to your email or dashboard.</p>
+                              <p class="text-light">We developed a special program that accelerates the process of getting an ELO Booster assigned to your order, and provides you with order updates to your email or dashboard.</p>
                             </div>
                           </div>
                           <!--Grid row-->
