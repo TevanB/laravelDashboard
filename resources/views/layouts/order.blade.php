@@ -1420,7 +1420,7 @@
                         <!--Grid column-->
 
                         <!--Grid column-->
-                        <div class="col-md-4 mb-2 text-center text-md-left flex-center">
+                        <div class="col-md-4 mb-2 text-center flex-center">
                           <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0">
                         </div>
                         <!--Grid column-->
@@ -1481,7 +1481,7 @@
 
     </div>
     <!-- Footer -->
-    <footer class="page-footer font-small footerBg pt-4">
+    <footer class="page-footer font-small footerBg pt-4 footerParr">
 
       <!-- Footer Links -->
       <div class="container-fluid text-center text-md-left">
