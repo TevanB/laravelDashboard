@@ -37,8 +37,9 @@ nav-item:hover, dropdown-item:hover{
 .footerLink{
   color: $white;
 }
-.navbar{
-  overflow: auto;
+.dropdown{
+  height: auto !important;
+  overflow: visible !important;
 }
 a.footerLink:hover{
   color: #357edd;
