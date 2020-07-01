@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-signin my-5 text-dark">
-                <div class="card-title text-center">{{ __('Login') }}</div>
+                <div class="card-title text-center mt-5">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" class="form-signin" action="{{ route('login') }}">
@@ -51,9 +51,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group row mb-0 justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <button type="submit" class="btn btn-primary container-fluid">
                                     {{ __('Login') }}
                                 </button>
 
