@@ -80,10 +80,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        $user->SendEmailVerificationNotification();
         Mail::to($user->email)->send(new ClientNewRegistrationMail());
 
         $token = $user->createToken('User View Token', ['view-users', 'view-orders'])->accessToken;
+        $user->SendEmailVerificationNotification();
 
         return $user;
     }
