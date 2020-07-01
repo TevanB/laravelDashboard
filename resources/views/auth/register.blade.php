@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-signin text-dark">
+            <div class="card card-signin text-dark bg-dark">
                 <div class="card-title text-center text-light mt-5">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" class="form-signin" action="{{ route('register') }}">
                         @csrf
-
+                      <div class="form-label-group">
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -60,13 +60,13 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group invisible">
                           <input id="id" type="text" class="form-control invisible registerFormClientID" name="id" value="123">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group invisible">
                           <input id="ongoing_orders_arr" class="invisible registerFormOOA" name="ongoing_orders_arr" value="[]">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group invisible">
                           <input id="current_orders_arr" class="invisible registerFormOOA" name="current_orders_arr" value="[]">
                         </div>
                         <div class="form-group row mb-0 justify-content-center">
@@ -76,6 +76,7 @@
                                 </button>
                             </div>
                         </div>
+                      </div>
                     </form>
                 </div>
             </div>
