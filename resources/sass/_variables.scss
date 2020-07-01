@@ -47,7 +47,7 @@ nav-item:hover, dropdown-item:hover{
 }
 .carBack{
   background-image: urL("/img/mecharengar.jpg");
-   height: 500px;
+   height: 300px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -60,6 +60,12 @@ nav-item:hover, dropdown-item:hover{
 }
 .footerBg{
   background-color: #1e1e1e;
+}
+.greyBG1{
+  background-color: #c6ccd8;
+}
+.greyBG2{
+  
 }
 main{
   position: relative;
