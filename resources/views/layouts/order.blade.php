@@ -173,9 +173,9 @@
               </div>
             </div>
           </div>
-          <div class="row align-items-center mt-5">
+          <div class="row align-items-center greyBG1">
             <div class="col-1"></div>
-            <div class="col align-items-center">
+            <div class="col align-items-center  mt-5">
               <div class="row">
               <div class="col-10">
 
@@ -1367,11 +1367,11 @@
             </div>
             <div class="row mt-5">
               <div class="col-1"></div>
-              <div class="col">
+              <div class="col mb-5">
                 <section class="section wow fadeIn" data-wow-delay="0.3s">
 
                       <!--Section heading-->
-                      <h1 class="font-weight-bold text-center h1 my-5 text-light">Why Choose <a class="blue">Us?</a></h1>
+                      <h1 class="font-weight-bold text-center h1 my-5 text-light">Why Choose <a class="text-primary">Us</a>?</h1>
 
                       <!--Section description-->
                       <p class="text-center text-muted text-light mb-5 mx-auto w-responsive lead">Our team has developed a streamlined process to provide you with a stress-free experience from this page where you order your boost, to the end of your order which you can manage in your custom dashboard.</p>
