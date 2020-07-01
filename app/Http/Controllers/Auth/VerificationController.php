@@ -35,7 +35,7 @@ class VerificationController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('verified');
+        $this->middleware('auth.basic');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:10,1')->only('verify', 'resend');
     }
