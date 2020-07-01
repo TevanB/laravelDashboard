@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card text-dark">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card card-signin text-dark">
+                <div class="card-title text-center text-light mt-5">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" class="form-signin" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -69,9 +69,9 @@
                         <div class="form-group">
                           <input id="current_orders_arr" class="invisible registerFormOOA" name="current_orders_arr" value="[]">
                         </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group row mb-0 justify-content-center">
+                            <div class="col-md-6 text-center">
+                                <button type="submit" class="btn btn-primary container-fluid">
                                     {{ __('Register') }}
                                 </button>
                             </div>
