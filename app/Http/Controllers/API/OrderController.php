@@ -25,7 +25,7 @@ class OrderController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth.basic');
+        //$this->middleware('auth:api');
 
 
     }
