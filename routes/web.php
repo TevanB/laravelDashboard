@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes(['verify'=>true])->middleware('auth');
-
+Route::group(['middleware' => 'auth'], function(){
+  Auth::routes(['verify'=>true]);
+});
 Route::get('/boosting', function () {
     return view('layouts.order');
 });
