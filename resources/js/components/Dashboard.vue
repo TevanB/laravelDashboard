@@ -392,6 +392,7 @@
         created(){
           this.getUser();
           if(this.$gate.isAdmin){
+            console.log('admin orders loaded');
             this.loadOrders();
           }
         },
