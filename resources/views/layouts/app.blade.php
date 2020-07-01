@@ -157,7 +157,7 @@
             </div>
         </nav>
 
-        <main class="py-4 bg-dark">
+        <main class="py-4 greyBG1">
             @yield('content')
         </main>
 
