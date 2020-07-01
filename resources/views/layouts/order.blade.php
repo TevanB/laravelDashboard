@@ -174,7 +174,7 @@
             </div>
           </div>
           <div class="row align-items-center greyBG1">
-            <div class="row">
+            <div class="row container-fluid">
               <div class="col-1"></div>
               <div class="col align-items-center  mt-5">
                 <div class="row">

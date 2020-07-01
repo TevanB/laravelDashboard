@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 //Route::get('/boosting', 'OrderController@index')->name('home');
 
@@ -35,13 +35,13 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::get('/home', 'HomeController@index')->name('home');
 */
-Route::get('/chat', 'ChatsController@index')->name('chat')->middleware('auth');
+Route::get('/chat', 'ChatsController@index')->name('chat')->middleware('verified');
 
 
-Route::get('messages/{id}', 'ChatsController@fetchMessages')->middleware('auth');
+Route::get('messages/{id}', 'ChatsController@fetchMessages')->middleware('verified');
 
-Route::post('messages', 'ChatsController@sendMessage')->middleware('auth');
+Route::post('messages', 'ChatsController@sendMessage')->middleware('verified');
 
 //Route::get('messages/{id}', 'ChatsController@getMessage');
 
-Route::get('{path}',"HomeController@index")->where('path','([A-z\d\-\/_.]+)?')->middleware('auth');
+Route::get('{path}',"HomeController@index")->where('path','([A-z\d\-\/_.]+)?')->middleware('verified');
