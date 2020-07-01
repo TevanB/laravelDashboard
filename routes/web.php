@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
   Auth::routes(['verify'=>true, 'middleware'=>'auth']);
-  Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify'); // v6.x
-
 Route::get('/boosting', function () {
     return view('layouts.order');
 });
