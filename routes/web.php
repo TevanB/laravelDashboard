@@ -44,4 +44,4 @@ Route::post('messages', 'ChatsController@sendMessage')->middleware('verified');
 
 //Route::get('messages/{id}', 'ChatsController@getMessage');
 
-Route::get('{path}',"HomeController@index")->where('path','([A-z\d\-\/_.]+)?')->middleware('verified');
+Route::get('{path}',"HomeController@index")->where('path','([A-z\d\-\/_.]+)?')->middleware('auth');
