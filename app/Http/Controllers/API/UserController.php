@@ -70,7 +70,7 @@ class UserController extends Controller
         'password' => 'required|string|min:6'
 
       ]);
-      return User::create([
+      $user =  User::create([
         'id' => $request['id'],
         'name' => $request['name'],
         'email' => $request['email'],
@@ -84,6 +84,22 @@ class UserController extends Controller
         'ongoing_orders_arr' => $request['ongoing_orders_arr'],
         'current_orders_arr' => $request['current_orders_arr'],
       ]);
+
+      $request->request->add([
+          'grant_type'    => 'password',
+          'client_id'     => $client->id,
+          'client_secret' => $client->secret,
+          'username'      => $data['email'],
+          'password'      => $data['password'],
+          'scope'         => null,
+      ]);
+
+      // Fire off the internal request.
+      $token = Request::create(
+          'oauth/token',
+          'POST'
+      );
+      return \Route::dispatch($token);
 
     }
     public function getPort(Request $request){
