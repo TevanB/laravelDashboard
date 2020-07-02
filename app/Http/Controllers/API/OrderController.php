@@ -9,6 +9,7 @@ use App\User;
 use App\Http\Requests;
 use App\Events\OrderClaimed;
 use App\Events\NewPurchase;
+use Illuminate\Support\Facades\Gate;
 
 use App\Events\RequestBoosterChange;
 use App\Events\RequestOrderDrop;
@@ -43,6 +44,8 @@ class OrderController extends Controller
         $orders = Order::paginate(99999);
         return OrderResource::collection($orders);
         //return Order::latest()->paginate(4);
+      }else{
+        return 'Failed';
       }
     }
 
