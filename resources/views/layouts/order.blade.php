@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Elo Boosting & Professional LOL Boosting - BMSBoosting.com</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

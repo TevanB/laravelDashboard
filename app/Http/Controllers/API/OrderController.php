@@ -161,7 +161,7 @@ class OrderController extends Controller
         }
       }
       else{
-        return false;
+        return 'false';
       }
     }
 

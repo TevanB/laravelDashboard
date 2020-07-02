@@ -101,12 +101,11 @@ class CaptureOrder
       echo $user;
       if($user){
         $prevArr = $user->ongoing_orders_arr;
-        $orderNum = $user->ongoing_orders;
-        $orderNum = $orderNum + 1;
+
         array_push($prevArr, json_decode($orderObj));
         $user->update([
           'ongoing_orders_arr' => $prevArr,
-          'ongoing_orders' => $orderNum,
+          'ongoing_orders' => $user->ongoing_orders + 1,
         ]);
       }
     }
