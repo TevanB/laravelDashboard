@@ -1083,11 +1083,8 @@
           if(this.$gate.isAdmin()){
             this.loadUsers();
 
-            this.loadOrders();
-            Fire.$on('AfterCreate', ()=>{
-              this.loadUsers();
-              this.loadOrders();
-            });
+            //this.loadOrders();
+
           }
 
         }
