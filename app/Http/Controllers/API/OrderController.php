@@ -38,9 +38,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-      if( Gate::allows('isAdmin') || Gate::allows('isBooster') || Gate::allows('isCoach')){
+      if( \Gate::allows('isAdmin') || \Gate::allows('isBooster') || \Gate::allows('isCoach')){
 
-        $orders = Order::paginate(999999999);
+        $orders = Order::paginate(99999);
         return OrderResource::collection($orders);
         //return Order::latest()->paginate(4);
       }
