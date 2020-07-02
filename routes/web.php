@@ -22,7 +22,9 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-
+Route::get( '/logged-in', function(){
+  return redirect('/dashboard');
+});
 
 
 
