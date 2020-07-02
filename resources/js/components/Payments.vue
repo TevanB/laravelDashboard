@@ -640,7 +640,7 @@
 
 
               })
-              axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
+              /*axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
                 let response = data.data.data;
 
                 console.log(response);
@@ -657,6 +657,7 @@
                 }
 
                 });
+                */
               }
         },
         updated(){
@@ -1082,7 +1083,7 @@
         },
         created(){
           if(this.$gate.isAdmin()){
-            this.loadUsers();
+            //this.loadUsers();
 
             //this.loadOrders();
 
