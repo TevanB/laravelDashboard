@@ -224,25 +224,26 @@
           axios.get("api/me").then((data)=>{
             this.user.fill(data.data);
             if(data.data.ongoing_orders < 3){
-              this.user.ongoing_orders = this.user.ongoing_orders + 1;
+              //this.user.ongoing_orders = this.user.ongoing_orders + 1;
 
-              let arr1 = this.user.ongoing_orders_arr;
-              if(!this.user.ongoing_orders_arr){
-                arr1 = [];
-              }
-              this.user.ongoing_orders_arr = arr1;
+              //let arr1 = this.user.ongoing_orders_arr;
+              //if(!this.user.ongoing_orders_arr){
+              //  arr1 = [];
+              //}
+              //this.user.ongoing_orders_arr = arr1;
 
               this.form.booster_id = data.data.id;
               order.booster_id = data.data.id;
               this.form.order_status = 'claimed';
-              order.order_status = 'claimed';
-              console.log(this.user.ongoing_orders);
-              console.log(order);
-              arr1.push(order);
+              //order.order_status = 'claimed';
+              //console.log(this.user.ongoing_orders);
+              //console.log(order);
+              //arr1.push(order);
 
               this.form.put('api/order/'+order.order_id)
-              .then(()=>{
+              .then((data)=>{
                 //successful
+                if(data.data != 'false'){
                 $('#addNew').modal('hide');
                 swal.fire(
                   'Claimed!',
@@ -256,18 +257,20 @@
                 });
                 this.$Progress.finish();
                 Fire.$emit('AfterCreate');
+                }else{
+                  swal.fire(
+                    'Error',
+                    'This order has already been claimed',
+                    'error'
+                  )
+                }
+
               })
               .catch(()=>{
                 this.$Progress.fail();
               });
-              axios.put('api/me', this.user)
-              .then(()=>{
 
-              })
-              .catch(()=>{
 
-              });
-              //data.data.put('api/user/'+data.data.id);
             }
             else{
               $('#addNew').modal('hide');

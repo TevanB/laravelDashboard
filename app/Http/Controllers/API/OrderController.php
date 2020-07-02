@@ -130,22 +130,38 @@ class OrderController extends Controller
       ]);
     }
     public function claim(Request $request, $id){
-
+      //assumes user order limit already checked
       $order = Order::findOrFail($id);
-      $order->booster_id = $request->input('booster_id');
 
 
-      $order->order_status = $request->input('order_status');
 
-      $client = User::findOrFail($order->client_id);
 
-      //if($request->input('order_status') == "claimed"){
-        Mail::to($client->email)->send(new ClientClaimOrderMail($order));
-      //}else if($request->input('order_status') == "completed"){
-      broadcast(new OrderClaimed($order->order_id))->toOthers();
-      //}
-      if($order->save()){
-        return new OrderResource($order);
+      if($order->order_status != 'claimed'){
+          $order->booster_id = $request->input('booster_id');
+
+          $order->order_status = 'claimed';
+          $booster = User::findOrFail($order->booster_id);
+          $ongoingOrderArr = $booster->ongoing_orders_arr;
+          array_push($ongoingOrderArr, $order);
+          $booster->update([
+            'ongoing_orders' => $booster->ongoing_orders + 1,
+            'ongoing_orders_arr' => $ongoingOrderArr,
+
+          ]);
+
+          $client = User::findOrFail($order->client_id);
+
+          //if($request->input('order_status') == "claimed"){
+          Mail::to($client->email)->send(new ClientClaimOrderMail($order));
+          //}else if($request->input('order_status') == "completed"){
+          broadcast(new OrderClaimed($order->order_id))->toOthers();
+        //}
+        if($order->save()){
+          return new OrderResource($order);
+        }
+      }
+      else{
+        return false;
       }
     }
 
