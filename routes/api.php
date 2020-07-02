@@ -22,6 +22,10 @@ Route::middleware(['auth:api'])->get('/user', function (Request $request) {
     return $request->order();
 });*/
 //Route::apiResources(['order'=>'API\OrderController']);
+Route::middleware(['auth:api'])->group(function(){
+
+
+
 Route::group(['middleware' => 'throttle:55,1'], function(){
 
 
@@ -86,4 +90,5 @@ Route::delete('order/{id}', 'API\OrderController@destroy');
 
 });
 */
+});
 });
