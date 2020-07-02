@@ -583,23 +583,7 @@
               }
             }
 
-              axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
-                let response = data.data.data;
 
-                console.log(response);
-                for(let i=0; i<response.length; i++){
-                  if(response[i].order_status == 'reassign'){
-                  $('#reassignAlerts').append(
-                  "<div class='alert alert-warning alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Reassign Request!</h5>Reassign request from Order # "+ response[i].order_id +" .</div>");
-
-                  }else if(response[i].order_status == 'verify'){
-                  $('#doneAlerts').append(
-                  "<div class='alert alert-success alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-check'></i> Completion Request!</h5>Completion request from Order # "+ response[i].order_id +" .</div>");
-
-                  }
-                }
-
-                });
 
 
             window.Echo.private('reassign')
@@ -656,6 +640,23 @@
 
 
               })
+              axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
+                let response = data.data.data;
+
+                console.log(response);
+                for(let i=0; i<response.length; i++){
+                  if(response[i].order_status == 'reassign'){
+                  $('#reassignAlerts').append(
+                  "<div class='alert alert-warning alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Reassign Request!</h5>Reassign request from Order # "+ response[i].order_id +" .</div>");
+
+                  }else if(response[i].order_status == 'verify'){
+                  $('#doneAlerts').append(
+                  "<div class='alert alert-success alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-check'></i> Completion Request!</h5>Completion request from Order # "+ response[i].order_id +" .</div>");
+
+                  }
+                }
+
+                });
               }
         },
         updated(){
