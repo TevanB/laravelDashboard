@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get( '/logged-in', function(){
-  return redirect('/dashboard');
+  return redirect('https://bms-dash.herokuapp.com/dashboard');
 });
 
 
