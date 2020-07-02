@@ -59,14 +59,15 @@ class AuthServiceProvider extends ServiceProvider
 
 
         Passport::routes();
-        Passport::personalAccessClientId(
+        /*Passport::personalAccessClientId(
           config('passport.personal_access_client.id')
         );
         Passport::personalAccessClientSecret(
           config('passport.personal_access_client.secret')
         );
 
-        //Passport::enableImplicitGrant();
+        Passport::enableImplicitGrant();
+        */
         //
     }
 }
