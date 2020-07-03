@@ -35,6 +35,6 @@ class AdminNewOrderMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.adminneworder');
+        return $this->subject('BMS Boosting New Order')->markdown('emails.adminneworder');
     }
 }

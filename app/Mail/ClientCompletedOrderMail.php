@@ -29,6 +29,6 @@ class ClientCompletedOrderMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.clientcompletedorder');
+        return $this->subject('BMS Boosting Order Completion')->markdown('emails.clientcompletedorder');
     }
 }

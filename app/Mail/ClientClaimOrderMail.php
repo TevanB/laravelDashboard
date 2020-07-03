@@ -29,6 +29,6 @@ class ClientClaimOrderMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.clientclaimorder');
+        return $this->subject('BMS Boosting Order Claimed')->markdown('emails.clientclaimorder');
     }
 }

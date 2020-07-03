@@ -28,6 +28,6 @@ class NewOrderMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->subject('New Order from BMS Boosting')->view('view.name');
     }
 }

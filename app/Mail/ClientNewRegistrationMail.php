@@ -28,6 +28,6 @@ class ClientNewRegistrationMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.clientnewregistration');
+        return $this->subject('BMS Boosting Account Registration')->markdown('emails.clientnewregistration');
     }
 }
