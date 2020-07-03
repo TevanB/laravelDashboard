@@ -207,7 +207,7 @@
           let tempObj = JSON.parse(input);
           if(tempObj){
           let arr = tempObj.extras;
-          let result = tempObj.rank + "| ";
+          let result = (tempObj.region).toUpperCase() + " | ";
           for(let i=0; i<arr.length; i++){
             result += arr[i];
             if(i != arr.length-1){
