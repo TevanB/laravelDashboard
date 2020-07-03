@@ -124,7 +124,7 @@
 </template>
 
 <script>
-    import Howl from 'howler';
+    require('howler');
     import Form from 'vform';
     export default {
     data(){
