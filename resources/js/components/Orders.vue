@@ -335,7 +335,7 @@
               .listen('new-purchase', (e) => {
               that.loadOrders();
               var sound = new Howl({
-                src: 'https://bms-dash.herokuapp.com/assets/sounds/claim1.mp3',
+                src: 'https://bms-dash.herokuapp.com/assets/sounds/claim2.mp3',
                 autoplay: true,
                 loop: false,
                 onend: function(){
