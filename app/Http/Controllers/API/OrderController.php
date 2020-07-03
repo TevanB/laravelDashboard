@@ -45,7 +45,7 @@ class OrderController extends Controller
         return OrderResource::collection($orders);
         //return Order::latest()->paginate(4);
       }else{
-        return 'failed';
+        return 'fail';
       }
     }
 
@@ -152,10 +152,11 @@ class OrderController extends Controller
 
           ]);
 
-          $client = User::findOrFail($order->client_id);
-
+          $client = User::find($order->client_id);
+          if($client){
           //if($request->input('order_status') == "claimed"){
-          Mail::to($client->email)->send(new ClientClaimOrderMail($order));
+            Mail::to($client->email)->send(new ClientClaimOrderMail($order));
+          }
           //}else if($request->input('order_status') == "completed"){
           broadcast(new OrderClaimed($order->order_id))->toOthers();
         //}
