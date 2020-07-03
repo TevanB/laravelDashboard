@@ -770,7 +770,7 @@
             let that = this;
             $.ajax({
               method: 'GET',
-              url: 'https://bms-dash.herokuapp.com:8001/rankings/'+JSON.parse(oObj.order_message).summoner_name,
+              url: 'https://bms-dash-node.herokuapp.com/rankings/'+JSON.parse(oObj.order_message).summoner_name+'/'+JSON.parse(oObj.order_message).region,
               success: function(data){
                 let ranks = ['I4', 'I3', 'I2', 'I1', 'B4', 'B3', 'B2', 'B1', 'S4', 'S3', 'S2', 'S1', 'G4', 'G3', 'G2', 'G1', 'P4', 'P3', 'P2', 'P1', 'D4', 'D3', 'D2', 'D1', "M", 'GM', 'C'];
                 let ranks2 = ['Iron 4', 'Iron 3', 'Iron 2', 'Iron 1', 'Bronze 4', 'Bronze 3', 'Bronze 2', 'Bronze 1', 'Silver 4', 'Silver 3', 'Silver 2', 'Silver 1', 'Gold 4', 'Gold 3', 'Gold 2', 'Gold 1', 'Platinum 4', 'Platinum 3', 'Platinum 2', 'Platinum 1', 'Diamond 4', 'Diamond 3', 'Diamond 2', 'Diamond 1', "Master", 'GM', 'C'];

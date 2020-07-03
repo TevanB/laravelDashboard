@@ -124,6 +124,7 @@
 </template>
 
 <script>
+    require('howler');
     import Form from 'vform'
     export default {
     data(){
@@ -333,6 +334,14 @@
             window.Echo.private('purchase')
               .listen('new-purchase', (e) => {
               that.loadOrders();
+              var sound = new Howl({
+                src: 'https://bms-dash.herokuapp.com/assets/sounds/claim1.mp3',
+                autoplay: true,
+                loop: false,
+                onend: function(){
+                  console.log('end')
+                }
+              });
 
 
 
