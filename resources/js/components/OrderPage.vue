@@ -853,7 +853,7 @@ import json from './output.json';
 
                 }
               }
-              if((this.fullRankCurrent === this.fullRankEnd) &&( this.fullRankEnd)){
+              if((this.fullRankCurrent >= this.fullRankEnd) &&( this.fullRankEnd)){
                 console.log(this.fullRankCurrent + " " + this.fullRankEnd);
                 thisRef.requestComplete();
               }
