@@ -68,11 +68,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md bggrey shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="https://bmsboosting.com">
                     <img src="/img/profile/profile.png" width="197" height="180" alt="BMS Boosting Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="fas fa-bars white"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent1">

@@ -29,7 +29,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars white"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="https://www.bmsboosting.com" class="nav-link">BMS Home</a>
