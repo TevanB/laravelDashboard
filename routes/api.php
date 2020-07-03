@@ -54,7 +54,7 @@ Route::put('orderRe', 'API\OrderController@createRe');
 Route::put('drop/{id}', 'API\OrderController@dropRequest');
 Route::put('requestComplete/{id}', 'API\OrderController@requestComplete');
 Route::put('requestAllPayouts/{id}', 'API\OrderController@requestAllPayouts');
-
+Route::put('pause/{id}', 'API\OrderController@pauseOrder');
 Route::post('create-paypal-transaction', 'PaypalRelated\CreateOrder@createOrder');
 Route::post('get-paypal-transaction', 'PaypalRelated\GetOrder@getOrder');
 Route::post('capture-paypal-transaction', 'PaypalRelated\CaptureOrder@captureOrder');

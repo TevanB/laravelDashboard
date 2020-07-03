@@ -367,6 +367,19 @@ echo(json_encode($boosterOrderArr1)."\n");
       );
       return $result;
     }
+    public function pauseOrder(Request $request, $id){
+      $order = Order::findOrFail($id);
+      if($order->order_status == 'paused'){
+        $order->update([
+          'order_status' => 'claimed'
+        ]);
+      }else{
+        $order->update([
+          'order_status' => 'paused'
+        ]);
+      }
+      return $order;
+    }
     public function dropRequest(Request $request, $id){
       $order = Order::findOrFail($id);
       $booster = User::findOrFail($order->booster_id);

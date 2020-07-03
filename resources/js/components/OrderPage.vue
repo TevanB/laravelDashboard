@@ -1084,7 +1084,7 @@ import json from './output.json';
             if(this.form.order_status !== 'unclaimed' && this.form.order_status !== 'verify'){
               if(this.form.order_status === 'paused'){
                 this.form.order_status = 'claimed';
-                axios.put("https://bms-dash.herokuapp.com/api/order/"+this.form.order_id, this.form).then((data)=>{
+                axios.put("https://bms-dash.herokuapp.com/api/pause/"+this.form.order_id, this.form).then((data)=>{
                   console.log(data);
                   swal.fire(
                     'Order Resumed',
