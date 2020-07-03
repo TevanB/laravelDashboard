@@ -125,7 +125,7 @@
 
 <script>
     import Howl from 'howler';
-    import Form from 'vform'
+    import Form from 'vform';
     export default {
     data(){
      return{
@@ -338,9 +338,7 @@
                 src: 'https://bms-dash.herokuapp.com/assets/sounds/claim2.mp3',
                 autoplay: true,
                 loop: false,
-                onend: function(){
-                  console.log('end')
-                }
+
               });
               sound.play();
 
