@@ -36,6 +36,6 @@ class ClientNewOrderMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('BMS Boosting Order Confirmation (ID: '+$order->order_id+')')->markdown('emails.clientneworder');
+        return $this->subject('BMS Boosting Order Confirmation (ID: '+$this->order->order_id+')')->markdown('emails.clientneworder');
     }
 }
