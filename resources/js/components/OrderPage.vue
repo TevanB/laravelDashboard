@@ -1098,8 +1098,8 @@ import json from './output.json';
             axios.put("https://bms-dash.herokuapp.com/api/pause/"+this.form.order_id, this.form).then((data)=>{
               console.log(data);
               swal.fire(
-                'Order Resumed',
-                'This order has been resumed.',
+                'Order Pause Toggled',
+                'The pause status of this order has been toggled.',
                 'success'
               ).then((result)=>{
                 if(result.value){
