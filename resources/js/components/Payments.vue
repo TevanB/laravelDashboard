@@ -658,15 +658,16 @@
 
                 });
                 */
+                for(let i=0; i<this.users.length; i++){
+                  if(this.users[i].type === 'admin'){
+                    this.adminUser = this.users[i];
+                  }
+                }
               }
         },
         updated(){
 
-          /*for(let i=0; i<this.users.length; i++){
-            if(this.users[i].type === 'admin'){
-              this.adminUser = this.users[i];
-            }
-          }*/
+
         },
         methods:{
           loadUsers(){
