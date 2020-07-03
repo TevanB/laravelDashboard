@@ -44,6 +44,7 @@ Vue.use(VueRouter);
 
 import VueProgressBar from 'vue-progressbar';
 
+import Howl from 'howler';
 
 
 Vue.use(VueProgressBar, {
@@ -176,7 +177,7 @@ const app = new Vue({
     router,
     data: {
         messages: [],
-        
+
     },
 
     created() {

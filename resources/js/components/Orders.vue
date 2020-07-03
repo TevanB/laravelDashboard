@@ -124,7 +124,7 @@
 </template>
 
 <script>
-    require('howler');
+    import Howl from 'howler';
     import Form from 'vform'
     export default {
     data(){
@@ -342,6 +342,7 @@
                   console.log('end')
                 }
               });
+              sound.play();
 
 
 
