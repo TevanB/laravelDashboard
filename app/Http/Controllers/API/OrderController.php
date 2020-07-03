@@ -400,7 +400,7 @@ echo(json_encode($boosterOrderArr1)."\n");
       ]);
       broadcast(new RequestOrderDrop($id))->toOthers();
 
-      return $boosterOrderArr
+      return $boosterOrderArr;
     }
     public function reassignOrder(Request $request, $id){
       $tempOrder1 = Order::findOrFail($id);
