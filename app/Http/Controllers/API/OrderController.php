@@ -387,7 +387,7 @@ echo(json_encode($boosterOrderArr1)."\n");
       foreach($boosterOrderArr as $key => $item){
         //echo(json_encode($item)."\n");
         if($item['order_id'] == $id){
-          $item['order_status'] = 'request_drop';
+          $boosterOrderArr[$key]['order_status'] = 'request_drop';
           //echo("match" . "\n");
           //echo(json_encode($key) ."\n");
           break;
@@ -400,7 +400,7 @@ echo(json_encode($boosterOrderArr1)."\n");
       ]);
       broadcast(new RequestOrderDrop($id))->toOthers();
 
-
+      return $boosterOrderArr
     }
     public function reassignOrder(Request $request, $id){
       $tempOrder1 = Order::findOrFail($id);
