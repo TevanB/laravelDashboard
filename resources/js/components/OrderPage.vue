@@ -1081,57 +1081,35 @@ import json from './output.json';
           },
           pauseOrder(){
 
-            if(this.form.order_status !== 'unclaimed' && this.form.order_status !== 'verify'){
-              if(this.form.order_status === 'paused'){
-                this.form.order_status = 'claimed';
-                axios.put("https://bms-dash.herokuapp.com/api/pause/"+this.form.order_id, this.form).then((data)=>{
-                  console.log(data);
-                  swal.fire(
-                    'Order Resumed',
-                    'This order has been resumed.',
-                    'success'
-                  ).then((result)=>{
-                    if(result.value){
-                      //this.refreshPage();
+          if(this.form.order_status == 'unclaimed'){
+              swal.fire(
+                'Pause Error',
+                'You cannot pause while the order is unclaimed.',
+                'error'
+              ).then((result)=>{
+                if(result.value){
+                  //this.refreshPage();
 
-                    }
-                  });
-                });
-              }
-              else{
-                this.form.order_status = 'paused';
-                axios.put("https://bms-dash.herokuapp.com/api/order/"+this.form.order_id, this.form).then((data)=>{
-                  console.log(data);
-                  swal.fire(
-                    'Order Paused',
-                    'This order has been paused. There are penalties if an order is paused for too long or the pause feature is being abused/used too often.',
-                    'success'
-                  ).then((result)=>{
-                    if(result.value){
-                      //this.refreshPage();
+                }
+              });
+          }else{
 
-                    }
-                  });
-                });
-              }
 
-            }else{
-              if(this.form.order_status === 'unclaimed'){
-                swal.fire(
-                  'Order Unclaimed',
-                  'This order has not been claimed by a booster yet. You cannot pause an unclaimed order.',
-                  'error'
-                )
-              }else{
-                swal.fire(
-                  'Verification In Progress',
-                  'This order has been marked as complete by the booster, awaiting confirmation from administration.',
-                  'error'
-                )
-              }
+            axios.put("https://bms-dash.herokuapp.com/api/pause/"+this.form.order_id, this.form).then((data)=>{
+              console.log(data);
+              swal.fire(
+                'Order Resumed',
+                'This order has been resumed.',
+                'success'
+              ).then((result)=>{
+                if(result.value){
+                  //this.refreshPage();
+
+                }
+              });
+            });
+
             }
-            Fire.$emit('AfterCreate');
-
           }
 
 
