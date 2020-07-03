@@ -29,7 +29,7 @@ nav-item:hover, dropdown-item:hover{
 @media (min-width: 768px){
   .navbar-expand-md
   .navbar-nav .dropdown-menu{
-    position:static;
+    position:absolute;
   }
 }
 .container{
