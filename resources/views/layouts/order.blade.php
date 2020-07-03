@@ -1425,7 +1425,7 @@
 
                         <!--Grid column-->
                         <div class="col-md-4 mb-2 text-center flex-center">
-                          <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0">
+                          <img src="https://bms-dash.herokuapp.com/img/macbookad.png" alt="" class="z-depth-0">
                         </div>
                         <!--Grid column-->
 
