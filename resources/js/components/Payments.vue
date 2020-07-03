@@ -658,11 +658,7 @@
 
                 });
                 */
-                for(let i=0; i<this.users.length; i++){
-                  if(this.users[i].type === 'admin'){
-                    this.adminUser = this.users[i];
-                  }
-                }
+
               }
         },
         updated(){
@@ -674,7 +670,13 @@
             if(this.$gate.isAdmin){
 
 
-            axios.get("https://bms-dash.herokuapp.com/api/user").then((data)=>{console.log(data.data.data); this.users=data.data.data});
+            axios.get("https://bms-dash.herokuapp.com/api/user").then((data)=>{console.log(data.data.data); this.users=data.data.data;
+            for(let i=0; i<this.users.length; i++){
+              if(this.users[i].type === 'admin'){
+                this.adminUser = this.users[i];
+              }
+            }
+            });
 
 
             }
