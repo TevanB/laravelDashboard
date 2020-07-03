@@ -23,6 +23,15 @@ $white: #ffffff;
 nav-item:hover, dropdown-item:hover{
   color: $blue
 }
+.dropdown-menu.show{
+  display: inline;
+}
+@media (min-width: 768px){
+  .navbar-expand-md
+  .navbar-nav .dropdown-menu{
+    position:static;
+  }
+}
 .parallax {
   /* The image used */
 
