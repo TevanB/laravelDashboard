@@ -19,7 +19,7 @@ Route::get('/boosting', function () {
 
 
 Route::get('/', function () {
-    return redirect('https://app.bmsboosting.com');
+    return redirect('https://www.bmsboosting.com');
 });
 
 Route::get( 'https://app.bmsboosting.com/logged-in', function(){
