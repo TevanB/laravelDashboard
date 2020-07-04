@@ -159,7 +159,6 @@ class UserController extends Controller
         //$user->update($request->all());
         $user->update([
           'name' => $request->name,
-          'email' => $request->email,
           'type' => $request->type,
           'bio' => $request->bio,
           'photo' => $request->photo,
