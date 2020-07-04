@@ -1,6 +1,6 @@
 <template>
   <li class="nav-item has-treeview">
-    <a class="nav-link">
+    <a href="" class="nav-link">
       <i class="nav-icon fas fa-gavel blue"></i>
       <p>
           My Orders
