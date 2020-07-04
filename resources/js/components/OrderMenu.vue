@@ -84,7 +84,7 @@
       },
       },
       created(){
-        this.loadOrders();
+        //this.loadOrders();
         this.getUser();
         console.log(this.orders);
 
