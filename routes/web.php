@@ -26,6 +26,9 @@ Route::get( 'https://app.bmsboosting.com/logged-in', function(){
   return redirect('https://app.bmsboosting.com/dashboard');
 });
 
+Route::get('/resources/js/app.js', function () {
+    return redirect('https://app.bmsboosting/dashboard');
+});
 
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
