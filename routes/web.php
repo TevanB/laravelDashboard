@@ -27,7 +27,7 @@ Route::get( 'https://app.bmsboosting.com/logged-in', function(){
 });
 
 Route::get('/resources/js/app.js', function () {
-    return redirect('https://app.bmsboosting/dashboard');
+    return redirect('https://app.bmsboosting.com/dashboard');
 });
 
 
