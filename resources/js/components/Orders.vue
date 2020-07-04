@@ -30,7 +30,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="order in filterClaimed(orders)" :key="order.order_id">
+                <tr v-for="order in filterClaimed([orders])" :key="order.order_id">
 
                   <td>{{order.order_id}}</td>
                   <td>{{order.order_type}}</td>
@@ -173,7 +173,7 @@
 
         filterClaimed(items){
 
-
+          console.log(items);
           if(items){
             let items2 = items;
             let result= [];
