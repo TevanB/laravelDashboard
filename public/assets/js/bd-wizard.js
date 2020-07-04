@@ -261,6 +261,12 @@ function changeStep(){
 //make one that takes order info and returns price
 //paypal
 
+$('.navbar-nav li a').on('click', function(){
+    if(!$( this ).hasClass('dropdown-toggle')){
+        $('.navbar-collapse').collapse('hide');
+    }
+});
+
 //Form control
 //below runs when started
 $('.actions').hide();
