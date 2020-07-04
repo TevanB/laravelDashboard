@@ -22,7 +22,7 @@ Route::get('/', function () {
     return redirect('https://www.bmsboosting.com');
 });
 
-Route::get( 'https://app.bmsboosting.com/logged-in', function(){
+Route::get( '/logged-in', function(){
   return redirect('https://app.bmsboosting.com/dashboard');
 });
 
