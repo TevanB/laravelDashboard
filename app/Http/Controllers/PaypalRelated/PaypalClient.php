@@ -4,7 +4,7 @@ namespace App\Http\Controllers\PaypalRelated;
 
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
 use PayPalCheckoutSdk\Core\SandboxEnvironment;
-use PayPalCheckoutSdk\Core\LiveEnvironment;
+use PayPalCheckoutSdk\Core\ProductionEnvironment;
 
 ini_set('error_reporting', E_ALL); // or error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -24,12 +24,12 @@ class PayPalClient
 
     /**
      * Set up and return PayPal PHP SDK environment with PayPal access credentials.
-     * This sample uses SandboxEnvironment. In production, use LiveEnvironment.
+     * This sample uses SandboxEnvironment. In production, use ProductionEnvironment.
      */
     public static function environment()
     {
         $clientId = env("PAYPAL_CLIENT");
         $clientSecret = getenv("PAYPAL_SECRET");
-        return new LiveEnvironment($clientId, $clientSecret);
+        return new ProductionEnvironment($clientId, $clientSecret);
     }
 }
