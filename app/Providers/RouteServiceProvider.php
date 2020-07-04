@@ -23,7 +23,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/logged-in';
+    public const HOME = 'https://app.bmsboosting.com/logged-in';
 
     /**
      * Define your route model bindings, pattern filters, etc.

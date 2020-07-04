@@ -22,7 +22,7 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-Route::get( '/logged-in', function(){
+Route::get( 'https://app.bmsboosting.com/logged-in', function(){
   return redirect('https://app.bmsboosting.com/dashboard');
 });
 

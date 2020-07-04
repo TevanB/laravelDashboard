@@ -83,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <router-link to="/dashboard" class="nav-link">
+              <router-link to="https://app.bmsboosting.com/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt blue"></i>
                 <p>
                   Dashboard
@@ -114,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             @can('isAdmin')
             <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
+              <a class="nav-link">
                 <i class="nav-icon fas fa-cog blue"></i>
                 <p>
                   Management
