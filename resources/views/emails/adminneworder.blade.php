@@ -11,7 +11,7 @@
 | Order Type        | {{$type}} |
 | Order Info        | {{$info}} |
 | Order Price     | ${{$order->order_price}} USD |
-| Order Region     | ${{$message->region}} |
+| Order Region     | {{strtoupper($message->region)}} |
 | Order Username     | {{$message->username}} |
 | Order Password     | {{$message->password}} |
 | Order Client Email     | {{$message->email}} |
