@@ -30,7 +30,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="order in filterClaimed([orders])" :key="order.order_id">
+                <tr v-for="order in filterClaimed(orders)" :key="order.order_id">
 
                   <td>{{order.order_id}}</td>
                   <td>{{order.order_type}}</td>
@@ -175,7 +175,7 @@
 
           console.log(items);
           if(items){
-            let items2 = items;
+            let items2 = items.data;
             let result= [];
             for(let i=0; i<items2.length; i++){
               if(items2[i].order_status=='unclaimed'){
