@@ -173,13 +173,14 @@
 
         filterClaimed(items){
 
-          console.log(items);
           if(items){
             let items2 = items.data;
             let result= [];
-            for(let i=0; i<items2.length; i++){
-              if(items2[i].order_status=='unclaimed'){
-                result.push(items2[i]);
+            if(items2){
+              for(let i=0; i<items2.length; i++){
+                if(items2[i].order_status=='unclaimed'){
+                  result.push(items2[i]);
+                }
               }
             }
             let result2 = result.reverse();
