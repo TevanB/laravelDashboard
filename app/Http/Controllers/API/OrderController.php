@@ -48,6 +48,27 @@ class OrderController extends Controller
         return 'fail';
       }
     }
+    public function index2()
+    {
+      if( \Gate::allows('isAdmin') || \Gate::allows('isBooster') || \Gate::allows('isCoach')){
+
+        $orders = Order::paginate(99999);
+        $result = array();
+        foreach($orders as $order){
+          $tempOrder = $order;
+          $tempOrder->order_message->email = '';
+          $tempOrder->order_message->username = '';
+          $tempOrder->order_message->password = '';
+          $tempOrder->order_message->discord = '';
+          $tempOrder->order_message->summoner_name = '';
+          array_push($result, $tempOrder);
+        }
+        return json_encode($result);
+        //return Order::latest()->paginate(4);
+      }else{
+        return 'fail';
+      }
+    }
 
     /**
      * Store a newly created resource in storage.

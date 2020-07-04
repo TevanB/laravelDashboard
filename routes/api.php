@@ -38,6 +38,7 @@ Route::apiResources(['profile'=>'API\UserController']);
 Route::put('order/{id}', 'API\OrderController@claim');
 Route::get('orderinfo/{id}', 'API\OrderController@orderInfo');
 Route::put('orders', 'API\OrderController@create');
+Route::get('ordersF', 'API\OrderController@index2');
 Route::get('profile', 'API\UserController@profile');
 //Route::post('profile', 'API\UserController@val');
 Route::put('profile', 'API\UserController@updateProfile');

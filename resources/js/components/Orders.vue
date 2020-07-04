@@ -313,7 +313,10 @@
           if(this.$gate.isAdmin){
 
 
-          axios.get("api/orders").then((data)=>(this.orders=data));
+          axios.get("api/orders2").then((data)=>{
+            this.orders=data;
+            console.log(data);
+          });
           }
         },
         createOrder(){
