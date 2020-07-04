@@ -1033,7 +1033,7 @@
                           'currency': 'USD'
                         },
                         'recipient_wallet': 'PAYPAL',
-                        'receiver': 'sb-j1fos1250972@personal.example.com',
+                        'receiver': person.email,
                       }
                     ]
                   }

@@ -16,7 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="/css/adminlte.css">
 <link rel="stylesheet" href="/css/adminlte.min.css">
 
-<script src='https://www.paypal.com/sdk/js?client-id=AU_f6op8E-Ijt-00jtij_n1JguJt66CYxoihZPNJM-MdGiD9qQU5s1wF2S_oD5ksJcrwe5-b6S7PPE25'>
+<script src='https://www.paypal.com/sdk/js?client-id=AUhiAnfqWuMkr2u63RKODnJQojrQ6YmwhOUaU7fEjFQRDfEH5SIXulUKxQnMUloUR7Tv6MzaYX83M8xA'>
 
 </script>
 
