@@ -15,6 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="/css/app.css">
 <link rel="stylesheet" href="/css/adminlte.css">
 <link rel="stylesheet" href="/css/adminlte.min.css">
+<link rel="icon" href="https://app.bmsboosting.com/img/logo.png">
 
 <script src='https://www.paypal.com/sdk/js?client-id=AUhiAnfqWuMkr2u63RKODnJQojrQ6YmwhOUaU7fEjFQRDfEH5SIXulUKxQnMUloUR7Tv6MzaYX83M8xA'>
 

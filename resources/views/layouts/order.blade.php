@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Elo Boosting & Professional LOL Boosting - BMSBoosting.com</title>
-
+    <link rel="icon" href="https://app.bmsboosting.com/img/logo.png">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
