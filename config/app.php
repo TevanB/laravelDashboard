@@ -59,7 +59,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://bms-dash.herokuapp.com'),
+    'url' => env('APP_URL', 'https://app.bmsboosting.com'),
 
     'asset_url' => env('ASSET_URL', null),
 

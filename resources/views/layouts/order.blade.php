@@ -90,7 +90,7 @@
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
-                            <a class="nav-link text-light menuFont" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
+                            <a class="nav-link text-light menuFont" href="https://app.bmsboosting.com/boosting">{{ __('Boosting') }}</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com/coaching">Coaching</a>
@@ -1425,7 +1425,7 @@
 
                         <!--Grid column-->
                         <div class="col-md-4 mb-2 text-center flex-center">
-                          <img src="https://bms-dash.herokuapp.com/img/macbook-mockup-png-3.png" alt="" class="z-depth-0 mt-5">
+                          <img src="https://app.bmsboosting.com/img/macbook-mockup-png-3.png" alt="" class="z-depth-0 mt-5">
                         </div>
                         <!--Grid column-->
 
@@ -1620,7 +1620,7 @@
           if(discountedPrice > 0){
             reqPrice = discountedPrice;
           }
-        return fetch('https://bms-dash.herokuapp.com/api/create-paypal-transaction', {
+        return fetch('https://app.bmsboosting.com/api/create-paypal-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
@@ -1658,7 +1658,7 @@
         console.log(data);
         setupOrdersArr();
 
-        return fetch('https://bms-dash.herokuapp.com/api/capture-paypal-transaction', {
+        return fetch('https://app.bmsboosting.com/api/capture-paypal-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
@@ -1685,7 +1685,7 @@
           if(!accountExists){
             modalActivity();
           }else{
-            window.location.replace('https://bms-dash.herokuapp.com/login');
+            window.location.replace('https://app.bmsboosting.com/login');
           }
 
         })

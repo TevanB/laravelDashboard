@@ -15,7 +15,7 @@ import moment from 'moment';
             let Dates = new Array();
             let Users = new Array();
             let NumUsers = new Array();
-            axios.get('https://bms-dash.herokuapp.com/api/user').then((response)=>{
+            axios.get('https://app.bmsboosting.com/api/user').then((response)=>{
               let data = response.data.data;
               if(data){
                 for(let i=0; i<data.length; i++){

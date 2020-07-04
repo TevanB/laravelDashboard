@@ -28,7 +28,7 @@ export default class Gate{
     }else{
       for(let i=0; i<this.user.ongoing_orders_arr.length; i++){
         //console.log(this.user.ongoing_orders_arr[i]);
-        //axios.get('https://bms-dash.herokuapp.com/api/orderinfo/'+order_id).then((data)=>{
+        //axios.get('https://app.bmsboosting.com/api/orderinfo/'+order_id).then((data)=>{
 
         //});
         //console.log(this.user.ongoing_orders_arr[i].order_id + " " + order_id);

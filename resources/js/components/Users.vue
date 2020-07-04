@@ -115,7 +115,7 @@
     },
     data(){
      return{
-       url: "https://bms-dash.herokuapp.com/api/users",
+       url: "https://app.bmsboosting.com/api/users",
        data: {},
        tableProps: {
            search: '',

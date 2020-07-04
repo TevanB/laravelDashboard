@@ -53,8 +53,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="https://bms-dash.herokuapp.com/dashboard" class="brand-link">
-        <img src="https://bms-dash.herokuapp.com/img/logo.png" alt="BMS Logo" class="brand-image-xl img-circle elevation-3"
+      <a href="https://app.bmsboosting.com/dashboard" class="brand-link">
+        <img src="https://app.bmsboosting.com/img/logo.png" alt="BMS Logo" class="brand-image-xl img-circle elevation-3"
         style="opacity: .8">
         <span class="brand-text font-weight-light">BMS Dashboard</span>
       </a>

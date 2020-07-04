@@ -322,7 +322,7 @@
         this.new_order.order_id = Date.now();
         console.log(this.new_order.order_id);
         console.log(this.new_order.order_price);
-          axios.put('https://bms-dash.herokuapp.com/api/orders', this.new_order).then(()=>{
+          axios.put('https://app.bmsboosting.com/api/orders', this.new_order).then(()=>{
             swal.fire(
               'Created!',
               'Your order has been successfully created.',
@@ -337,7 +337,7 @@
               .listen('new-purchase', (e) => {
               that.loadOrders();
               var sound = new Howl({
-                src: 'https://bms-dash.herokuapp.com/assets/sounds/claim2.mp3',
+                src: 'https://app.bmsboosting.com/assets/sounds/claim2.mp3',
                 autoplay: true,
                 loop: false,
 

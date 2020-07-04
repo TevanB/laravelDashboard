@@ -239,7 +239,7 @@
             let found = false;
             for(let i=0; i<this.user.current_orders_arr.length; i++){
               if(this.user.current_orders_arr[i].payout_status != 'completed'){
-                axios.put('https://bms-dash.herokuapp.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
+                axios.put('https://app.bmsboosting.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
                   toast.fire({
                     icon: 'success',
                     title: 'Payout Requests Sent.'
@@ -255,7 +255,7 @@
                 title: 'You have no payouts.'
               });
             }
-            /*axios.put('https://bms-dash.herokuapp.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
+            /*axios.put('https://app.bmsboosting.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
               toast.fire({
                 icon: 'success',
                 title: 'Payout Requests Sent.'
@@ -269,7 +269,7 @@
             if(order.payout_status != 'completed'){
               order.payout_status = 'requested';
               console.log(order);
-              axios.put('https://bms-dash.herokuapp.com/api/orders/'+order.order_id, order).then(()=>{
+              axios.put('https://app.bmsboosting.com/api/orders/'+order.order_id, order).then(()=>{
 
               });
               for(let i=0; i<this.user.current_orders_arr.length; i++){
@@ -277,7 +277,7 @@
                   this.user.current_orders_arr[i].payout_status = 'requested';
                 }
               }
-              axios.put('https://bms-dash.herokuapp.com/api/me', this.user);
+              axios.put('https://app.bmsboosting.com/api/me', this.user);
             }else{
               toast.fire({
                 icon: 'error',
@@ -302,7 +302,7 @@
             return bCut;
           },
           getUser(){
-            axios.get("https://bms-dash.herokuapp.com/api/me").then((data)=>{
+            axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
 
               this.user = data.data;
               //console.log(this.user);
@@ -354,7 +354,7 @@
                 confirmButtonText: 'Go To Order Page'
                 }).then((result)=>{
                   if(result.value){
-                    window.location.replace('https://bms-dash.herokuapp.com/order/'+e.orderID);
+                    window.location.replace('https://app.bmsboosting.com/order/'+e.orderID);
                   }
                 })
                   break;

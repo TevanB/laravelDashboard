@@ -87,7 +87,7 @@
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                       </li>
                       <li class="nav-item ml-2 mr-2">
-                          <a class="nav-link text-light menuFont" href="https://bms-dash.herokuapp.com/boosting">{{ __('Boosting') }}</a>
+                          <a class="nav-link text-light menuFont" href="https://app.bmsboosting.com/boosting">{{ __('Boosting') }}</a>
                       </li>
                       <li class="nav-item ml-2 mr-2">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com/coaching">Coaching</a>
