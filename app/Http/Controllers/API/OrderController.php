@@ -52,7 +52,7 @@ class OrderController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isBooster') || \Gate::allows('isCoach')){
 
-        $orders = Order::paginate(99999);
+        $orders = DB::table('orders')->get();
         $result = array();
         foreach($orders as $order){
           $tempOrder = $order;
