@@ -56,11 +56,13 @@ class OrderController extends Controller
         $result = array();
         foreach($orders as $order){
           $tempOrder = $order;
-          $tempOrder->order_message->email = '';
-          $tempOrder->order_message->username = '';
-          $tempOrder->order_message->password = '';
-          $tempOrder->order_message->discord = '';
-          $tempOrder->order_message->summoner_name = '';
+          $decoder = json_decode($tempOrder->order_message);
+          $decoder->email = '';
+          $decoder->username = '';
+          $decoder->password = '';
+          $decoder->discord = '';
+          $decoder->summoner_name = '';
+          $tempOrder->order_message = json_encode($decoder);
           array_push($result, $tempOrder);
         }
         return json_encode($result);
