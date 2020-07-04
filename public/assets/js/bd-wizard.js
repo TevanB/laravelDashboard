@@ -247,10 +247,10 @@ $('.preEmailDuoError').hide();
 
 
 $('.registerFormEmail').on('change', function(e){
-  console.log(Date.now());
+  //console.log(Date.now());
 });
 $('.registerFormClientID').attr('value', Date.now());
-console.log($('.registerFormClientID').val());
+//console.log($('.registerFormClientID').val());
 
 function changeStep(){
   $("#wizard").steps("next", {});
@@ -293,7 +293,7 @@ $('#applyDiscount').on('click', function(e){
     url:"https://app.bmsboosting.com/api/prices/"+$('#discount_code').val(),
 
     success: function success(data){
-      console.log(data);
+      //console.log(data);
       if(data!==' '){
         $(".scBuiltDisc").each(function(){
           $(this).remove();
@@ -304,7 +304,7 @@ $('#applyDiscount').on('click', function(e){
 
         });
         let info = data.split(" ");
-        console.log('info');
+        //console.log('info');
         if(info[0]==='percentage'){
           let discValue = orderPrice * (parseInt(info[1])/100);
           discountedPrice = orderPrice - discValue;
@@ -338,21 +338,21 @@ $('#applyDiscount').on('click', function(e){
   }
 })
 $('#express-order-2').click(function(e){
-  console.log('click');
+  //console.log('click');
   calculatePrice();
 
 });
 
 
 $('#express-order-1').click(function(e){
-  console.log('click');
+  //console.log('click');
   calculatePrice();
 });
 
 
 
 $('#offline-mode-1').click(function(e){
-  console.log('click');
+  //console.log('click');
   calculatePrice();
 });
 
@@ -500,7 +500,7 @@ $('#username').on('change', function(e) {
 });
 $('#regionSel').on('change', function(e){
   orderFormObj.region = $('#regionSel').val();
-  console.log(e.target.value);
+  //console.log(e.target.value);
 });
 $('#password').on('change', function(e) {
     password = e.target.value;
@@ -563,7 +563,7 @@ function setupOrdersArr(){
 
 function checkAccount(){
   let query = {emailAddress: email};
-  console.log(query.emailAddress);
+  //console.log(query.emailAddress);
   $.ajax({
     type:"GET",
     url:"https://app.bmsboosting.com/api/accounts",
@@ -571,14 +571,14 @@ function checkAccount(){
     dataType: "json",
     success: function success(data){
       if(data){
-        console.log('Account Exists');
+        //console.log('Account Exists');
         accountExists = true;
         resultt = true;
         $('.userFormClientID').val(data);
         $('.registerFormClientID').val(data);
         order.client_id = data;
         clientIDReturn.push(data);
-        console.log(data);
+        //console.log(data);
 
       }
       else{
@@ -589,7 +589,7 @@ function checkAccount(){
 
     }
   });
-  console.log(clientIDReturn);
+  //console.log(clientIDReturn);
   return clientIDReturn;
 }
 
@@ -697,7 +697,7 @@ function visibilityCheck(){
     $('#netwin-duo').hide();
     $('#placement-solo').hide();
     $('#placement-duo').show();
-    console.log('duo place');
+    //console.log('duo place');
   }
 }
 function makeNewInvoiceID(){
@@ -713,9 +713,9 @@ function validateEndForm(){
 
   var endP1 = x['password'].value;
   var endP2 = x['password_confirmation'].value;
-  console.log(x);
-  console.log(endP1);
-  console.log(endEmail);
+  //console.log(x);
+  //console.log(endP1);
+  //console.log(endEmail);
   if(endP1.length < 8){
     $('.endPassError1').show()
   }else{
@@ -785,7 +785,7 @@ function calculatePrice(){
         data: query,
         dataType: "json",
         success: function success(data){
-          console.log(data);
+          //console.log(data);
           orderPrice = data;
           order.order_price = data;
 
@@ -801,7 +801,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.88);
 
@@ -809,7 +809,7 @@ function calculatePrice(){
                   //pass
                 }else if($('#lpg_1').val()==='16'){
                   orderPrice += orderPrice*0.1;
-                  console.log(orderPrice);
+                  //console.log(orderPrice);
 
                 }else if($('#lpg_1').val()==='15'){
                   orderPrice = orderPrice + orderPrice*0.25;
@@ -823,7 +823,7 @@ function calculatePrice(){
                   extrasPrice += orderPrice*0.1;
 
                 }
-                console.log(extrasPrice);
+                //console.log(extrasPrice);
                 orderPrice += extrasPrice;
                 order.order_price = orderPrice;
 
@@ -845,7 +845,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.79);
                 if($('#lpg_1').val()==='19'){
@@ -885,7 +885,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.7);
                 if($('#lpg_1').val()==='19'){
@@ -925,7 +925,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.6);
                 if($('#lpg_1').val()==='19'){
@@ -965,7 +965,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.5);
                 if($('#lpg_1').val()==='19'){
@@ -1000,7 +1000,7 @@ function calculatePrice(){
               //pass
             }else if($('#lpg_1').val()==='16'){
               orderPrice += orderPrice*0.1;
-              console.log(orderPrice);
+              //console.log(orderPrice);
 
             }else if($('#lpg_1').val()==='15'){
               orderPrice = orderPrice + orderPrice*0.25;
@@ -1008,14 +1008,14 @@ function calculatePrice(){
             }
             let extrasPrice=0;
             if($('#express-order-1').is(':checked')){
-              console.log('checked in calc price');
+              //console.log('checked in calc price');
               extrasPrice += orderPrice*0.25;
             }
             if($('#offline-mode-1').is(':checked')){
               extrasPrice += orderPrice*0.1;
 
             }
-            console.log(extrasPrice);
+            //console.log(extrasPrice);
             orderPrice += extrasPrice;
            orderPrice = Math.round(orderPrice * 100)/100;
             $('#temp-order-price').text("  $"+orderPrice.toFixed(2));
@@ -1023,7 +1023,7 @@ function calculatePrice(){
         }
       })
       /*axios.get('https://app.bmsboosting.com/api/prices', JSON.stringify(query)).then((data)=>{
-        console.log(data.data);
+        //console.log(data.data);
       });*/
 
 
@@ -1040,14 +1040,14 @@ function calculatePrice(){
     let amount = $('#net-selector').val();
     query.netwin_rank = netDiv;
     query.quantity = parseInt(amount, 10);
-    console.log(query.quantity);
+    //console.log(query.quantity);
     $.ajax({
       type:"GET",
       url:"https://app.bmsboosting.com/api/prices",
       data: query,
       dataType: "json",
       success: function success(data){
-        console.log(data);
+        //console.log(data);
         orderPrice = data;
         let extrasPrice=0;
         if($('#express-order-1').is(':checked')){
@@ -1077,7 +1077,7 @@ function calculatePrice(){
       data: query,
       dataType: "json",
       success: function success(data){
-        console.log(data);
+        //console.log(data);
         orderPrice = data;
         let extrasPrice=0;
         if($('#express-order-1').is(':checked')){
@@ -1108,7 +1108,7 @@ function calculatePrice(){
     let startingIndex = ranks.indexOf(startingDiv);
     let endingIndex = ranks.indexOf(endingDiv);
     let divList = [];
-    //console.log(startingIndex + " " + endingIndex);
+    ////console.log(startingIndex + " " + endingIndex);
     if(startingIndex >= endingIndex){
       //RAISE ERROR
       validOrder=false;
@@ -1136,7 +1136,7 @@ function calculatePrice(){
         data: query,
         dataType: "json",
         success: function success(data){
-          console.log(data);
+          //console.log(data);
           orderPrice = data;
           order.order_price = data;
           if($('#startinglp_10').val()==='21'){
@@ -1151,7 +1151,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.88);
                 if($('#lpg_10').val()==='19'){
@@ -1188,7 +1188,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.79);
                 if($('#lpg_10').val()==='19'){
@@ -1225,7 +1225,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.7);
                 if($('#lpg_10').val()==='19'){
@@ -1262,7 +1262,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.6);
                 if($('#lpg_10').val()==='19'){
@@ -1299,7 +1299,7 @@ function calculatePrice(){
               data: newQuery,
               dataType: "json",
               success: function success(data){
-                console.log(data);
+                //console.log(data);
 
                 orderPrice = orderPrice - data + (data*0.5);
                 if($('#lpg_10').val()==='19'){
@@ -1330,7 +1330,7 @@ function calculatePrice(){
               //pass
             }else if($('#lpg_10').val()==='16'){
               orderPrice += orderPrice*0.1;
-              console.log(orderPrice);
+              //console.log(orderPrice);
 
             }else if($('#lpg_10').val()==='15'){
               orderPrice = orderPrice + orderPrice*0.25;
@@ -1348,7 +1348,7 @@ function calculatePrice(){
         }
       })
       /*axios.get('https://app.bmsboosting.com/api/prices', JSON.stringify(query)).then((data)=>{
-        console.log(data.data);
+        //console.log(data.data);
       });*/
 
     }
@@ -1368,7 +1368,7 @@ function calculatePrice(){
       data: query,
       dataType: "json",
       success: function success(data){
-        console.log(data);
+        //console.log(data);
         orderPrice = data;
         let extrasPrice=0;
         if($('#express-order-2').is(':checked')){
@@ -1394,7 +1394,7 @@ function calculatePrice(){
       data: query,
       dataType: "json",
       success: function success(data){
-        console.log(data);
+        //console.log(data);
         orderPrice = data;
         let extrasPrice=0;
         if($('#express-order-2').is(':checked')){

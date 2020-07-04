@@ -190,7 +190,7 @@
           let regex = new RegExp(/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d(?:\.\d+)?Z?/);
           if(a.match(regex)){
             $(this).text(moment(a).format('MMMM Do YYYY, h:mm:ss a'));
-            //console.log(moment(a).format('MMMM Do YYYY, h:mm:ss a'));
+            ////console.log(moment(a).format('MMMM Do YYYY, h:mm:ss a'));
           }
       });
      },
@@ -322,7 +322,7 @@
           },
         },
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
         },
         created(){
           this.loadUsers();

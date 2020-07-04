@@ -28,9 +28,9 @@
                     user: this.user.user,
                     message: this.newMessage,
                 };
-                console.log(data);
+                //console.log(data);
                 this.$emit('messagesent', JSON.stringify(data));
-                console.log("MESSAGESENT EVENT EXECUTED");
+                //console.log("MESSAGESENT EVENT EXECUTED");
                 this.newMessage = '';
             },
             fetchMessages() {

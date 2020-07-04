@@ -40,19 +40,19 @@ import HasError from 'vform';
           }
         },
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
 
-            console.log(window.Echo.private('chat'));
+            //console.log(window.Echo.private('chat'));
             window.Echo.private('chat')
               .listen('message-sent', (e) => {
-              console.log("MESSAGE SENT REQUEST HEARD");
+              //console.log("MESSAGE SENT REQUEST HEARD");
 
                 this.fetchMessages();
 
               })
               .listen('UpdateRequest', (e)=>{
-                console.log(e);
-                console.log("UPDATE REQUEST HEARD");
+                //console.log(e);
+                //console.log("UPDATE REQUEST HEARD");
                 this.fetchMessages();
 
               });
@@ -60,14 +60,14 @@ import HasError from 'vform';
 
 
             //this.scrollToEnd();
-            console.log(this.$el.querySelector("#scroller"));
+            //console.log(this.$el.querySelector("#scroller"));
 
             this.fetchMessages();
 
 
         },
         updated(){
-          console.log('order chat updated');
+          //console.log('order chat updated');
 
           this.$emit('updaterequest');
 
@@ -84,12 +84,12 @@ import HasError from 'vform';
             axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
 
               this.user = data.data.name;
-              //console.log(this.user);
+              ////console.log(this.user);
             });
           },
           addMessage(message) {
 
-              console.log(this.messages);
+              //console.log(this.messages);
               // message is the string not the object
               this.messages.push(message);
 
@@ -97,7 +97,7 @@ import HasError from 'vform';
               this.result.order_id = this.order_id.order_id;
               this.result.message = message;
               axios.post('https://app.bmsboosting.com/messages', this.result).then(response => {
-                console.log(response.data);
+                //console.log(response.data);
                 this.fetchMessages();
 
               });
@@ -109,12 +109,12 @@ import HasError from 'vform';
           fetchMessages() {
               let that = this;
               axios.get('https://app.bmsboosting.com/messages/'+ that.order_id.order_id).then(response => {
-                  console.log(response);
+                  //console.log(response);
                   this.messages = response.data;
                   this.scrollToEnd();
 
               });
-              console.log('messages fetched');
+              //console.log('messages fetched');
           },
         },
         created(){

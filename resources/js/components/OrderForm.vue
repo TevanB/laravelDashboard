@@ -136,7 +136,7 @@
 
     export default {
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
 
         }
     }

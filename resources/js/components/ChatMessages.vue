@@ -48,7 +48,7 @@
       },
       scrollToEnd() {
         var container = this.$el.querySelector("#scroller");
-        console.log(container);
+        //console.log(container);
         //container.scrollTop = container.scrollHeight;
       },
 
@@ -59,7 +59,7 @@
 
         if(Number.isInteger(message.id)){
           axios.get('https://app.bmsboosting.com/messages/'+message.id, message).then((data)=>{
-            console.log(data.data.name);
+            //console.log(data.data.name);
             this.sender = data.data.name;
 
           })
@@ -68,7 +68,7 @@
       },
 
       trimOrderMessages(messageArr){
-        console.log(this.order_id.order_id);
+        //console.log(this.order_id.order_id);
         let tempArr = [];
         for(let i =0; i<messageArr.length; i++){
           if(messageArr[i].order_id == this.order_id.order_id){

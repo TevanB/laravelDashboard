@@ -627,10 +627,10 @@ import json from './output.json';
          },
 
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
             let bID = this.order_id;
             let bbID = this.tipValue;
-            console.log(this.tipValue);
+            //console.log(this.tipValue);
 
             $("#boosterTipInput").change(function() {
           	    $("#currentTipAmount").val($('#boosterTipInput').val());
@@ -639,8 +639,8 @@ import json from './output.json';
             let that = this;
             window.Echo.private('claims')
               .listen('order-claimed', (e) => {
-              //console.log("Order claim heard!!");
-              //console.log(e);
+              ////console.log("Order claim heard!!");
+              ////console.log(e);
               for(let i=0; i<that.user.ongoing_orders_arr.length; i++){
 
                 if(e.orderID === that.user.ongoing_orders_arr[i].order_id && that.user.type === 'client'){
@@ -713,9 +713,9 @@ import json from './output.json';
         },
         watch:{
           orders: function(val){
-            console.log('change');
+            //console.log('change');
             axios.get('https://app.bmsboosting.com/api/users/'+this.form.booster_id).then((data)=>{
-              //console.log(data);
+              ////console.log(data);
               this.boosterName = data.data;
             });
           }
@@ -729,23 +729,23 @@ import json from './output.json';
 
             axios.get("https://app.bmsboosting.com/api/orders/"+this.order_id).then((data)=>{
 
-              //console.log(data.data.data);
+              ////console.log(data.data.data);
               this.form.fill(data.data.data);
               //if(!this.$gate.isWorkerOrAdmin){
                 axios.get('https://app.bmsboosting.com/api/users/'+this.form.booster_id).then((data)=>{
-                  console.log(data);
+                  //console.log(data);
                   this.boosterName = data.data;
                 });
               //}
               this.orders = data.data.data;
               let tempObj = JSON.parse(data.data.data.order_message).type
               this.orderInfo.fill(JSON.parse(data.data.data.order_message));
-              console.log(this.orderInfo);
+              //console.log(this.orderInfo);
               this.username = tempObj.username;
               this.summName = tempObj.summoner_name;
               this.parseOrderInfo(this.orders.order_type);
               this.getRankInfo(this.orderInfo.summoner_name, this.orderInfo.region);
-              console.log(this.rankStart);
+              //console.log(this.rankStart);
 
             });
             this.getRankInfo(this.orderInfo.summoner_name, this.orderInfo.region);
@@ -792,9 +792,9 @@ import json from './output.json';
           let startIndex = ranks2.indexOf(this.fullRankStart);
           let endIndex = ranks2.indexOf(this.fullRankEnd);
           let currIndex = ranks2.indexOf(currRank);
-          console.log(startIndex+" "+endIndex+" "+currIndex);
+          //console.log(startIndex+" "+endIndex+" "+currIndex);
           let result = (((currIndex - startIndex)/(endIndex - startIndex))*100).toFixed(2);
-          console.log(result);
+          //console.log(result);
           $('#orderProgressAmt').attr('style', 'width:'+result+'%');
         },
         getRankInfo(name, region){
@@ -840,7 +840,7 @@ import json from './output.json';
               }else{
                 this.rankCurrent = JSON.parse(data).rank;
                 boom = JSON.parse(data).rank;
-                console.log(this.rankCurrent);
+                //console.log(this.rankCurrent);
                 if(boom === 'Unranked'){
                   $('#currentRankIMG').attr("src", "https://app.bmsboosting.com/img/unranked.png");
                 }else if(boom === 'Master'){
@@ -855,7 +855,7 @@ import json from './output.json';
                 }
               }
               if((ranks2.indexOf(this.fullRankCurrent) >= ranks2.indexOf(this.fullRankEnd)) &&( this.fullRankEnd)){
-                console.log(rank2.indexOf(this.fullRankCurrent) + " " + ranks2.indexOf(this.fullRankEnd));
+                //console.log(rank2.indexOf(this.fullRankCurrent) + " " + ranks2.indexOf(this.fullRankEnd));
                 thisRef.requestComplete();
               }
               thisRef.orderProgressSetter(fullBoom);
@@ -974,20 +974,20 @@ import json from './output.json';
 
           //let index = -1;
           for(let i =0; i<this.user.ongoing_orders_arr.length; i++){
-            console.log(this.user.ongoing_orders_arr[i]);
+            //console.log(this.user.ongoing_orders_arr[i]);
             if(this.user.ongoing_orders_arr[i].order_id == this.order_id){
               this.user.ongoing_orders_arr[i].order_status = 'verfiy';
 
               break;
             }
-            console.log(i);
+            //console.log(i);
           }
 
 
           axios.put("https://app.bmsboosting.com/api/me", this.user).then(()=>{
-            console.log("User Update Success");
+            //console.log("User Update Success");
           }).catch(()=>{
-            console.log("User Update Failed");
+            //console.log("User Update Failed");
 
           });*/
 
@@ -1033,7 +1033,7 @@ import json from './output.json';
 
           },
           requestBoosterChange(){
-          //console.log(this.orders.order_status);/
+          ////console.log(this.orders.order_status);/
           if(this.orders.order_status != 'reassign' && this.orders.order_status != 'reassigned'){
             swal.fire({
               title : 'Request Verification',
@@ -1070,7 +1070,7 @@ import json from './output.json';
           },
           getOrder(){
             axios.get("https://app.bmsboosting.com/api/orders/"+this.order_id).then((data)=>{
-              console.log(data.data.data.order_message);
+              //console.log(data.data.data.order_message);
               this.form.fill(data.data.data);
               this.orders = data.data.data;
               let tempObj = JSON.parse(data.data.data.order_message).type
@@ -1096,7 +1096,7 @@ import json from './output.json';
 
 
             axios.put("https://app.bmsboosting.com/api/pause/"+this.form.order_id, this.form).then((data)=>{
-              console.log(data);
+              //console.log(data);
               swal.fire(
                 'Order Pause Toggled',
                 'The pause status of this order has been toggled.',

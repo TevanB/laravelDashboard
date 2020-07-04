@@ -1613,7 +1613,7 @@
 
         createOrder: function() {
           caReturn = checkAccount();
-          console.log('careturn 1 is ' + caReturn);
+          //console.log('careturn 1 is ' + caReturn);
 
           makeNewInvoiceID();
           let reqPrice = orderPrice;
@@ -1633,7 +1633,7 @@
         }).then(function(res) {
           return res.json();
         }).then(function(data) {
-          console.log(data);
+          //console.log(data);
           return data.result.id; // Use the same key name for order ID on the client and server
         });
       },
@@ -1643,19 +1643,19 @@
         let fixedPrice = orderPrice.toFixed(2);
         //caReturn = order.client_id;
         order.client_id = clientID;
-        console.log(caReturn);
-        console.log(order);
-        console.log('arr index cr' + clientID);
+        //console.log(caReturn);
+        //console.log(order);
+        //console.log('arr index cr' + clientID);
         if(caReturn.length!=0){
-          console.log('careturn not empty');
+          //console.log('careturn not empty');
           existStatus = true;
           clientID = caReturn[0];
           order.client_id = caReturn[0];
         }else{
-          console.log('careturn is empty');
+          //console.log('careturn is empty');
         }
 
-        console.log(data);
+        //console.log(data);
         setupOrdersArr();
 
         return fetch('https://app.bmsboosting.com/api/capture-paypal-transaction', {
@@ -1679,8 +1679,8 @@
 
           })
         }).then(function(res) {
-          console.log(data);
-          console.log(res);
+          //console.log(data);
+          //console.log(res);
         }).then(function(details) {
           if(!accountExists){
             modalActivity();

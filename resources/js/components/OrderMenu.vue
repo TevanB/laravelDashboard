@@ -24,7 +24,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
         },
         data(){
           return{
@@ -54,29 +54,29 @@
             break;
           }
         }
-        //console.log(tempArr);
+        ////console.log(tempArr);
         return input.slice(index);
       },
       getUser(){
         axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
 
           this.user = data.data;
-          //console.log(this.user);
+          ////console.log(this.user);
         });
       },
       loadOrders(){
         if(this.$gate.isAdmin){
           axios.get("https://app.bmsboosting.com/api/orders").then((response)=>{
-            console.log(response.data.data);
+            //console.log(response.data.data);
             var i = response.data.data[0];
 
             for(var i=0; i < response.data.data.length; i++){
 
-              //console.log(response.data.data[i]);
+              ////console.log(response.data.data[i]);
               this.orders.push(response.data.data[i]);
 
             }
-            console.log(this.orders);
+            //console.log(this.orders);
 
           });
         }
@@ -86,7 +86,7 @@
       created(){
         //this.loadOrders();
         this.getUser();
-        console.log(this.orders);
+        //console.log(this.orders);
 
       }
     }

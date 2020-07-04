@@ -39,7 +39,7 @@
 
         },
         updated(){
-          console.log(this.row);
+          //console.log(this.row);
         },
         methods:{
         deleteUser(id=this.row.id){

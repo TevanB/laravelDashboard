@@ -268,7 +268,7 @@
           requestPayout(order){
             if(order.payout_status != 'completed'){
               order.payout_status = 'requested';
-              console.log(order);
+              //console.log(order);
               axios.put('https://app.bmsboosting.com/api/orders/'+order.order_id, order).then(()=>{
 
               });
@@ -305,7 +305,7 @@
             axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
 
               this.user = data.data;
-              //console.log(this.user);
+              ////console.log(this.user);
             });
           },
           psTranslate(status){
@@ -339,12 +339,12 @@
           }
           },
         mounted() {
-            console.log('Component mounted.');
+            //console.log('Component mounted.');
             let that = this;
             window.Echo.private('claims')
               .listen('order-claimed', (e) => {
-              //console.log("Order claim heard!!");
-              //console.log(e);
+              ////console.log("Order claim heard!!");
+              ////console.log(e);
               for(let i=0; i<that.user.ongoing_orders_arr.length; i++){
                 if(e.orderID === that.user.ongoing_orders_arr[i].order_id && that.user.type === 'client'){
                 swal.fire({

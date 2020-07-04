@@ -27,14 +27,14 @@ export default class Gate{
       return true;
     }else{
       for(let i=0; i<this.user.ongoing_orders_arr.length; i++){
-        //console.log(this.user.ongoing_orders_arr[i]);
+        ////console.log(this.user.ongoing_orders_arr[i]);
         //axios.get('https://app.bmsboosting.com/api/orderinfo/'+order_id).then((data)=>{
 
         //});
-        //console.log(this.user.ongoing_orders_arr[i].order_id + " " + order_id);
+        ////console.log(this.user.ongoing_orders_arr[i].order_id + " " + order_id);
 
         if(this.user.ongoing_orders_arr[i].order_id==order_id){
-          console.log('match');
+          //console.log('match');
           return true;
         }
       }

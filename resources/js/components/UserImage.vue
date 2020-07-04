@@ -7,7 +7,7 @@ style="opacity: .8">
     import Form from 'vform';
     export default {
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
         },
         data(){
           return{
@@ -25,7 +25,7 @@ style="opacity: .8">
         methods:{
 
           getProfilePhoto(){
-            console.log(this.form.photo);
+            //console.log(this.form.photo);
             let photo = (this.form.photo.length > 100) ? this.form.photo: "img/profile/"+this.form.photo;
             //return "img/profile/"+this.form.photo;
             if(this.form.photo==''){

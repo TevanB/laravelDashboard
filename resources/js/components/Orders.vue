@@ -184,8 +184,8 @@
               }
             }
             let result2 = result.reverse();
-            console.log(result);
-            console.log(result2);
+            //console.log(result);
+            //console.log(result2);
             return result2;
           }
 
@@ -236,8 +236,8 @@
               order.booster_id = data.data.id;
               this.form.order_status = 'claimed';
               //order.order_status = 'claimed';
-              //console.log(this.user.ongoing_orders);
-              //console.log(order);
+              ////console.log(this.user.ongoing_orders);
+              ////console.log(order);
               //arr1.push(order);
 
               this.form.put('api/order/'+order.order_id)
@@ -288,7 +288,7 @@
                 //'There was a problem with the server.',
                 //'error'
               //);
-              console.log(error);
+              //console.log(error);
               //this.$Progress.fail();
             });
         },
@@ -314,14 +314,14 @@
 
           axios.get("api/ordersF").then((data)=>{
             this.orders=data;
-            console.log(data);
+            //console.log(data);
           });
           }
         },
         createOrder(){
         this.new_order.order_id = Date.now();
-        console.log(this.new_order.order_id);
-        console.log(this.new_order.order_price);
+        //console.log(this.new_order.order_id);
+        //console.log(this.new_order.order_price);
           axios.put('https://app.bmsboosting.com/api/orders', this.new_order).then(()=>{
             swal.fire(
               'Created!',

@@ -19,9 +19,9 @@ import moment from 'moment';
                   if(splitter[splitter.length-1]!=='.'){
 
                   let tempDate = moment(data[i].created_at).format('MMMM Do YYYY');
-                    //console.log(tempDate);
+                    ////console.log(tempDate);
                     if(Dates.indexOf(tempDate) == -1){
-                    //console.log(tempDate+" not in Dates Array");
+                    ////console.log(tempDate+" not in Dates Array");
                       let counter = 0;
                       Dates.push(moment(data[i].created_at).format('MMMM Do YYYY'));
                       for(let j=0; j<data.length; j++){
@@ -32,8 +32,8 @@ import moment from 'moment';
                       }
                       Prices.push(counter);
                     }else{
-                      //console.log("in dates array");
-                      //console.log(data[i]);
+                      ////console.log("in dates array");
+                      ////console.log(data[i]);
                     }
                   }
 

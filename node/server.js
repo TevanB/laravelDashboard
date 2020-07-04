@@ -13,17 +13,17 @@ app.engine('html', require('ejs').renderFile);
 //var html = fs.readFileSync(__dirname + '/public' +  file, 'utf8');
 //var $ = cheerio.load(html);
 var jsonPath = path.join('public', 'output.json');
-console.log(jsonPath);
+//console.log(jsonPath);
 
 var mysql = require('mysql');
 var con = mysql.createConnection(process.env.JAWSDB_URL);
 con.connect();
 
 function updater(){
-  console.log(process.env.PORT);
+  //console.log(process.env.PORT);
   con.query('UPDATE ports SET name = '+process.env.PORT+' WHERE id = 1', function(err, rows, fields){
     if(err) throw err;
-    console.log(rows[0]);
+    //console.log(rows[0]);
   });
 }
 setInterval(updater, 5000);
@@ -38,16 +38,16 @@ app.use(function(req, res, next){
   next();
 });
 app.get('/rankings/:name/:server', function(req, res){
-      console.log('get request heard');
+      //console.log('get request heard');
 	    //var parsedResults = [];
-      //console.log(req.params);
+      ////console.log(req.params);
        opggScrape.getStats(req.params.name, {region: req.params.server, refresh: false}).then(stats => {
-         //console.log(req.params);
+         ////console.log(req.params);
          //var path = './public/output.json';
          res.send(JSON.stringify(stats));
 
   	  	/*fs.writeFile('./public/output.json', JSON.stringify(stats, null, 4), function(err){
-  	    	console.log('Sraping data successfully written! - Check your project public/output.json file');
+  	    	//console.log('Sraping data successfully written! - Check your project public/output.json file');
           //res.end();
 
   	    });*/
@@ -58,6 +58,6 @@ app.get('/rankings/:name/:server', function(req, res){
 
 app.listen(PORT);
 
-console.log('Your node server start successfully.... on port '+PORT);
+//console.log('Your node server start successfully.... on port '+PORT);
 
 exports = module.exports = app;

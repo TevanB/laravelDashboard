@@ -358,16 +358,16 @@
         },
         mounted: function(){
 
-            console.log('Component mounted.');
+            //console.log('Component mounted.');
 
             let that = this;
             window.Echo.private('claims')
               .listen('order-claimed', (e) => {
-              //console.log("Order claim heard!!");
-              //console.log(e);
+              ////console.log("Order claim heard!!");
+              ////console.log(e);
               for(let i=0; i<that.user.ongoing_orders_arr.length; i++){
                 if(e.orderID === that.user.ongoing_orders_arr[i].order_id && that.user.type === 'client'){
-                  console.log("Order claim match!!");
+                  //console.log("Order claim match!!");
                   swal.fire({
                   title: 'Order Claimed',
                   text: 'Your order has been claimed by a booster.',
@@ -392,7 +392,7 @@
         created(){
           this.getUser();
           if(this.$gate.isAdmin){
-            console.log('admin orders loaded');
+            //console.log('admin orders loaded');
             this.loadOrders();
           }
         },
@@ -413,7 +413,7 @@
             axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
 
               this.user = data.data;
-              //console.log(this.user);
+              ////console.log(this.user);
             });
           },
           loadOrders(){
