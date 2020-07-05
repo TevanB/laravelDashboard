@@ -46,7 +46,6 @@
         "webpack": "^4.43.0"
     },
     "dependencies": {
-        "@cometchat-pro/chat": "^2.0.7",
         "@fortawesome/fontawesome-free": "^5.13.0",
         "admin-lte": "^3.0.0-alpha.2",
         "body-parser": "^1.19.0",
@@ -69,15 +68,12 @@
         "moment": "^2.24.0",
         "mysql": "^2.18.1",
         "net": "^1.0.2",
-        "node-gzip": "^1.1.2",
-        "op.gg-api": "^2.0.5-alpha",
         "opgg-scrape": "^1.0.3",
         "path": "^0.12.7",
         "pusher-js": "^6.0.2",
         "request": "^2.88.2",
         "sweetalert2": "^9.10.12",
         "tls": "0.0.1",
-        "uniqid": "^5.2.0",
         "v8": "^0.1.0",
         "vform": "^1.0.1",
         "vue-chartjs": "^3.5.0",
