@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div v-else-if="!$gate.isWorkerOrAdmin()">
+    <div v-if="!$gate.isWorkerOrAdmin()">
       <not-found></not-found>
 
     </div>
