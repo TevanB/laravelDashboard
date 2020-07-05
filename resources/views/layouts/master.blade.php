@@ -102,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
               <router-link to="/terms" class="nav-link">
-                <i class="nav-icon fas fa-gavel blue"></i>
+                <i class="nav-icon fas fa-exclamation blue"></i>
                 <p>
                   Rules
                 </p>
@@ -120,7 +120,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
               <router-link to="/terms" class="nav-link">
-                <i class="nav-icon fas fa-gavel blue"></i>
+                <i class="nav-icon fas fa-exclamation blue"></i>
                 <p>
                   Rules
                 </p>
