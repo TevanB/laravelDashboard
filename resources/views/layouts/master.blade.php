@@ -214,7 +214,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   window.user = @json(auth()->user())
   </script>
 @endauth
-  <script src="/js/app.js"></script>
   <!--Start of Tawk.to Script-->
 
   <!--End of Tawk.to Script-->
