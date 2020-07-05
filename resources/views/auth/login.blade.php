@@ -71,6 +71,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row mb-0 justify-content-center mt-3">
+                            <div class="row container-fluid">
+                              <div class="col-md-8 text-center">
+                                <h4>Don't have an account?</h4>
+                              </div>
+                              <div class="col-md-8 text-center">
+                                  <button type="button" href="https://app.bmsboosting.com/register" class="btn btn-primary container-fluid">
+                                      Register
+                                  </button>
+                              </div>
+
+                            </div>
+                        </div>
                       </div>
                     </form>
                 </div>
