@@ -5,12 +5,6 @@
   */
 
 /*!
-  * vue-router v3.1.6
-  * (c) 2020 Evan You
-  * @license MIT
-  */
-
-/*!
  *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
  *  
  *  howler.js v2.2.0
