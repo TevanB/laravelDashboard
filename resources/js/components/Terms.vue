@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div v-if="!$gate.isWorkerOrAdmin()">
+    <div v-if="$gate.isClient()">
       <not-found></not-found>
 
     </div>
