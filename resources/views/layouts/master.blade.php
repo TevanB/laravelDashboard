@@ -100,6 +100,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </p>
               </router-link>
             </li>
+            <li class="nav-item">
+              <router-link to="/terms" class="nav-link">
+                <i class="nav-icon fas fa-gavel blue"></i>
+                <p>
+                  Rules
+                </p>
+              </router-link>
+            </li>
             @endcan
             @can('isAdmin')
             <li class="nav-item">
@@ -107,6 +115,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <i class="nav-icon fas fa-briefcase blue"></i>
                 <p>
                   Orders
+                </p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/terms" class="nav-link">
+                <i class="nav-icon fas fa-gavel blue"></i>
+                <p>
+                  Rules
                 </p>
               </router-link>
             </li>

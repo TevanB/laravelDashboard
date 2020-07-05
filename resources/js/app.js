@@ -63,6 +63,7 @@ let routes = [
   { path: '/users', component: require('./components/Users.vue').default },
   { path: '/developer', component: require('./components/Developer.vue').default },
   { path: '/payments', component: require('./components/Payments.vue').default },
+  { path: '/terms', component: require('./components/Terms.vue').default },
 
 
   { path: '/orders', component: require('./components/Orders.vue').default },
@@ -138,9 +139,10 @@ Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue').default
 );
+
 Vue.component(
-    'order-menu',
-    require('./components/OrderMenu.vue').default
+    'terms',
+    require('./components/Terms.vue').default
 );
 
 Vue.component(
