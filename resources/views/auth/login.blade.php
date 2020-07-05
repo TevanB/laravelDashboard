@@ -71,23 +71,43 @@
                                 @endif
                             </div>
                         </div>
+
+                      </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <div class="card card-signin my-5 mt-5 text-dark bg-dark">
+                <div class="card-title text-center mt-5 text-light">{{ __('Login') }}</div>
+
+                <div class="card-body">
+                    <form method="POST" class="form-signin" action="{{ route('login') }}">
+                        @csrf
+                      <div class="form-label-group">
                         <div class="form-group row mb-0 justify-content-center mt-3">
-                            <div class="row container-fluid">
+                            <div class="row container-fluid justify-content-center">
                               <div class="col-md-8 text-center">
-                                <h4>Don't have an account?</h4>
+                                <p>Don't have an account?</p>
                               </div>
                               <div class="col-md-8 text-center">
                                   <button type="button" href="https://app.bmsboosting.com/register" class="btn btn-primary container-fluid">
-                                      Register
+                                      Register Now
                                   </button>
                               </div>
 
                             </div>
                         </div>
+
                       </div>
                     </form>
                 </div>
             </div>
+
+
+
         </div>
     </div>
 </div>
