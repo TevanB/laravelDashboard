@@ -670,7 +670,7 @@
             if(this.$gate.isAdmin){
 
 
-            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{//console.log(data.data.data); this.users=data.data.data;
+            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{//console.log(data.data.data); this.users=data;
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 this.adminUser = this.users[i];
