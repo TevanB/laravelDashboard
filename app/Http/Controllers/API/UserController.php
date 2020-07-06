@@ -31,9 +31,8 @@ class UserController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
 
-        $users = DB::table('users')->get();
 
-        return $users;
+        return User::latest()->paginate(999999999);
       }
     }
     public function index2(Request $request)

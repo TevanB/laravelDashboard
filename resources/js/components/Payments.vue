@@ -578,7 +578,7 @@
 
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
-                //console.log('hit');
+                console.log('hit');
                 this.adminPayout = this.users[i].payout;
               }
             }
@@ -591,13 +591,13 @@
 
           //    $('#reassignAlerts').append(
           //    "<div class='alert alert-warning alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Reassign Request!</h5>Reassign request from Order # "+ e.orderID +" .</div>");
-              axios.get("https://app.bmsboosting.com/api/orders").then((data)=>{
+              axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
                 this.orders=data;
                 let response = data.data.data;
-                //console.log(response);
+                console.log(response);
                 for(let i=0; i<response.length; i++){
                   if(response[i].order_status == 'reassign'){
-                  //console.log('reassign match');
+                  console.log('reassign match');
                   $('#reassignAlerts').append(
                   "<div class='alert alert-warning alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Reassign Request!</h5>Reassign request from Order # "+ response[i].order_id +" .</div>");
 
@@ -621,15 +621,15 @@
               window.Echo.private('claims')
                 .listen('order-claimed', (e) => {
                   $('#claim'+e.orderID).remove();
-                  axios.get('https://app.bmsboosting.com/api/user').then((data)=>{
+                  axios.get('https://bms-dash.herokuapp.com/api/user').then((data)=>{
                     let userList = data.data.data;
-                    ////console.log(userList);
+                    //console.log(userList);
                     for(let j=0; j<userList.length; j++){
                       if(userList[j].type != 'client'){
                       let tempName = userList[j].name;
                       for(let k=0; k<userList[j].ongoing_orders_arr.length; k++){
                         if(userList[j].ongoing_orders_arr[k].order_id == e.orderID){
-                        ////console.log('match');
+                        //console.log('match');
                           $('#claimAlerts').append(
                           "<div id='claim"+e.orderID+"' class='alert alert-primary alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Order Claim!</h5>"+tempName+" claimed Order # "+ e.orderID +" .</div>");
                           break;
@@ -640,10 +640,10 @@
 
 
               })
-             axios.get("https://app.bmsboosting.com/api/orders").then((data)=>{
+             axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
                 let response = data.data.data;
 
-                //console.log(response);
+                console.log(response);
                 for(let i=0; i<response.length; i++){
                   if(response[i].order_status == 'reassign'){
                   $('#reassignAlerts').append(
@@ -670,8 +670,7 @@
             if(this.$gate.isAdmin){
 
 
-            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{//console.log(data.data.data); this.users=data;
-            console.log(this.users);
+            axios.get("https://bms-dash.herokuapp.com/api/user").then((data)=>{console.log(data.data.data); this.users=data.data.data;
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 this.adminUser = this.users[i];
@@ -684,7 +683,7 @@
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 this.adminUser = this.users[i];
-                //console.log(this.adminUser);
+                console.log(this.adminUser);
               }
             }
           },
@@ -721,7 +720,7 @@
             }
           },
           isDiv(order){
-            //console.log(order.order_type);
+            console.log(order.order_type);
             if(order.order_type.includes('Division')){
               return true;
             }else{
@@ -731,7 +730,7 @@
           adminPayouts(){
             let counter = 0;
             let ordersP = ''
-            axios.get("https://app.bmsboosting.com/api/orders").then((data)=>{
+            axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
               ordersP = data.data.data;
 
             for(let i=0; i<ordersP.length; i++){
@@ -751,8 +750,8 @@
                 }
               }
             }
-            axios.put('https://app.bmsboosting.com/api/payouts');
-            axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
+            axios.put('https://bms-dash.herokuapp.com/api/payouts');
+            axios.get("https://bms-dash.herokuapp.com/api/me").then((data)=>{
               this.userPP.fill(data.data);
               this.userPP.payout += counter;
               axios.put('api/me', this.userPP).then((data)=>{
@@ -765,7 +764,7 @@
           },
           reassignOrder(oObj){
             this.rOrder = oObj;
-            //console.log(JSON.parse(oObj.order_message).summoner_name);
+            console.log(JSON.parse(oObj.order_message).summoner_name);
             this.newOrder.reset();
 
             let that = this;
@@ -776,7 +775,7 @@
                 let ranks = ['I4', 'I3', 'I2', 'I1', 'B4', 'B3', 'B2', 'B1', 'S4', 'S3', 'S2', 'S1', 'G4', 'G3', 'G2', 'G1', 'P4', 'P3', 'P2', 'P1', 'D4', 'D3', 'D2', 'D1', "M", 'GM', 'C'];
                 let ranks2 = ['Iron 4', 'Iron 3', 'Iron 2', 'Iron 1', 'Bronze 4', 'Bronze 3', 'Bronze 2', 'Bronze 1', 'Silver 4', 'Silver 3', 'Silver 2', 'Silver 1', 'Gold 4', 'Gold 3', 'Gold 2', 'Gold 1', 'Platinum 4', 'Platinum 3', 'Platinum 2', 'Platinum 1', 'Diamond 4', 'Diamond 3', 'Diamond 2', 'Diamond 1', "Master", 'GM', 'C'];
 
-                //console.log(data);
+                console.log(data);
                 let current = data.rank;
                 let type = oObj.order_type.split(' - ');
                 let rankSec = type[2];
@@ -817,7 +816,7 @@
                 }else{
                   //design placement/netwin reassignment process
                   let initQuantity = type[2].charAt(0);
-                  ////console.log(initQuantity);
+                  //console.log(initQuantity);
                   that.newOrder.order_message = oObj.order_message;
                   that.newOrder.client_id = oObj.client_id;
 
@@ -889,11 +888,11 @@
             cOrder.payout_status = 'completed';
 
             cOrder.client_id = oObj.client_id;
-            //console.log(cOrder);
+            console.log(cOrder);
 
             let inputObj = [cOrder, this.newOrder];
 
-            axios.put('https://app.bmsboosting.com/api/orderRe', inputObj).then(()=>{
+            axios.put('https://bms-dash.herokuapp.com/api/orderRe', inputObj).then(()=>{
               swal.fire(
                 'Created!',
                 'Your reassignment has been sent out to boosters.',
@@ -902,7 +901,7 @@
 
             });
             oObj.order_status = 'reassign';
-            axios.put("https://app.bmsboosting.com/api/orders/"+oObj.order_id, oObj).then(()=>{
+            axios.put("https://bms-dash.herokuapp.com/api/orders/"+oObj.order_id, oObj).then(()=>{
 
             });
 
@@ -923,7 +922,7 @@
           },
           markReassigned(order, person){
             order.order_status = 'reassigned';
-            axios.put("https://app.bmsboosting.com/api/reassigned/"+order.order_id, order).then(()=>{
+            axios.put("https://bms-dash.herokuapp.com/api/reassigned/"+order.order_id, order).then(()=>{
               toast.fire({
                 icon: 'success',
                 title: 'Order Marked as Reassigned!'
@@ -933,7 +932,7 @@
           markFinished(order, person){
 
 
-            axios.put('https://app.bmsboosting.com/api/finished/'+order.order_id).then((data)=>{
+            axios.put('https://bms-dash.herokuapp.com/api/finished/'+order.order_id).then((data)=>{
               toast.fire({
                 icon: 'success',
                 title: 'Order Marked as Completed!'
@@ -956,7 +955,7 @@
             let adjustedPrice = (order.order_price*0.96)-0.3;
             let bCut = Math.floor(adjustedPrice*0.7);
             person.payout += bCut;
-            axios.put("https://app.bmsboosting.com/api/orders/"+order.order_id, order).then(()=>{
+            axios.put("https://bms-dash.herokuapp.com/api/orders/"+order.order_id, order).then(()=>{
               toast.fire({
                 icon: 'success',
                 title: 'Order Marked as Completed'
@@ -968,10 +967,10 @@
               })
             });
 
-            axios.put("https://app.bmsboosting.com/api/user/"+person.id, person).then(()=>{
-              //console.log("User Update Success");
+            axios.put("https://bms-dash.herokuapp.com/api/user/"+person.id, person).then(()=>{
+              console.log("User Update Success");
             }).catch(()=>{
-              //console.log("User Update Failed");
+              console.log("User Update Failed");
 
             });
             */
@@ -980,7 +979,7 @@
             if(this.$gate.isAdmin){
 
 
-            axios.get("https://app.bmsboosting.com/api/orders").then((data)=>{
+            axios.get("https://bms-dash.herokuapp.com/api/orders").then((data)=>{
               this.orders=data;
 
             });
@@ -989,7 +988,7 @@
           },
           checkDropReq(user){
             for(let i=0; i<user.ongoing_orders_arr.length; i++){
-            ////console.log(user.ongoing_orders_arr[i].order_status+" "+user.name);
+            //console.log(user.ongoing_orders_arr[i].order_status+" "+user.name);
               if(user.ongoing_orders_arr[i].order_status == 'request_drop'){
                 $('#alert'+user.ongoing_orders_arr[i].order_id).remove();
                 $('#dropAlerts').append(
@@ -1000,9 +999,9 @@
           },
           checkDoneReq(user){
             for(let i=0; i<user.ongoing_orders_arr.length; i++){
-            ////console.log(user.ongoing_orders_arr[i].order_status+" "+user.name);
+            //console.log(user.ongoing_orders_arr[i].order_status+" "+user.name);
               if(user.ongoing_orders_arr[i].order_status == 'verify'){
-              //console.log('alnsfklbadslg')
+              console.log('alnsfklbadslg')
                 $('#done'+user.ongoing_orders_arr[i].order_id).remove();
                 $('#doneAlerts').append(
                 "<div id='done"+user.ongoing_orders_arr[i].order_id+"' class='alert alert-success alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Completion Request!</h5>Completion request from Order # "+ user.ongoing_orders_arr[i].order_id +" .</div>");
@@ -1011,9 +1010,9 @@
             }
           },
           payoutAll(person){
-          ////console.log(process);
-          ////console.log(process.env);
-          ////console.log(process.env.MIX_PAYPAL_AUTHORIZATION);
+          //console.log(process);
+          //console.log(process.env);
+          //console.log(process.env.MIX_PAYPAL_AUTHORIZATION);
 
             if(person.payout > 0){
               const config = {
@@ -1044,7 +1043,7 @@
                 let orderArr = this.orders.data.data;
                 let userOrderArr = [];
 
-                axios.put('https://app.bmsboosting.com/api/payouts/'+person.id).then((data)=>{
+                axios.put('https://bms-dash.herokuapp.com/api/payouts/'+person.id).then((data)=>{
                   toast.fire({
                     icon: 'success',
                     title: 'User Payout Complete'
@@ -1057,7 +1056,7 @@
                     person.current_orders_arr[i].payout_status = 'completed';
                   }
                 }*/
-                //axios.put('https://app.bmsboosting.com/api/user/'+person.id, person);
+                //axios.put('https://bms-dash.herokuapp.com/api/user/'+person.id, person);
 
 
               });
@@ -1070,7 +1069,7 @@
             }
           },
           adminWithdraw(){
-            axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
+            axios.get("https://bms-dash.herokuapp.com/api/me").then((data)=>{
               this.userPP.fill(data.data);
               this.userPP.payout = 0;
               axios.put('api/me', this.userPP).then((data)=>{

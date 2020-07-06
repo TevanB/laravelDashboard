@@ -41,9 +41,8 @@ class OrderController extends Controller
     {
       if( \Gate::allows('isAdmin')){
 
-        $orders = DB::table('orders')->get();
-
-        return $orders;
+        $orders = Order::paginate(99999);
+        return OrderResource::collection($orders);
         //return Order::latest()->paginate(4);
       }else{
         return 'fail';
