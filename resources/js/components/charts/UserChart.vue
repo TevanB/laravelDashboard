@@ -17,7 +17,7 @@ import moment from 'moment';
             let NumUsers = new Array();
             axios.get('https://app.bmsboosting.com/api/user').then((response)=>{
               let data = response.data.data;
-              console.log(response.data.data);
+              //console.log(response.data.data);
               if(data){
                 for(let i=0; i<data.length; i++){
                   if(Dates.indexOf(this.myDate(data[i].created_at))==-1){

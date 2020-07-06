@@ -578,7 +578,7 @@
 
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
-                console.log('hit');
+                //console.log('hit');
                 this.adminPayout = this.users[i].payout;
               }
             }
@@ -587,7 +587,7 @@
               if(this.form.order_status != 'unclaimed'){
                 this.loadOrders();
                 this.loadUsers();
-                console.log('mounted reload');
+                //console.log('mounted reload');
 
               }
 
@@ -604,10 +604,10 @@
               axios.get("https://app.bmsboosting.com/api/orders").then((data)=>{
                 this.orders=data;
                 let response = data.data.data;
-                console.log(response);
+                //console.log(response);
                 for(let i=0; i<response.length; i++){
                   if(response[i].order_status == 'reassign'){
-                  console.log('reassign match');
+                  //console.log('reassign match');
                   $('#reassignAlerts').append(
                   "<div class='alert alert-warning alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Reassign Request!</h5>Reassign request from Order # "+ response[i].order_id +" .</div>");
 
@@ -653,7 +653,7 @@
              axios.get("https://app.bmsboosting.com/api/orders").then((data)=>{
                 let response = data.data.data;
 
-                console.log(response);
+               //console.log(response);
                 for(let i=0; i<response.length; i++){
                   if(response[i].order_status == 'reassign'){
                   $('#reassignAlerts').append(
@@ -680,7 +680,7 @@
             if(this.$gate.isAdmin){
 
 
-            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{console.log(data.data.data); console.log(data.data); this.users=data.data.data;
+            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{console.log(data.data.data);//console.log(data.data); this.users=data.data.data;
             for(let i=0; i<data.data.length; i++){
               if(data.data[i].type === 'admin'){
                 this.adminUser = this.users[i];
@@ -693,7 +693,7 @@
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 this.adminUser = this.users[i];
-                console.log(this.adminUser);
+               //console.log(this.adminUser);
               }
             }
           },
@@ -730,7 +730,7 @@
             }
           },
           isDiv(order){
-            console.log(order.order_type);
+           //console.log(order.order_type);
             if(order.order_type.includes('Division')){
               return true;
             }else{
@@ -774,7 +774,7 @@
           },
           reassignOrder(oObj){
             this.rOrder = oObj;
-            console.log(JSON.parse(oObj.order_message).summoner_name);
+           //console.log(JSON.parse(oObj.order_message).summoner_name);
             this.newOrder.reset();
 
             let that = this;
@@ -785,7 +785,7 @@
                 let ranks = ['I4', 'I3', 'I2', 'I1', 'B4', 'B3', 'B2', 'B1', 'S4', 'S3', 'S2', 'S1', 'G4', 'G3', 'G2', 'G1', 'P4', 'P3', 'P2', 'P1', 'D4', 'D3', 'D2', 'D1', "M", 'GM', 'C'];
                 let ranks2 = ['Iron 4', 'Iron 3', 'Iron 2', 'Iron 1', 'Bronze 4', 'Bronze 3', 'Bronze 2', 'Bronze 1', 'Silver 4', 'Silver 3', 'Silver 2', 'Silver 1', 'Gold 4', 'Gold 3', 'Gold 2', 'Gold 1', 'Platinum 4', 'Platinum 3', 'Platinum 2', 'Platinum 1', 'Diamond 4', 'Diamond 3', 'Diamond 2', 'Diamond 1', "Master", 'GM', 'C'];
 
-                console.log(data);
+               //console.log(data);
                 let current = data.rank;
                 let type = oObj.order_type.split(' - ');
                 let rankSec = type[2];
@@ -898,7 +898,7 @@
             cOrder.payout_status = 'completed';
 
             cOrder.client_id = oObj.client_id;
-            console.log(cOrder);
+           //console.log(cOrder);
 
             let inputObj = [cOrder, this.newOrder];
 
@@ -978,9 +978,9 @@
             });
 
             axios.put("https://app.bmsboosting.com/api/user/"+person.id, person).then(()=>{
-              console.log("User Update Success");
+             //console.log("User Update Success");
             }).catch(()=>{
-              console.log("User Update Failed");
+             //console.log("User Update Failed");
 
             });
             */
@@ -1011,7 +1011,7 @@
             for(let i=0; i<user.ongoing_orders_arr.length; i++){
             //console.log(user.ongoing_orders_arr[i].order_status+" "+user.name);
               if(user.ongoing_orders_arr[i].order_status == 'verify'){
-              console.log('alnsfklbadslg')
+             //console.log('alnsfklbadslg')
                 $('#done'+user.ongoing_orders_arr[i].order_id).remove();
                 $('#doneAlerts').append(
                 "<div id='done"+user.ongoing_orders_arr[i].order_id+"' class='alert alert-success alert-dismissible container-fluid'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><h5><i class='icon fas fa-exclamation-triangle'></i> Completion Request!</h5>Completion request from Order # "+ user.ongoing_orders_arr[i].order_id +" .</div>");
