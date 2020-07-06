@@ -584,12 +584,9 @@
             }
 
             window.setInterval(()=>{
-              if(this.form.order_status != 'unclaimed'){
                 this.loadOrders();
                 this.loadUsers();
                 //console.log('mounted reload');
-
-              }
 
             }, 10000);
 
