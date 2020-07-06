@@ -671,6 +671,7 @@
 
 
             axios.get("https://app.bmsboosting.com/api/user").then((data)=>{//console.log(data.data.data); this.users=data;
+            console.log(this.users);
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 this.adminUser = this.users[i];
