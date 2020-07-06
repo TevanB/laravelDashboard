@@ -583,6 +583,9 @@
               }
             }
 
+            this.loadOrders();
+            this.loadUsers();
+            console.log('mounted reload');
 
 
 
