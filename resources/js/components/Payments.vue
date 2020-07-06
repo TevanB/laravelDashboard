@@ -50,7 +50,7 @@
                 <div class="card-header"></div>
                 <div class="card-body">
                   <h5 class="card-title mb-5">Current Admin Payout</h5>
-                  <h2  id="uPayoutID" class="text-center card-text" :key="adminUser.payout">${{adminUser.payout}} USD</h2>
+                  <h2  id="uPayoutID" class="text-center card-text" :key="adminUser.payout">${{getPayout(user)}} USD</h2>
 
                 </div>
               </div>
@@ -532,6 +532,7 @@
 
            editmode: true,
            users: {},
+           user:{},
            new_curLP:'',
            new_gameNum:1,
            orders:{},
@@ -576,12 +577,12 @@
         mounted() {
         if(this.$gate.isAdmin()){
 
-            for(let i=0; i<this.users.length; i++){
+            /*for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 //console.log('hit');
-                this.adminUser = this.users[i];
+                this.adminPayout = this.users[i].payout;
               }
-            }
+            }*/
 
             /*window.setInterval(()=>{
                 this.loadOrders();
@@ -673,6 +674,20 @@
 
         },
         methods:{
+          getPayout(user){
+            //if(user.payout){
+              return user.payout.toFixed(2);
+            //}else if(user.payout === 0){
+              //return 0.00;
+            //}
+          },
+          getUser(){
+            axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
+
+              this.user = data.data;
+              ////console.log(this.user);
+            });
+          },
           loadUsers(){
             if(this.$gate.isAdmin){
 
@@ -682,7 +697,7 @@
             this.users=data.data.data;
             for(let i=0; i<data.data.length; i++){
               if(data.data[i].type === 'admin'){
-                this.adminUser = data.data[i];
+                this.adminUser = this.users[i];
               }
             }
             });
@@ -1091,7 +1106,7 @@
         created(){
           if(this.$gate.isAdmin()){
             this.loadUsers();
-
+            this.getUser();
             this.loadOrders();
 
           }
