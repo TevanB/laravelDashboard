@@ -591,7 +591,7 @@
 
               }
 
-            }, 15000);
+            }, 10000);
 
 
 
@@ -680,7 +680,7 @@
             if(this.$gate.isAdmin){
 
 
-            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{console.log(data.data.data);//console.log(data.data); this.users=data.data.data;
+            axios.get("https://app.bmsboosting.com/api/user").then((data)=>{//console.log(data.data.data);//console.log(data.data); this.users=data.data.data;
             for(let i=0; i<data.data.length; i++){
               if(data.data[i].type === 'admin'){
                 this.adminUser = this.users[i];
