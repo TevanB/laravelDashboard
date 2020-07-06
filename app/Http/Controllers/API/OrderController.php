@@ -43,7 +43,7 @@ class OrderController extends Controller
 
         $orders = DB::table('orders')->get();
 
-        return $orders
+        return $orders;
         //return Order::latest()->paginate(4);
       }else{
         return 'fail';
