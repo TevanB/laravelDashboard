@@ -580,6 +580,7 @@
               if(this.users[i].type === 'admin'){
                 //console.log('hit');
                 this.adminPayout = this.users[i].payout;
+                this.adminUser = this.users[i];
               }
             }
 
