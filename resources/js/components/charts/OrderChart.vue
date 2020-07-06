@@ -11,7 +11,7 @@ import moment from 'moment';
             let Prices = new Array();
 
             axios.get('https://app.bmsboosting.com/api/orders').then((response)=>{
-              let data = response.data.data;
+              let data = response;
               if(data){
                 for(let i=0; i<data.length; i++){
 
