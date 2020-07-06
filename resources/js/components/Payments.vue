@@ -576,12 +576,12 @@
         mounted() {
         if(this.$gate.isAdmin()){
 
-            for(let i=0; i<this.users.length; i++){
+            /*for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 //console.log('hit');
                 this.adminPayout = this.users[i].payout;
               }
-            }
+            }*/
 
             /*window.setInterval(()=>{
                 this.loadOrders();
@@ -689,12 +689,7 @@
 
 
             }
-            for(let i=0; i<this.users.length; i++){
-              if(this.users[i].type === 'admin'){
-                this.adminUser = this.users[i];
-               //console.log(this.adminUser);
-              }
-            }
+
           },
           boosterCut(totalPrice){
             let adjustedPrice = (totalPrice*0.96)-0.3;
