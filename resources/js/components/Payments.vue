@@ -579,7 +579,6 @@
             for(let i=0; i<this.users.length; i++){
               if(this.users[i].type === 'admin'){
                 //console.log('hit');
-                this.adminPayout = this.users[i].payout;
                 this.adminUser = this.users[i];
               }
             }
@@ -683,7 +682,7 @@
             this.users=data.data.data;
             for(let i=0; i<data.data.length; i++){
               if(data.data[i].type === 'admin'){
-                this.adminUser = this.users[i];
+                this.adminUser = data.data[i];
               }
             }
             });
