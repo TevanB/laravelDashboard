@@ -91,7 +91,7 @@ class CaptureOrder
 
 
     Mail::to($clientEmail)->send(new ClientNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3));
-    Mail::to("admin@bmsboosting.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
+    Mail::to("bmseloboosting@gmail.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
 
     broadcast(new NewPurchase())->toOthers();
 
