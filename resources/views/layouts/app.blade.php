@@ -86,10 +86,10 @@
                       <li class="nav-item ml-2 mr-2">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                       </li>
-                      <li class="nav-item ml-2 mr-2">
+                      <li class="nav-item">
                           <a class="nav-link text-light menuFont" href="https://app.bmsboosting.com/boosting">{{ __('LoL Boosting') }}</a>
                       </li>
-                      <li class="nav-item ml-2 mr-2">
+                      <li class="nav-item">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com/tft-elo-boosting">{{ __('TFT Boosting') }}</a>
                       </li>
                       <li class="nav-item ml-2 mr-2">
@@ -98,7 +98,7 @@
                       <li class="nav-item ml-2 mr-2">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com/account-selling">Accounts</a>
                       </li>
-                      
+
 
 
                         <!-- Authentication Links -->

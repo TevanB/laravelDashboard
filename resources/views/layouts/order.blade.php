@@ -89,10 +89,10 @@
                         <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                         </li>
-                        <li class="nav-item ml-2 mr-2">
+                        <li class="nav-item">
                             <a class="nav-link text-light menuFont" href="https://app.bmsboosting.com/boosting">{{ __('LoL Boosting') }}</a>
                         </li>
-                        <li class="nav-item ml-2 mr-2">
+                        <li class="nav-item">
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com/tft-elo-boosting">{{ __('TFT Boosting') }}</a>
                         </li>
                         <li class="nav-item ml-2 mr-2">
@@ -101,7 +101,7 @@
                         <li class="nav-item ml-2 mr-2">
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com/account-selling">Accounts</a>
                         </li>
-                        
+
 
                         <li class="nav-item dropdown ml-2 mr-2">
                             <a id="navbarDropdown" class="nav-link text-light dropdown-toggle menuFont" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help Centre<span class="caret"></span></a>
