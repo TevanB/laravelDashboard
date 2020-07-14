@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\API;
+use NotificationChannels\Discord\DiscordChannel;
+use NotificationChannels\Discord\DiscordMessage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,12 +17,15 @@ use JamesDordoy\LaravelVueDatatable\Http\Resources\DataTableCollectionResource;
 class UserController extends Controller
 {
 
-
+    public $discord_channel = 732416883378225202;
     public function __construct()
     {
         $this->middleware('auth:api');
 
 
+    }
+    public function routeNotificationForDiscord(){
+      return $this->discord_channel;
     }
     /**
      * Display a listing of the resource.
@@ -38,6 +43,8 @@ class UserController extends Controller
     public function index2(Request $request)
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
+
+        DiscordMessage::create("You loaded orders on the site!");
 
         $length = $request->input('length');
         $sortBy = $request->input('column');

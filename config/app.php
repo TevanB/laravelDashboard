@@ -170,6 +170,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         JamesDordoy\LaravelVueDatatable\Providers\LaravelVueDatatableServiceProvider::class,
+        NotificationChannels\Discord\DiscordServiceProvider::class,
 
         /*
          * Package Service Providers...
