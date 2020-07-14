@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\API;
-use NotificationChannels\Discord\DiscordChannel;
-use NotificationChannels\Discord\DiscordMessage;
 
+use App\Notifications\DiscordTest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
@@ -20,16 +19,13 @@ class UserController extends Controller
 
     use Notifiable;
 
-    public $discord_channel = '732416883378225202';
     public function __construct()
     {
         $this->middleware('auth:api');
 
 
     }
-    public function routeNotificationForDiscord(){
-      return $this->discord_channel;
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -47,7 +43,8 @@ class UserController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
 
-        DiscordMessage::create("You loaded orders on the site!");
+        $users = auth('api')->user();
+        Notification::send($users, new DiscordTest());
 
         $length = $request->input('length');
         $sortBy = $request->input('column');

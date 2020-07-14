@@ -17,6 +17,11 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
+    public $discord_channel = '732416883378225202';
+    public function routeNotificationForDiscord()
+    {
+      return $this->$discord_channel;
+    }
     protected $fillable = [
         'id', 'name', 'email', 'password', 'bio', 'photo', 'type', 'payout', 'ongoing_orders', 'ongoing_orders_arr','current_orders_arr', 'completed_orders',
     ];
