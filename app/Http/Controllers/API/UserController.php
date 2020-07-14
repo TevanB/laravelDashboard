@@ -46,7 +46,7 @@ class UserController extends Controller
         $curl = curl_init('https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk');
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(array("content"=>"ah haw")));
-
+        echo curl_exec($curl);
         $length = $request->input('length');
         $sortBy = $request->input('column');
         $orderBy = $request->input('dir');
