@@ -46,7 +46,7 @@ class UserController extends Controller
         $curl = curl_init();
         $hookObject = json_encode([
           "type" => "rich",
-          "content" => "New Order on Website, visit https://app.bmsboosting.com/orders",
+          "content" => "New website order, visit https://app.bmsboosting.com/orders",
         ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         curl_setopt_array($curl, [
           CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
@@ -56,7 +56,7 @@ class UserController extends Controller
               "Content-Type: application/json"
             ]
         ]);
-        echo curl_exec($curl);
+        curl_exec($curl);
         $length = $request->input('length');
         $sortBy = $request->input('column');
         $orderBy = $request->input('dir');
@@ -102,6 +102,21 @@ class UserController extends Controller
         'ongoing_orders_arr' => $request['ongoing_orders_arr'],
         'current_orders_arr' => $request['current_orders_arr'],
       ]);
+
+      $curl = curl_init();
+      $hookObject = json_encode([
+        "type" => "rich",
+        "content" => "User: " . $user->name . ", Email: " . $user->email . " has registered on your site.",
+      ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+      curl_setopt_array($curl, [
+        CURLOPT_URL => 'https://discordapp.com/api/webhooks/732698435324477525/zSq2-7HQLwZ-9a1zqraq_pdR9xeKzilNwkErT_n7AXs3fLfZmo8CmXo9piJxBubRExzw',
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $hookObject,
+        CURLOPT_HTTPHEADER => [
+            "Content-Type: application/json"
+          ]
+      ]);
+      curl_exec($curl);
 
       $request->request->add([
           'grant_type'    => 'password',
