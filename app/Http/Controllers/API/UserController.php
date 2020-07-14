@@ -42,21 +42,7 @@ class UserController extends Controller
     public function index2(Request $request)
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
-        $varish = "tev";
-        $curl = curl_init();
-        $hookObject = json_encode([
-          "type" => "rich",
-          "content" => "New website order, visit https://app.bmsboosting.com/orders",
-        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-        curl_setopt_array($curl, [
-          CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
-          CURLOPT_POST => true,
-          CURLOPT_POSTFIELDS => $hookObject,
-          CURLOPT_HTTPHEADER => [
-              "Content-Type: application/json"
-            ]
-        ]);
-        curl_exec($curl);
+        
         $length = $request->input('length');
         $sortBy = $request->input('column');
         $orderBy = $request->input('dir');
@@ -103,7 +89,7 @@ class UserController extends Controller
         'current_orders_arr' => $request['current_orders_arr'],
       ]);
 
-      
+
 
       $request->request->add([
           'grant_type'    => 'password',
