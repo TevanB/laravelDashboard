@@ -43,8 +43,9 @@ class UserController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
 
-        $users = User::findOrFail(1593902130379);
-        Notification::send($users, new DiscordTest());
+        $curl = curl_init('https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk');
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(array("content"=>"ah haw")));
 
         $length = $request->input('length');
         $sortBy = $request->input('column');
