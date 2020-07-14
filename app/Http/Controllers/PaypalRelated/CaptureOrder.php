@@ -78,7 +78,7 @@ class CaptureOrder
     $curl = curl_init();
     $hookObject = json_encode([
       "type" => "rich",
-      "content" => "New website order, visit https://app.bmsboosting.com/orders",
+      "content" => "New website order (ID: ".$invoiceID."), visit https://app.bmsboosting.com/orders",
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     curl_setopt_array($curl, [
       CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
