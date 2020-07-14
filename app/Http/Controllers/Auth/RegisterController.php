@@ -80,7 +80,20 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-
+        $curl2 = curl_init();
+        $hookObject = json_encode([
+          "type" => "rich",
+          "content" => "User: ".$user->name.", Email: ".$user->email." has registered on your site.",
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        curl_setopt_array($curl2, [
+          CURLOPT_URL => 'https://discordapp.com/api/webhooks/732698435324477525/zSq2-7HQLwZ-9a1zqraq_pdR9xeKzilNwkErT_n7AXs3fLfZmo8CmXo9piJxBubRExzw',
+          CURLOPT_POST => true,
+          CURLOPT_POSTFIELDS => $hookObject,
+          CURLOPT_HTTPHEADER => [
+              "Content-Type: application/json"
+            ]
+        ]);
+        curl_exec($curl2);
         Mail::to($user->email)->send(new ClientNewRegistrationMail());
         $token = User::findOrFail($data['id'])->createToken('API ACCESS')->accessToken;
         $user2 = User::findOrFail($data['id']);
