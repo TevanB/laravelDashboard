@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Notifications\Notifiable;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
