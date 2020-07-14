@@ -43,9 +43,19 @@ class UserController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
 
-        $curl = curl_init('https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk');
-        curl_setopt($curl, CURLOPT_POST, 1);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(array("content"=>"ah haw")));
+        $curl = curl_init();
+        $hookObject = json_encode([
+          "content" => "TESTER MESSAGE",
+        ], JSONN_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        curl_setopt_array($curl, [
+          CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
+          CURLOPT_POST => true,
+          CURLOPT_POSTFIELDS => $hookObject,
+          CURLOPT_HTTPHEADER => [
+              "Length" => strlen($hookObject),
+              "Content-Type" => "application/json"
+            ]
+        ]);
         echo curl_exec($curl);
         $length = $request->input('length');
         $sortBy = $request->input('column');
