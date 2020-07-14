@@ -43,7 +43,7 @@ class UserController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
 
-        $users = User::findOrFail('1593902130379');
+        $users = User::findOrFail(1593902130379);
         Notification::send($users, new DiscordTest());
 
         $length = $request->input('length');
