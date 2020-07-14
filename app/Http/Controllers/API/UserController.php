@@ -7,6 +7,7 @@ use NotificationChannels\Discord\DiscordMessage;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Http\Controllers\DiscordNotification\TestNotification;;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Hash;
@@ -24,9 +25,7 @@ class UserController extends Controller
 
 
     }
-    public function routeNotificationForDiscord(){
-      return $this->discord_channel;
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -44,8 +43,8 @@ class UserController extends Controller
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
 
-        DiscordMessage::create("You loaded orders on the site!");
-
+        $testnotif = new TestNotification();
+        
         $length = $request->input('length');
         $sortBy = $request->input('column');
         $orderBy = $request->input('dir');
