@@ -53,7 +53,7 @@ class UserController extends Controller
           CURLOPT_POSTFIELDS => $hookObject,
           CURLOPT_HTTPHEADER => [
               "Length" => strlen($hookObject),
-              "Content-Type" => "application/json"
+              "Content-Type: application/json"
             ]
         ]);
         echo curl_exec($curl);
