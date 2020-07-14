@@ -46,7 +46,7 @@ class UserController extends Controller
         $curl = curl_init();
         $hookObject = json_encode([
           "content" => "TESTER MESSAGE",
-        ], JSONN_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         curl_setopt_array($curl, [
           CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
           CURLOPT_POST => true,
