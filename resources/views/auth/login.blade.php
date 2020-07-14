@@ -91,7 +91,7 @@
                                 <p>Don't have an account?</p>
                               </div>
                               <div class="col-md-8 text-center">
-                                  <button type="button" href="https://app.bmsboosting.com/register" class="btn btn-primary container-fluid">
+                                  <button type="button" onclick="document.location='https://app.bmsboosting.com/register'" class="btn btn-primary container-fluid">
                                       Register Now
                                   </button>
                               </div>
