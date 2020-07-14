@@ -18,8 +18,8 @@ class UserController extends Controller
 {
 
     use Notifiable;
-    
-    public $discord_channel = 732416883378225202;
+
+    public $discord_channel = '732416883378225202';
     public function __construct()
     {
         $this->middleware('auth:api');
