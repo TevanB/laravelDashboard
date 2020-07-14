@@ -42,11 +42,11 @@ class UserController extends Controller
     public function index2(Request $request)
     {
       if( \Gate::allows('isAdmin') || \Gate::allows('isAdmin')){
-
+        $varish = "tev";
         $curl = curl_init();
         $hookObject = json_encode([
           "type" => "rich",
-          "content" => "New website order, visit https://app.bmsboosting.com/orders",
+          "content" => "New website order, ".$varish."visit https://app.bmsboosting.com/orders",
         ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         curl_setopt_array($curl, [
           CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
@@ -106,7 +106,7 @@ class UserController extends Controller
       $curl = curl_init();
       $hookObject = json_encode([
         "type" => "rich",
-        "content" => "User: " . $user->name . ", Email: " . $user->email . " has registered on your site.",
+        "content" => "User: ".$user->name.", Email: ".$user->email." has registered on your site.",
       ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
       curl_setopt_array($curl, [
         CURLOPT_URL => 'https://discordapp.com/api/webhooks/732698435324477525/zSq2-7HQLwZ-9a1zqraq_pdR9xeKzilNwkErT_n7AXs3fLfZmo8CmXo9piJxBubRExzw',
