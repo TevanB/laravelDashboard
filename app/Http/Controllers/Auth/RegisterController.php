@@ -94,6 +94,7 @@ class RegisterController extends Controller
             ]
         ]);
         curl_exec($curl2);
+        curl_close($curl2);
         Mail::to($user->email)->send(new ClientNewRegistrationMail());
         $token = User::findOrFail($data['id'])->createToken('API ACCESS')->accessToken;
         $user2 = User::findOrFail($data['id']);

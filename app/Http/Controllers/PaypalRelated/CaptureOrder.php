@@ -75,21 +75,21 @@ class CaptureOrder
     }
     //SAVE ORDER TO DATABASE Below
 
-    $curl = curl_init();
-    $hookObject = json_encode([
+    $curl2 = curl_init();
+    $hookObject2 = json_encode([
       "type" => "rich",
       "content" => "@everyone New website order (ID: ".$invoiceID."), visit https://app.bmsboosting.com/orders",
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-    curl_setopt_array($curl, [
+    curl_setopt_array($curl2, [
       CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
       CURLOPT_POST => true,
-      CURLOPT_POSTFIELDS => $hookObject,
+      CURLOPT_POSTFIELDS => $hookObject2,
       CURLOPT_HTTPHEADER => [
           "Content-Type: application/json"
         ]
     ]);
-    curl_exec($curl);
-
+    curl_exec($curl2);
+    curl_close($curl2);
     DB::table('orders')->insert([
       'order_id' => $invoiceID,
       'client_id' => json_decode($orderObj)->client_id,

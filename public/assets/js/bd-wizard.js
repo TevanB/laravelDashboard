@@ -1530,7 +1530,7 @@ function buildOrderInfo(){
         orderFormObj.starting_lp = "(" + $('#startinglp_10').val() + "-20)";
 
       }else if($('#startinglp_10').val()==='21'){
-        lpString = " (" + $('#startinglp-10').val() + "-40)" + " LP to ";
+        lpString = " (" + $('#startinglp_10').val() + "-40)" + " LP to ";
         orderFormObj.starting_lp = "(" + $('#startinglp_10').val() + "-40)";
 
       }
