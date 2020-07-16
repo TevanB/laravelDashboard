@@ -1079,7 +1079,7 @@
                           <h5 class="text-bold text-light">Server (Required)</h5>
                         </div>
                         <div class="col-3">
-                          <select class="custom-select bg-light" name="regionSel" id="regionSel">
+                          <select class="custom-select bg-light" name="regionSel2" id="regionSel2">
                             <option value="na" selected="selected">NA</option>
                             <option value="euw">EUW</option>
                             <option value="eune">EUNE</option>

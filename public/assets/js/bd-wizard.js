@@ -515,7 +515,7 @@ $('#emailAddress').on('change', function(e) {
 $('#emailAddress2').on('change', function(e) {
     email = e.target.value;
     orderFormObj.email = e.target.value;
-    orderFormObj.region = $('#regionSel').val();
+    orderFormObj.region = $('#regionSel2').val();
 
 
 });
@@ -526,6 +526,8 @@ $('#discord').on('change', function(e) {
 $('#discord2').on('change', function(e) {
     discord = e.target.value;
     orderFormObj.discord = e.target.value;
+    orderFormObj.region = $('#regionSel2').val();
+
 });
 $('#summonerName').on('change', function(e) {
     summonerName = e.target.value;
@@ -535,6 +537,8 @@ $('#summonerName2').on('change', function(e) {
     summonerName = e.target.value;
     orderFormObj.summoner_name = e.target.value;
     orderFormObj.type = 'duo';
+    orderFormObj.region = $('#regionSel2').val();
+
 });
 $('#orderMessage').on('change', function(e) {
     message = e.target.value;
@@ -543,6 +547,8 @@ $('#orderMessage').on('change', function(e) {
 $('#orderMessage2').on('change', function(e) {
     message = e.target.value;
     orderFormObj.message = e.target.value;
+    orderFormObj.region = $('#regionSel2').val();
+
 
 });
 
