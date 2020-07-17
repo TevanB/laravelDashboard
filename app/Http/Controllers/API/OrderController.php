@@ -135,7 +135,21 @@ class OrderController extends Controller
       echo $p1['client_id']."\n";
       //p1 is the client ongoing_orders_arr obj
 
-
+      $curl2 = curl_init();
+      $hookObject = json_encode([
+        "type" => "rich",
+        "content" => "User: ".$user->name.", Email: ".$user->email." has registered on your site.",
+      ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+      curl_setopt_array($curl2, [
+        CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $hookObject,
+        CURLOPT_HTTPHEADER => [
+            "Content-Type: application/json"
+          ]
+      ]);
+      curl_exec($curl2);
+      curl_close($curl2);
         //this is a reassign request by period signifier
         $user = User::findOrFail($p1['client_id']);
         if($user){
