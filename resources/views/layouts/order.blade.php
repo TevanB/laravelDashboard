@@ -666,7 +666,7 @@
 
                         <div class="col-sm-10">
                           <label class="text-light"  for="net-selector">Number of Net Wins</label>
-                          <input type="range" class="custom-range" id="net-selector" value="1" min="1" max="6" step="1">
+                          <input type="range" class="custom-range" id="net-selector" value="1" min="1" max="8" step="1">
                         </div>
                         <div class="col-sm-2">
                           <div class="card border-primary mb-3" style="max-width: 18rem;">
@@ -764,7 +764,7 @@
 
                         <div class="col-sm-10">
                           <label class="text-light"  for="net-selector">Number of Net Wins</label>
-                          <input type="range" class="custom-range" id="net-selector-duo" value="1" min="1" max="6" step="1">
+                          <input type="range" class="custom-range" id="net-selector-duo" value="1" min="1" max="" step="1">
                         </div>
                         <div class="col-sm-2">
                           <div class="card border-primary mb-3" style="max-width: 18rem;">
