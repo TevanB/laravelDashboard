@@ -135,21 +135,7 @@ class OrderController extends Controller
       echo $p1['client_id']."\n";
       //p1 is the client ongoing_orders_arr obj
 
-      $curl2 = curl_init();
-      $hookObject = json_encode([
-        "type" => "rich",
-        "content" => "Reassignment created.",
-      ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-      curl_setopt_array($curl2, [
-        CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
-        CURLOPT_POST => true,
-        CURLOPT_POSTFIELDS => $hookObject,
-        CURLOPT_HTTPHEADER => [
-            "Content-Type: application/json"
-          ]
-      ]);
-      curl_exec($curl2);
-      curl_close($curl2);
+
         //this is a reassign request by period signifier
         $user = User::findOrFail($p1['client_id']);
         if($user){
@@ -171,6 +157,9 @@ class OrderController extends Controller
     }
     public function claim(Request $request, $id){
       //assumes user order limit already checked
+
+
+
       $order = Order::findOrFail($id);
 
 
@@ -188,6 +177,22 @@ class OrderController extends Controller
             'ongoing_orders_arr' => $ongoingOrderArr,
 
           ]);
+
+          $curl2 = curl_init();
+          $hookObject = json_encode([
+            "type" => "rich",
+            "content" => "Order #".$id." claimed by ".$booster->name.".",
+          ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+          curl_setopt_array($curl2, [
+            CURLOPT_URL => 'https://discordapp.com/api/webhooks/734896157163257886/VaUUN2eseqcXMa0o2XG5RhvocdkqNNoG_XjAYisKUy_ERgAd37tW-VYJpWo5Jf7hKWB3',
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $hookObject,
+            CURLOPT_HTTPHEADER => [
+                "Content-Type: application/json"
+              ]
+          ]);
+          curl_exec($curl2);
+          curl_close($curl2);
 
           $client = User::find($order->client_id);
           if($client){
