@@ -138,7 +138,7 @@ class OrderController extends Controller
       $curl2 = curl_init();
       $hookObject = json_encode([
         "type" => "rich",
-        "content" => "User: ".$user->name.", Email: ".$user->email." has registered on your site.",
+        "content" => "Reassignment created.",
       ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
       curl_setopt_array($curl2, [
         CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',

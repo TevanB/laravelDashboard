@@ -134,7 +134,7 @@
 
 
                   <tbody v-if="orders.data">
-                    <tr v-for="order in orders.data.data" :key="order.order_id" v-if="orders.data && orders.data.data && order.order_status != 'unclaimed' && order.order_status != 'completed' && order.order_status != 'reassigned'">
+                    <tr v-for="order in orders.data.data" :key="order.order_id" v-if="orders.data && orders.data.data && order.order_status != 'unclaimed' && order.order_status != 'completed' && order.order_status != 'reassigned' && order.order_status != 'cancelled'">
 
 
 
