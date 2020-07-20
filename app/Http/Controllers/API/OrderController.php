@@ -146,6 +146,21 @@ class OrderController extends Controller
           ]);
         }
 
+        $curl2 = curl_init();
+        $hookObject2 = json_encode([
+          "type" => "rich",
+          "content" => "@everyone New website order (ID: ".$p2['order_id']."), visit https://app.bmsboosting.com/orders",
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        curl_setopt_array($curl2, [
+          CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
+          CURLOPT_POST => true,
+          CURLOPT_POSTFIELDS => $hookObject2,
+          CURLOPT_HTTPHEADER => [
+              "Content-Type: application/json"
+            ]
+        ]);
+        curl_exec($curl2);
+        curl_close($curl2);
 
       return Order::create([
         'order_type' => $p2['order_type'],
