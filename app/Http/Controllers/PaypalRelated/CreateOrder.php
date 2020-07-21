@@ -34,6 +34,8 @@ class CreateOrder
       print "Status Code: {$response->statusCode}\n";
       print "Status: {$response->result->status}\n";
       print "Order ID: {$response->result->id}\n";
+      print "Price: {$price}\n";
+      print "Description: {$description}\n";
       print "Intent: {$response->result->intent}\n";
       print "Purchase Units: {$response->result->purchase_units}\n";
       print "Links:\n";
