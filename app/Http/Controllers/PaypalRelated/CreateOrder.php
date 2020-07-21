@@ -16,7 +16,7 @@ class CreateOrder
    *This is the sample function to create an order. It uses the
    *JSON body returned by buildRequestBody() to create an order.
    */
-  public static function createOrder($debug=false)
+  public static function createOrder($debug=true)
   {
     $request_body = file_get_contents('php://input');
     $data = json_decode($request_body);
