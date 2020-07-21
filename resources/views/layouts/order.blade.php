@@ -1621,6 +1621,7 @@
           if(discountedPrice > 0){
             reqPrice = discountedPrice;
           }
+          reqPrice = Math.round((reqPrice + Number.EPSILON) * 100) / 100;
         return fetch('https://app.bmsboosting.com/api/create-paypal-transaction', {
           method: 'post',
           headers: {
