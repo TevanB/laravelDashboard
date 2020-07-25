@@ -1033,13 +1033,13 @@
           //console.log(process.env);
           //console.log(process.env.MIX_PAYPAL_AUTHORIZATION);
             axios.get('https://app.bmsboosting.com/api/ppGet').then((data)=>{
-              console.log(data.data);
+              console.log(data);
 
             if(person.payout > 0){
               const config = {
                   method: 'post',
                   url: 'https://api.paypal.com/v1/payments/payouts',
-                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer '+data.data},
+                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer '+data},
                   data:{
                     'sender_batch_header': {
                       'sender_batch_id': Date.now(),
