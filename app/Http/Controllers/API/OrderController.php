@@ -97,7 +97,7 @@ class OrderController extends Controller
     }
     public function getAuth(Request $request)
     {
-      return env("PAYPAL_CLIENT");
+      return env("PAYPAL_ACCESS");
     }
     public function create(Request $request)
     {
