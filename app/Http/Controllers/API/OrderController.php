@@ -95,6 +95,10 @@ class OrderController extends Controller
         //$order->update($request->all());
 
     }
+    public function getAuth(Request $request)
+    {
+      return env("PAYPAL_CLIENT");
+    }
     public function create(Request $request)
     {
       /*$this->validate($request,[

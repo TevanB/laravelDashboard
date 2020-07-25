@@ -34,7 +34,7 @@ Route::get("/me/{id}", 'API\UserController@getUserByID');
 Route::apiResources(['orders'=>'API\OrderController']);
 Route::apiResources(['user'=>'API\UserController']);
 Route::apiResources(['profile'=>'API\UserController']);
-
+Route::get('ppGet', 'API\OrderController@getAuth');
 Route::put('order/{id}', 'API\OrderController@claim');
 Route::get('orderinfo/{id}', 'API\OrderController@orderInfo');
 Route::put('orders', 'API\OrderController@create');

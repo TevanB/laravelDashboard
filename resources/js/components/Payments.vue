@@ -1032,12 +1032,14 @@
           //console.log(process);
           //console.log(process.env);
           //console.log(process.env.MIX_PAYPAL_AUTHORIZATION);
+            axios.get('https://app.bmsboosting.com/api/ppGet').then((data)=>{
+              console.log(data.data);
 
             if(person.payout > 0){
               const config = {
                   method: 'post',
                   url: 'https://api.paypal.com/v1/payments/payouts',
-                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer '+process.env.PAYPAL_CLIENT},
+                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer '+data.data},
                   data:{
                     'sender_batch_header': {
                       'sender_batch_id': Date.now(),
@@ -1058,6 +1060,7 @@
                   }
 
               };
+
               axios(config).then((data)=>{
                 let orderArr = this.orders.data.data;
                 let userOrderArr = [];
@@ -1086,6 +1089,7 @@
                 'error'
               )
             }
+            });
           },
           adminWithdraw(){
             axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
