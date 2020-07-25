@@ -1036,7 +1036,7 @@
             if(person.payout > 0){
               const config = {
                   method: 'post',
-                  url: 'https://api.sandbox.paypal.com/v1/payments/payouts',
+                  url: 'https://api.paypal.com/v1/payments/payouts',
                   headers: {'Content-Type': 'application/json', 'Authorization': process.env.MIX_PAYPAL_AUTHORIZATION},
                   data:{
                     'sender_batch_header': {
