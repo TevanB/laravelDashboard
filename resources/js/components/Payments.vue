@@ -1037,7 +1037,7 @@
               const config = {
                   method: 'post',
                   url: 'https://api.paypal.com/v1/payments/payouts',
-                  headers: {'Content-Type': 'application/json', 'Authorization': process.env.MIX_PAYPAL_AUTHORIZATION},
+                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer '+process.env.PAYPAL_CLIENT},
                   data:{
                     'sender_batch_header': {
                       'sender_batch_id': Date.now(),
