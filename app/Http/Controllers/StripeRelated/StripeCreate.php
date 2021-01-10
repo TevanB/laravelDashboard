@@ -2,7 +2,8 @@
 // This is your real test secret API key.
 namespace App\Http\Controllers\StripeRelated;
 //require __DIR__ . '/vendor/autoload.php';
-use Stripe;
+require_once('init.php');
+
 class StripeCreate
 {
 
