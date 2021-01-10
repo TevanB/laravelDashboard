@@ -24,7 +24,9 @@
     <link rel="stylesheet" id="avada-stylesheet-css" href="https://www.bmsboosting.com/wp-content/themes/Avada/assets/css/style.min.css?ver=5.7.1" type="text/css" media="all">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bd-wizard.css">
-
+    <link rel="stylesheet" href="assets/css/stripestyling.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
 
     <style>
       .chat {
@@ -1253,10 +1255,17 @@
 
                         </div>
                         <div class="row container-sm mt-5 mb-5">
-                          <div class="col-7" id="paypalButtons">
-
-                          </div>
-                        </div>
+                        <form id="payment-form">
+                          <div id="card-element" class="form-control"><!--Stripe.js injects the Card Element--></div>
+                          <button id="submit">
+                            <div class="spinner hidden" id="spinner"></div>
+                            <span id="button-text">Pay</span>
+                          </button>
+                          <p id="card-error" role="alert"></p>
+                          <p class="result-message hidden">
+                            Payment succeeded, see the result in your
+                          </p>
+                        </form>
 
                       </div>
 
@@ -1604,9 +1613,183 @@
     <script src="./assets/js/bd-wizard.js"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=AUhiAnfqWuMkr2u63RKODnJQojrQ6YmwhOUaU7fEjFQRDfEH5SIXulUKxQnMUloUR7Tv6MzaYX83M8xA">
     </script>
-
     <script>
+      var stripe = Stripe("pk_live_51I4xTLCBjNIgSDtBbEuNZoqjXvEWLz95hNIU2rDoljw8ZDO3UJqaorFzlK5ia26Y0oUQLhbbh3xgE2swrJCLYDRM00sUVI6AeC");
+      
       let caReturn ='';
+      caReturn = checkAccount();
+      makeNewInvoiceID();
+      let reqPrice = orderPrice;
+      console.log(reqPrice)
+      if(discountedPrice > 0){
+        reqPrice = discountedPrice;
+      }
+      reqPrice = Math.round((reqPrice + Number.EPSILON) * 100) / 100;
+
+      console.log(reqPrice)
+
+      fetch("https://bms-test.herokuapp.com/api/create-stripe-transaction", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            price: reqPrice,
+            description: orderPPString,
+            id: orderIdUnique,
+          })
+      }).then((data)=> {
+        //console.log(data.json())
+        var elements = stripe.elements();
+        var style = {
+          base: {
+            color: "#32325d",
+            fontFamily: 'Arial, sans-serif',
+            fontSmoothing: "antialiased",
+            fontSize: "16px",
+            "::placeholder": {
+              color: "#32325d"
+            }
+          },
+          invalid: {
+            fontFamily: 'Arial, sans-serif',
+            color: "#fa755a",
+            iconColor: "#fa755a"
+          }
+        };
+        var card = elements.create("card", { style: style });
+        // Stripe injects an iframe into the DOM
+        card.mount("#card-element");
+        card.on("change", function (event) {
+          // Disable the Pay button if there are no card details in the Element
+          document.querySelector("button").disabled = event.empty;
+          document.querySelector("#card-error").textContent = event.error ? event.error.message : "";
+        });
+        var form = document.getElementById("payment-form");
+        //console.log(data.json())
+        form.addEventListener("submit", async function(event) {
+          event.preventDefault();
+          let cSec = await data.clone().json()
+          console.log(cSec)
+          // Complete payment when the submit button is clicked
+          payWithCard(stripe, card, cSec.clientSecret);
+        });
+
+      
+      });
+    // Calls stripe.confirmCardPayment
+    // If the card requires authentication Stripe shows a pop-up modal to
+    // prompt the user to enter authentication details without leaving your page.
+    var payWithCard = function(stripe, card, clientSecret) {
+      loading(true);
+      stripe
+        .confirmCardPayment(clientSecret, {
+          payment_method: {
+            card: card
+          }
+        })
+        .then(function(result) {
+          if (result.error) {
+            // Show error to your customer
+            showError(result.error.message);
+          } else {
+            // The payment succeeded!
+            orderComplete(result.paymentIntent.id);
+          }
+        });
+    };
+    /* ------- UI helpers ------- */
+    // Shows a success message when the payment is complete
+    var orderComplete = function(paymentIntentId) {
+      loading(false);
+      document
+        .querySelector(".result-message")
+        .setAttribute(
+          "href",
+          "https://dashboard.stripe.com/test/payments/" + paymentIntentId
+        );
+      document.querySelector(".result-message").classList.remove("hidden");
+      document.querySelector("button").disabled = true;
+
+      let clientID = makeClientID();
+        let existStatus = false;
+        let fixedPrice = orderPrice.toFixed(2);
+        //caReturn = order.client_id;
+        order.client_id = clientID;
+        //console.log(caReturn);
+        //console.log(order);
+        //console.log('arr index cr' + clientID);
+        if(caReturn.length!=0){
+          //console.log('careturn not empty');
+          existStatus = true;
+          clientID = caReturn[0];
+          order.client_id = caReturn[0];
+        }else{
+          //console.log('careturn is empty');
+        }
+
+        //console.log(data);
+        setupOrdersArr();
+
+        return fetch('https://bms-test.herokuapp.com/api/capture-stripe-transaction', {
+          method: 'post',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            orderID: paymentIntentId,          //this may be diff, check stripe v
+            id_invoice: orderIdUnique,
+            orderType: orderPPString,
+            orderOne:orderSoloDuoString,
+            orderTwo:orderTypeString,
+            orderThree:orderInfoString,
+            clienter_id: [clientID],
+            price: fixedPrice,
+            client_email: email,
+            message: JSON.stringify(orderFormObj),
+            accountExists: existStatus,
+            orderObj: JSON.stringify(order),
+
+          })
+        }).then(function(res) {
+          //console.log(data);
+          //console.log(res);
+        }).then(function(details) {
+          if(!accountExists){
+            modalActivity();
+          }else{
+            window.location.replace('https://app.bmsboosting.com/login');
+          }
+
+        })
+    };
+    // Show the customer the error from Stripe if their card fails to charge
+    var showError = function(errorMsgText) {
+      loading(false);
+      var errorMsg = document.querySelector("#card-error");
+      errorMsg.textContent = errorMsgText;
+      setTimeout(function() {
+        errorMsg.textContent = "";
+      }, 4000);
+    };
+    // Show a spinner on payment submission
+    var loading = function(isLoading) {
+      if (isLoading) {
+        // Disable the button and show a spinner
+        document.querySelector("button").disabled = true;
+        document.querySelector("#spinner").classList.remove("hidden");
+        document.querySelector("#button-text").classList.add("hidden");
+      } else {
+        document.querySelector("button").disabled = false;
+        document.querySelector("#spinner").classList.add("hidden");
+        document.querySelector("#button-text").classList.remove("hidden");
+      }
+    };
+
+
+    </script>
+    <script>
+      /*let caReturn ='';
       paypal.Buttons({
         style:{
           color: 'blue',
@@ -1660,13 +1843,13 @@
         //console.log(data);
         setupOrdersArr();
 
-        return fetch('https://app.bmsboosting.com/api/capture-paypal-transaction', {
+        return fetch('https://app.bmsboosting.com/api/capture-stripe-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
           },
           body: JSON.stringify({
-            orderID: data.orderID,
+            orderID: data.orderID,          //this may be diff, check stripe v
             id_invoice: orderIdUnique,
             orderType: orderPPString,
             orderOne:orderSoloDuoString,
@@ -1693,6 +1876,7 @@
         })
     }
   }).render('#paypalButtons');
+  */
   </script>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
