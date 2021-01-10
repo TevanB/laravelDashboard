@@ -1,20 +1,20 @@
 <?php
 // This is your real test secret API key.
 namespace App\Http\Controllers\StripeRelated;
-require __DIR__ . '/vendor/autoload.php';
-
+//require __DIR__ . '/vendor/autoload.php';
+use Stripe;
 class StripeCreate
 {
 
     public static function createOrder($debug=false){
-        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
+        Stripe::setApiKey(env('STRIPE_S_KEY'));
 
         header('Content-Type: application/json');
         try {
         // retrieve JSON from POST body
         $json_str = file_get_contents('php://input');
         $json_obj = json_decode($json_str);
-        $paymentIntent = \Stripe\PaymentIntent::create([
+        $paymentIntent = PaymentIntent::create([
             'amount' => $json_obj->price * 100,
             'currency' => 'usd',
         ]);
