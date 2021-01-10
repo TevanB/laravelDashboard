@@ -1653,8 +1653,7 @@
 
 
       var startStripe = function(){
-        let caReturn ='';
-        caReturn = checkAccount();
+        
         makeNewInvoiceID();
         let reqPrice = orderPrice;
         console.log(reqPrice)
@@ -1665,7 +1664,7 @@
 
         console.log(orderPrice)
 
-        fetch("https://bms-test.herokuapp.com/api/create-stripe-transaction", {
+        fetch("https://app.bmsboosting.com/api/create-stripe-transaction", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1708,7 +1707,7 @@
     };
     /* ------- UI helpers ------- */
     // Shows a success message when the payment is complete
-    var orderComplete = function(paymentIntentId) {
+    var orderComplete = async function(paymentIntentId) {
       loading(false);
       document
         .querySelector(".result-message")
@@ -1718,7 +1717,8 @@
         );
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
-
+      let caReturn ='';
+      caReturn = await checkAccount();
       let clientID = makeClientID();
         let existStatus = false;
         let fixedPrice = orderPrice.toFixed(2);
@@ -1739,7 +1739,7 @@
         //console.log(data);
         setupOrdersArr();
 
-        return fetch('https://bms-test.herokuapp.com/api/capture-stripe-transaction', {
+        return fetch('https://app.bmsboosting.com/api/capture-stripe-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'

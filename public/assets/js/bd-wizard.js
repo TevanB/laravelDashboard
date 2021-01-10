@@ -567,7 +567,7 @@ function setupOrdersArr(){
 
 }
 
-function checkAccount(){
+async function checkAccount(){
   let query = {emailAddress: email};
   //console.log(query.emailAddress);
   $.ajax({
