@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\StripeRelated;
-require('./init.php');
-
-//require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 //1. Import the PayPal SDK client that was created in `Set up Server-Side SDK`.
 //use App\Http\Controllers\PaypalRelated\PayPalClient;
 use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
