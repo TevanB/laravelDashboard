@@ -59,6 +59,8 @@ Route::put('pause/{id}', 'API\OrderController@pauseOrder');
 Route::post('create-paypal-transaction', 'PaypalRelated\CreateOrder@createOrder');
 Route::post('get-paypal-transaction', 'PaypalRelated\GetOrder@getOrder');
 Route::post('capture-paypal-transaction', 'PaypalRelated\CaptureOrder@captureOrder');
+Route::post('create-stripe-transaction', 'StripeRelated\StripeCreate@createOrder');
+Route::post('capture-stripe-transaction', 'StripeRelated\StripeCapture@captureOrder');
 
 Route::get('ranks', 'API\RankController@getRank');
 
