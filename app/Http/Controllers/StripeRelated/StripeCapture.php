@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\StripeRelated;
-//require '../../../../vendor/autoload.php';
+require('../../stripe-php-7.67.0/init');
 
 //require __DIR__ . '/vendor/autoload.php';
 //1. Import the PayPal SDK client that was created in `Set up Server-Side SDK`.
