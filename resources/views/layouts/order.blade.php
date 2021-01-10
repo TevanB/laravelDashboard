@@ -1670,7 +1670,7 @@
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-              price: orderPrice,
+              price: reqPrice,
               description: orderPPString,
               id: orderIdUnique,
             })
