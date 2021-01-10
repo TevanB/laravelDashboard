@@ -125,6 +125,7 @@ $("#wizard").steps({
       rankImageCheckDuoDivTwo();
       if(newIndex===5){
         buildOrderInfo();
+        startStripe();
       }
       /*if(currentIndex === 4 && newIndex === 5){
         if(!checked){

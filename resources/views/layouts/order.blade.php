@@ -1615,68 +1615,69 @@
     </script>
     <script>
       var stripe = Stripe("pk_live_51I4xTLCBjNIgSDtBbEuNZoqjXvEWLz95hNIU2rDoljw8ZDO3UJqaorFzlK5ia26Y0oUQLhbbh3xgE2swrJCLYDRM00sUVI6AeC");
-      
-      let caReturn ='';
-      caReturn = checkAccount();
-      makeNewInvoiceID();
-      let reqPrice = orderPrice;
-      console.log(reqPrice)
-      if(discountedPrice > 0){
-        reqPrice = discountedPrice;
-      }
-      reqPrice = Math.round((reqPrice + Number.EPSILON) * 100) / 100;
+      var startStripe = function(){
+        let caReturn ='';
+        caReturn = checkAccount();
+        makeNewInvoiceID();
+        let reqPrice = orderPrice;
+        console.log(reqPrice)
+        if(discountedPrice > 0){
+          reqPrice = discountedPrice;
+        }
+        reqPrice = Math.round((reqPrice + Number.EPSILON) * 100) / 100;
 
-      console.log(orderPrice)
+        console.log(orderPrice)
 
-      fetch("https://bms-test.herokuapp.com/api/create-stripe-transaction", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            price: orderPrice,
-            description: orderPPString,
-            id: orderIdUnique,
-          })
-      }).then((data)=> {
-        //console.log(data.json())
-        var elements = stripe.elements();
-        var style = {
-          base: {
-            color: "#32325d",
-            fontFamily: 'Arial, sans-serif',
-            fontSmoothing: "antialiased",
-            fontSize: "16px",
-            "::placeholder": {
-              color: "#32325d"
-            }
+        fetch("https://bms-test.herokuapp.com/api/create-stripe-transaction", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
           },
-          invalid: {
-            fontFamily: 'Arial, sans-serif',
-            color: "#fa755a",
-            iconColor: "#fa755a"
-          }
-        };
-        var card = elements.create("card", { style: style });
-        // Stripe injects an iframe into the DOM
-        card.mount("#card-element");
-        card.on("change", function (event) {
-          // Disable the Pay button if there are no card details in the Element
-          document.querySelector("button").disabled = event.empty;
-          document.querySelector("#card-error").textContent = event.error ? event.error.message : "";
-        });
-        var form = document.getElementById("payment-form");
-        //console.log(data.json())
-        form.addEventListener("submit", async function(event) {
-          event.preventDefault();
-          let cSec = await data.clone().json()
-          //console.log(cSec)
-          // Complete payment when the submit button is clicked
-          payWithCard(stripe, card, cSec.clientSecret);
-        });
+          body: JSON.stringify({
+              price: orderPrice,
+              description: orderPPString,
+              id: orderIdUnique,
+            })
+        }).then((data)=> {
+          //console.log(data.json())
+          var elements = stripe.elements();
+          var style = {
+            base: {
+              color: "#32325d",
+              fontFamily: 'Arial, sans-serif',
+              fontSmoothing: "antialiased",
+              fontSize: "16px",
+              "::placeholder": {
+                color: "#32325d"
+              }
+            },
+            invalid: {
+              fontFamily: 'Arial, sans-serif',
+              color: "#fa755a",
+              iconColor: "#fa755a"
+            }
+          };
+          var card = elements.create("card", { style: style });
+          // Stripe injects an iframe into the DOM
+          card.mount("#card-element");
+          card.on("change", function (event) {
+            // Disable the Pay button if there are no card details in the Element
+            document.querySelector("button").disabled = event.empty;
+            document.querySelector("#card-error").textContent = event.error ? event.error.message : "";
+          });
+          var form = document.getElementById("payment-form");
+          //console.log(data.json())
+          form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            let cSec = await data.clone().json()
+            //console.log(cSec)
+            // Complete payment when the submit button is clicked
+            payWithCard(stripe, card, cSec.clientSecret);
+          });
 
-      
-      });
+        
+        });
+      }
     // Calls stripe.confirmCardPayment
     // If the card requires authentication Stripe shows a pop-up modal to
     // prompt the user to enter authentication details without leaving your page.
