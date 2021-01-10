@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\StripeRelated;
-require_once('init.php');
+require_once('stripe-php/init.php');
 //1. Import the PayPal SDK client that was created in `Set up Server-Side SDK`.
 //use App\Http\Controllers\PaypalRelated\PayPalClient;
 use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
