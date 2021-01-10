@@ -1642,7 +1642,7 @@
       });
       var form = document.getElementById("payment-form");
       //console.log(data.json())
-      form.addEventListener("submit", async function(event) {
+      form.addEventListener("submit", function(event) {
         event.preventDefault();
         
         //console.log(cSec)
@@ -1675,7 +1675,7 @@
               description: orderPPString,
               id: orderIdUnique,
             })
-        }).then((data)=> {
+        }).then(async (data)=> {
           //console.log(data.json())
           let cSec = await data.clone().json()
           payWithCard(stripe, card, cSec.clientSecret);
