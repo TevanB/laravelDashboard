@@ -1644,7 +1644,7 @@
       //console.log(data.json())
       form.addEventListener("submit", async function(event) {
         event.preventDefault();
-        let cSec = await data.clone().json()
+        
         //console.log(cSec)
         // Complete payment when the submit button is clicked
         startStripe();
@@ -1677,6 +1677,7 @@
             })
         }).then((data)=> {
           //console.log(data.json())
+          let cSec = await data.clone().json()
           payWithCard(stripe, card, cSec.clientSecret);
           
           
