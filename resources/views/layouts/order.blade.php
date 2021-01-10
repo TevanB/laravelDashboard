@@ -1626,7 +1626,7 @@
       }
       reqPrice = Math.round((reqPrice + Number.EPSILON) * 100) / 100;
 
-      console.log(reqPrice)
+      console.log(orderPrice)
 
       fetch("https://bms-test.herokuapp.com/api/create-stripe-transaction", {
         method: "POST",
@@ -1634,7 +1634,7 @@
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            price: reqPrice,
+            price: orderPrice,
             description: orderPPString,
             id: orderIdUnique,
           })
@@ -1670,7 +1670,7 @@
         form.addEventListener("submit", async function(event) {
           event.preventDefault();
           let cSec = await data.clone().json()
-          console.log(cSec)
+          //console.log(cSec)
           // Complete payment when the submit button is clicked
           payWithCard(stripe, card, cSec.clientSecret);
         });
