@@ -61,6 +61,7 @@ Route::post('get-paypal-transaction', 'PaypalRelated\GetOrder@getOrder');
 Route::post('capture-paypal-transaction', 'PaypalRelated\CaptureOrder@captureOrder');
 Route::post('create-stripe-transaction', 'StripeRelated\StripeCreate@createOrder');
 Route::post('capture-stripe-transaction', 'StripeRelated\StripeCapture@captureOrder');
+Route::post('user-stripe-dash', 'StripeRelated\StripePayout@visitPayoutDash');
 
 Route::get('ranks', 'API\RankController@getRank');
 

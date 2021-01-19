@@ -53,13 +53,14 @@
                                       <div class="card-header p-2">
                                         <ul class="nav nav-pills">
                                           <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Account</a></li>
+                                          <li class="nav-item"  v-if="$gate.isBoosterOrCoach()"><a class="nav-link" href="#orders" data-toggle="tab">Orders</a></li>
                                           <li class="nav-item"  v-if="$gate.isBoosterOrCoach()"><a class="nav-link" href="#payouts" data-toggle="tab">Payouts</a></li>
 
                                         </ul>
                                       </div><!-- /.card-header -->
                                       <div class="card-body">
                                         <div class="tab-content">
-                                          <div class="tab-pane" id="payouts"  v-if="$gate.isBoosterOrCoach()">
+                                          <div class="tab-pane" id="orders"  v-if="$gate.isBoosterOrCoach()">
 
                                             <div class="card-header">
                                               <h3 class="card-title">Order History (Completed)</h3>
@@ -103,6 +104,21 @@
 
                                           </div>
                                           <!-- /.tab-pane -->
+
+                                          <div class="tab-pane" id="payouts"  v-if="$gate.isBoosterOrCoach()">
+                                            <div class="card-header">
+                                              <h3 class="card-title">Payout Info</h3>
+                                              <div class="card-tools">
+                                              <button class="btn btn-success" @click="payoutDash()">Payout Dashboard
+                                              <i class="fas fa-arrows-alt-v"></i>
+                                              </button>
+                                              </div>
+                                            </div>
+
+                                            <div class="card-body">
+                                              <!-- Add Stripe UI for Payouts -->
+                                            </div>
+                                          </div>
 
                                           <!-- /.tab-pane -->
 
@@ -234,6 +250,13 @@
             if(this.$gate.isWorkerOrAdmin){
               axios.get("api/orders").then((data)=>(this.orders=data));
             }
+          },
+          payoutDash(){
+            //redirect to url with stripe dashboard
+            axios.post('https://app.bmsboosting.com/api/user-stripe-dash').then((data)=>{
+              conosle.log(data.data);
+              window.location.replace(data.data.url);
+            });
           },
           requestAllPayouts(){
             let found = false;
