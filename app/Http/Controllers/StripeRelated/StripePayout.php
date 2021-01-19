@@ -23,7 +23,7 @@ class StripePayout
             'email' => $json_obj->email,
             ]);
             
-            echo(createAccLink($newAcc->id));
+            echo($this->ccreateAccLink($newAcc->id));
             
             //echo($account);               //Call createAccLink
 
@@ -68,9 +68,9 @@ class StripePayout
                 }
             }
             if($accId != ""){
-                echo(createAccLink($accId));
+                echo($this->ccreateAccLink($accId));
             }else{
-                echo(createAcc());
+                echo($this->createAcc());
             }
         }catch(Error $e){
             http_response_code(500);
