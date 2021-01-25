@@ -254,8 +254,8 @@
           payoutDash(){
             //redirect to url with stripe dashboard
             axios.post('https://app.bmsboosting.com/api/user-stripe-dash').then((data)=>{
-              conosle.log(data.data);
-              window.location.replace(data.data.url);
+              conosle.log(data);
+              window.location.replace(data);
             });
           },
           requestAllPayouts(){
