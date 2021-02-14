@@ -53,13 +53,14 @@
                                       <div class="card-header p-2">
                                         <ul class="nav nav-pills">
                                           <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Account</a></li>
+                                          <li class="nav-item"  v-if="$gate.isBoosterOrCoach()"><a class="nav-link" href="#orders" data-toggle="tab">Orders</a></li>
                                           <li class="nav-item"  v-if="$gate.isBoosterOrCoach()"><a class="nav-link" href="#payouts" data-toggle="tab">Payouts</a></li>
 
                                         </ul>
                                       </div><!-- /.card-header -->
                                       <div class="card-body">
                                         <div class="tab-content">
-                                          <div class="tab-pane" id="payouts"  v-if="$gate.isBoosterOrCoach()">
+                                          <div class="tab-pane" id="orders"  v-if="$gate.isBoosterOrCoach()">
 
                                             <div class="card-header">
                                               <h3 class="card-title">Order History (Completed)</h3>
@@ -103,6 +104,21 @@
 
                                           </div>
                                           <!-- /.tab-pane -->
+
+                                          <div class="tab-pane" id="payouts"  v-if="$gate.isBoosterOrCoach()">
+                                            <div class="card-header">
+                                              <h3 class="card-title">Payout Info</h3>
+                                              <div class="card-tools">
+                                              <button class="btn btn-success" @click="payoutDash()">Payout Dashboard
+                                              <i class="fas fa-arrows-alt-v"></i>
+                                              </button>
+                                              </div>
+                                            </div>
+
+                                            <div class="card-body">
+                                              <!-- Add Stripe UI for Payouts -->
+                                            </div>
+                                          </div>
 
                                           <!-- /.tab-pane -->
 
@@ -197,15 +213,11 @@
               client_id: '',
               booster_id: '',
               created_at: '',
-
             }),
           }
         },
         methods:{
           updateInfo(){
-
-
-
             //axios.post("api/profile", this.form);
             axios.put("api/profile", this.form).then(()=>{
               swal.fire(
@@ -215,7 +227,6 @@
               ).then((result)=>{
                 if(result.value){
                   this.refreshPage();
-
                 }
               });
             }).catch(()=>{
@@ -225,15 +236,18 @@
                 'error'
               )
             });
-
-
-
-
           },
           loadOrders(){
             if(this.$gate.isWorkerOrAdmin){
               axios.get("api/orders").then((data)=>(this.orders=data));
             }
+          },
+          payoutDash(){
+            //redirect to url with stripe dashboard
+            axios.post('https://app.bmsboosting.com/api/user-stripe-dash').then((data)=>{
+              conosle.log(data.data);
+              window.location.replace(data.data.url);
+            });
           },
           requestAllPayouts(){
             let found = false;
@@ -270,7 +284,6 @@
               order.payout_status = 'requested';
               //console.log(order);
               axios.put('https://app.bmsboosting.com/api/orders/'+order.order_id, order).then(()=>{
-
               });
               for(let i=0; i<this.user.current_orders_arr.length; i++){
                 if(this.user.current_orders_arr[i].order_id === order.order_id){
@@ -303,7 +316,6 @@
           },
           getUser(){
             axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
-
               this.user = data.data;
               ////console.log(this.user);
             });
@@ -329,7 +341,6 @@
                 this.form.photo=reader.result;
               }
               reader.readAsDataURL(file);
-
             }else{
               toast.fire({
                 icon: 'error',
@@ -360,31 +371,18 @@
                   break;
                 }
               }
-
-
-
               });
         },
-
         created(){
-
           this.loadOrders();
           Fire.$on('AfterCreate', ()=>{
             this.loadOrders();
           });
-
           this.getUser();
-
           axios.get("api/me").then((data)=>(this.form.fill(data.data)));
           Fire.$on('AfterCreate', ()=>{
             axios.get("api/me").then((data)=>(this.form.fill(data.data)));
             });
-
         }
-
-
-
 };
-
-
 </script>
