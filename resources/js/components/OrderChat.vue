@@ -81,7 +81,7 @@ import HasError from 'vform';
 
           },
           getUser(){
-            axios.get("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//api/me").then((data)=>{
+            axios.get("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
 
               this.user = data.data.name;
               ////console.log(this.user);
@@ -96,7 +96,7 @@ import HasError from 'vform';
 
               this.result.order_id = this.order_id.order_id;
               this.result.message = message;
-              axios.post('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//messages', this.result).then(response => {
+              axios.post('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/messages', this.result).then(response => {
                 //console.log(response.data);
                 this.fetchMessages();
 
@@ -108,7 +108,7 @@ import HasError from 'vform';
           },
           fetchMessages() {
               let that = this;
-              axios.get('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//messages/'+ that.order_id.order_id).then(response => {
+              axios.get('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/messages/'+ that.order_id.order_id).then(response => {
                   //console.log(response);
                   this.messages = response.data;
                   this.scrollToEnd();
