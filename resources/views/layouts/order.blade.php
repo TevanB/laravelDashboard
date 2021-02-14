@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Elo Boosting & Professional LOL Boosting - BMSBoosting.com</title>
-    <link rel="icon" href="https://app.bmsboosting.com/img/logo.png">
+    <link rel="icon" href="https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//img/logo.png">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -92,7 +92,7 @@
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light menuFont" href="https://app.bmsboosting.com/boosting">{{ __('LoL Boosting') }}</a>
+                            <a class="nav-link text-light menuFont" href="https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//boosting">{{ __('LoL Boosting') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light menuFont" href="https://bmsboosting.com/tft-elo-boosting">{{ __('TFT Boosting') }}</a>
@@ -1435,7 +1435,7 @@
 
                         <!--Grid column-->
                         <div class="col-md-4 mb-2 text-center flex-center">
-                          <img src="https://app.bmsboosting.com/img/macbook-mockup-png-3.png" alt="" class="z-depth-0 mt-5">
+                          <img src="https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//img/macbook-mockup-png-3.png" alt="" class="z-depth-0 mt-5">
                         </div>
                         <!--Grid column-->
 
@@ -1664,7 +1664,7 @@
 
         console.log(orderPrice)
 
-        fetch("https://app.bmsboosting.com/api/create-stripe-transaction", {
+        fetch("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//api/create-stripe-transaction", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1739,7 +1739,7 @@
         //console.log(data);
         setupOrdersArr();
 
-        return fetch('https://app.bmsboosting.com/api/capture-stripe-transaction', {
+        return fetch('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//api/capture-stripe-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
@@ -1766,7 +1766,7 @@
           if(!accountExists){
             modalActivity();
           }else{
-            window.location.replace('https://app.bmsboosting.com/login');
+            window.location.replace('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//login');
           }
 
         })
@@ -1813,7 +1813,7 @@
             reqPrice = discountedPrice;
           }
           reqPrice = Math.round((reqPrice + Number.EPSILON) * 100) / 100;
-        return fetch('https://app.bmsboosting.com/api/create-paypal-transaction', {
+        return fetch('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//api/create-paypal-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
@@ -1851,7 +1851,7 @@
         //console.log(data);
         setupOrdersArr();
 
-        return fetch('https://app.bmsboosting.com/api/capture-stripe-transaction', {
+        return fetch('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//api/capture-stripe-transaction', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
@@ -1878,7 +1878,7 @@
           if(!accountExists){
             modalActivity();
           }else{
-            window.location.replace('https://app.bmsboosting.com/login');
+            window.location.replace('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//login');
           }
 
         })

@@ -41,8 +41,8 @@ class StripePayout
 
             $account_links = \Stripe\AccountLink::create([
                 'account' => $id,
-                'refresh_url' => 'https://app.bmsboosting.com/profile',
-                'return_url' => 'https://app.bmsboosting.com/profile',
+                'refresh_url' => 'https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/-setup-payou-rs8qky.herokuapp.com//profile',
+                'return_url' => 'https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/-setup-payou-rs8qky.herokuapp.com//profile',
                 'type' => 'account_onboarding',
             ]);
             echo($account_links);

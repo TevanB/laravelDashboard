@@ -58,7 +58,7 @@
         //used model relationship to get username
 
         if(Number.isInteger(message.id)){
-          axios.get('https://app.bmsboosting.com/messages/'+message.id, message).then((data)=>{
+          axios.get('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com//messages/'+message.id, message).then((data)=>{
             //console.log(data.data.name);
             this.sender = data.data.name;
 
