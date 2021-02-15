@@ -12,11 +12,11 @@
         "build": "vue-cli-service build",
         "heroku-postbuild": [
             "npm run prod",
+            "npm run build",
             "php artisan optimize",
             "php artisan config:cache",
             "php artisan passport:keys"
         ],
-        "postinstall": "npm run build",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
