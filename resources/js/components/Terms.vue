@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div v-if="$gate.isClient()">
+    <div v-else-if="$gate.isClient()">
       <not-found></not-found>
 
     </div>
