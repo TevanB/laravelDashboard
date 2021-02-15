@@ -29,15 +29,15 @@ style="opacity: .8">
             let photo = (this.form.photo.length > 100) ? this.form.photo: "img/profile/"+this.form.photo;
             //return "img/profile/"+this.form.photo;
             if(this.form.photo==''){
-              return "https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/img/profile/profile.png"
+              return "https://bms-backend-setup-payou-rs8qky.herokuapp.com/img/profile/profile.png"
             }
-            return 'https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/'+photo;
+            return 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/'+photo;
           },
 
 
         },
         created(){
-          axios.get("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
+          axios.get("https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
 
             this.form.fill(data.data);
 

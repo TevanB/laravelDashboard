@@ -78,7 +78,7 @@ class CaptureOrder
     $curl2 = curl_init();
     $hookObject2 = json_encode([
       "type" => "rich",
-      "content" => "@everyone New website order (ID: ".$invoiceID."), visit https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/orders",
+      "content" => "@everyone New website order (ID: ".$invoiceID."), visit https://bms-backend-setup-payou-rs8qky.herokuapp.com/orders",
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     curl_setopt_array($curl2, [
       CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',

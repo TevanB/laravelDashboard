@@ -6,7 +6,7 @@ We created the dashboard on our website to allow users to manage their orders wi
 When your order, you will have access to a page to manage your order where you can communicate with your booster, all the while having BMS Boosting management only a few clicks away!
 
 
-@component('mail::button', ['url' => 'https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard'])
+@component('mail::button', ['url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard'])
 Dashboard
 @endcomponent
 

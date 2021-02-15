@@ -10,7 +10,7 @@ Thank you for choosing BMS Boosting for your order!
 Regards,
 BMS Boosting Customer Support Team
 
-@component('mail::button', ['url' => 'https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard'])
+@component('mail::button', ['url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard'])
 Dashboard
 @endcomponent
 

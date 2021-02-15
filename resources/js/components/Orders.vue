@@ -322,7 +322,7 @@
         this.new_order.order_id = Date.now();
         //console.log(this.new_order.order_id);
         //console.log(this.new_order.order_price);
-          axios.put('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders', this.new_order).then(()=>{
+          axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders', this.new_order).then(()=>{
             swal.fire(
               'Created!',
               'Your order has been successfully created.',
@@ -337,7 +337,7 @@
               .listen('new-purchase', (e) => {
               that.loadOrders();
               var sound = new Howl({
-                src: 'https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/assets/sounds/claim2.mp3',
+                src: 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/assets/sounds/claim2.mp3',
                 autoplay: true,
                 loop: false,
 

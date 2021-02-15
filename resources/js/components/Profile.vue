@@ -244,7 +244,7 @@
           },
           payoutDash(){
             //redirect to url with stripe dashboard
-            axios.post('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/user-stripe-dash').then((data)=>{
+            axios.post('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/user-stripe-dash').then((data)=>{
               conosle.log(data.data);
               window.location.replace(data.data.url);
             });
@@ -253,7 +253,7 @@
             let found = false;
             for(let i=0; i<this.user.current_orders_arr.length; i++){
               if(this.user.current_orders_arr[i].payout_status != 'completed'){
-                axios.put('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
+                axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
                   toast.fire({
                     icon: 'success',
                     title: 'Payout Requests Sent.'
@@ -269,7 +269,7 @@
                 title: 'You have no payouts.'
               });
             }
-            /*axios.put('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
+            /*axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/requestAllPayouts/'+this.user.id).then((data)=>{
               toast.fire({
                 icon: 'success',
                 title: 'Payout Requests Sent.'
@@ -283,14 +283,14 @@
             if(order.payout_status != 'completed'){
               order.payout_status = 'requested';
               //console.log(order);
-              axios.put('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders/'+order.order_id, order).then(()=>{
+              axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders/'+order.order_id, order).then(()=>{
               });
               for(let i=0; i<this.user.current_orders_arr.length; i++){
                 if(this.user.current_orders_arr[i].order_id === order.order_id){
                   this.user.current_orders_arr[i].payout_status = 'requested';
                 }
               }
-              axios.put('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me', this.user);
+              axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me', this.user);
             }else{
               toast.fire({
                 icon: 'error',
@@ -315,7 +315,7 @@
             return bCut;
           },
           getUser(){
-            axios.get("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
+            axios.get("https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
               this.user = data.data;
               ////console.log(this.user);
             });
@@ -365,7 +365,7 @@
                 confirmButtonText: 'Go To Order Page'
                 }).then((result)=>{
                   if(result.value){
-                    window.location.replace('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/order/'+e.orderID);
+                    window.location.replace('https://bms-backend-setup-payou-rs8qky.herokuapp.com/order/'+e.orderID);
                   }
                 })
                   break;

@@ -15,7 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="/css/app.css">
 <link rel="stylesheet" href="/css/adminlte.css">
 <link rel="stylesheet" href="/css/adminlte.min.css">
-<link rel="icon" href="https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/img/logo.png">
+<link rel="icon" href="https://bms-backend-setup-payou-rs8qky.herokuapp.com/img/logo.png">
 
 <script src='https://www.paypal.com/sdk/js?client-id=AUhiAnfqWuMkr2u63RKODnJQojrQ6YmwhOUaU7fEjFQRDfEH5SIXulUKxQnMUloUR7Tv6MzaYX83M8xA'>
 
@@ -54,8 +54,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard" class="brand-link">
-        <img src="https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/img/logo.png" alt="BMS Logo" class="brand-image-xl img-circle elevation-3"
+      <a href="https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard" class="brand-link">
+        <img src="https://bms-backend-setup-payou-rs8qky.herokuapp.com/img/logo.png" alt="BMS Logo" class="brand-image-xl img-circle elevation-3"
         style="opacity: .8">
         <span class="brand-text font-weight-light">BMS Dashboard</span>
       </a>

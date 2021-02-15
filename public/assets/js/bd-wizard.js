@@ -290,7 +290,7 @@ $('#applyDiscount').on('click', function(e){
     $('#discount_error').hide();
     $.ajax({
     type:"GET",
-    url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices/"+$('#discount_code').val(),
+    url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices/"+$('#discount_code').val(),
 
     success: function success(data){
       //console.log(data);
@@ -572,7 +572,7 @@ async function checkAccount(){
   //console.log(query.emailAddress);
   $.ajax({
     type:"GET",
-    url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/accounts",
+    url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/accounts",
     data: query,
     dataType: "json",
     success: function success(data){
@@ -787,7 +787,7 @@ function calculatePrice(){
       }
       $.ajax({
         type:"GET",
-        url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+        url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
         data: query,
         dataType: "json",
         success: function success(data){
@@ -803,7 +803,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -847,7 +847,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -887,7 +887,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -927,7 +927,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -967,7 +967,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -1028,7 +1028,7 @@ function calculatePrice(){
           }
         }
       })
-      /*axios.get('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices', JSON.stringify(query)).then((data)=>{
+      /*axios.get('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices', JSON.stringify(query)).then((data)=>{
         //console.log(data.data);
       });*/
 
@@ -1049,7 +1049,7 @@ function calculatePrice(){
     //console.log(query.quantity);
     $.ajax({
       type:"GET",
-      url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+      url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
       data: query,
       dataType: "json",
       success: function success(data){
@@ -1079,7 +1079,7 @@ function calculatePrice(){
     query.quantity = parseInt(amount, 10);
     $.ajax({
       type:"GET",
-      url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+      url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
       data: query,
       dataType: "json",
       success: function success(data){
@@ -1138,7 +1138,7 @@ function calculatePrice(){
       }
       $.ajax({
         type:"GET",
-        url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+        url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
         data: query,
         dataType: "json",
         success: function success(data){
@@ -1153,7 +1153,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -1190,7 +1190,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -1227,7 +1227,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -1264,7 +1264,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -1301,7 +1301,7 @@ function calculatePrice(){
 
             $.ajax({
               type:"GET",
-              url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+              url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
               data: newQuery,
               dataType: "json",
               success: function success(data){
@@ -1353,7 +1353,7 @@ function calculatePrice(){
           }
         }
       })
-      /*axios.get('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices', JSON.stringify(query)).then((data)=>{
+      /*axios.get('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices', JSON.stringify(query)).then((data)=>{
         //console.log(data.data);
       });*/
 
@@ -1370,7 +1370,7 @@ function calculatePrice(){
     query.quantity = parseInt(amount, 10);
     $.ajax({
       type:"GET",
-      url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+      url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
       data: query,
       dataType: "json",
       success: function success(data){
@@ -1396,7 +1396,7 @@ function calculatePrice(){
     query.quantity = parseInt(amount, 10);
     $.ajax({
       type:"GET",
-      url:"https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
+      url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/prices",
       data: query,
       dataType: "json",
       success: function success(data){

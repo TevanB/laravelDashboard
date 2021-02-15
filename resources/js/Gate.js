@@ -28,7 +28,7 @@ export default class Gate{
     }else{
       for(let i=0; i<this.user.ongoing_orders_arr.length; i++){
         ////console.log(this.user.ongoing_orders_arr[i]);
-        //axios.get('https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orderinfo/'+order_id).then((data)=>{
+        //axios.get('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orderinfo/'+order_id).then((data)=>{
 
         //});
         ////console.log(this.user.ongoing_orders_arr[i].order_id + " " + order_id);

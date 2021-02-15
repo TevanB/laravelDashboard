@@ -58,7 +58,7 @@
         return input.slice(index);
       },
       getUser(){
-        axios.get("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
+        axios.get("https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/me").then((data)=>{
 
           this.user = data.data;
           ////console.log(this.user);
@@ -66,7 +66,7 @@
       },
       loadOrders(){
         if(this.$gate.isAdmin){
-          axios.get("https://https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders").then((response)=>{
+          axios.get("https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders").then((response)=>{
             //console.log(response.data.data);
             var i = response.data.data[0];
 
