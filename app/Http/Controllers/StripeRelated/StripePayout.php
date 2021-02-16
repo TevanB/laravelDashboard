@@ -16,7 +16,7 @@ class StripePayout
             $stripe = new \Stripe\StripeClient(
                 'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
               );
-            $accList = $stripe->accounts->all(['limit' => 3]);
+            $accList = $stripe->accounts->all();
             $accId = "";
             for ($x = 0; $x < count($accList->data); $x++) {
                 if($json_obj->email == $accList->data[$x]){
