@@ -83,7 +83,11 @@ class StripePayout
                 ]);
                 echo($account_links->url);
             }else{
-                echo("payouts do be workin");
+                $login = $stripe->accounts->createLoginLink(
+                    $id,
+                    []
+                  );
+                echo($login->url);
             }
 
         }catch(Error $e){
