@@ -35,7 +35,7 @@ class StripePayout
                 $bank_acc_id = "";
                 for ($x = 0; $x < count($curAcc->external_accounts->data); $x++) {
                     if("bank_account" == $curAcc->external_accounts->data[$x]->object){
-                        $bank_acc_id = $curAcc->external_accounts->data[$x]->id;
+                        $bank_acc_id = $curAcc->external_accounts->data[$x]->account;
                     }
                 }
                 $stripe->payouts->create([
