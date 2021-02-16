@@ -1718,63 +1718,7 @@
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
       //let caReturn ='';
-      checkAccount().then(()=>{
-      
-        console.log(order.client_id)
-      
-        let existStatus = false;
-        let fixedPrice = orderPrice.toFixed(2);
-
-        /*if(caReturn.length!=0){
-          console.log('careturn not empty');
-          existStatus = true;
-          clientID = caReturn[0];
-          order.client_id = caReturn[0];
-        }else{
-          console.log('careturn is empty');
-          let clientID = makeClientID();
-          order.client_id = clientID;
-        }*/
-        if(order.client_id==''){
-          console.log('order.client_id is empty');
-          let clientID = makeClientID();
-          order.client_id = clientID;
-        }
-        //console.log(data);
-        setupOrdersArr();
-
-        return fetch('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/capture-stripe-transaction', {
-          method: 'post',
-          headers: {
-            'content-type': 'application/json'
-          },
-          body: JSON.stringify({
-            orderID: paymentIntentId,          //this may be diff, check stripe v
-            id_invoice: orderIdUnique,
-            orderType: orderPPString,
-            orderOne:orderSoloDuoString,
-            orderTwo:orderTypeString,
-            orderThree:orderInfoString,
-            clienter_id: [order.client_id],
-            price: fixedPrice,
-            client_email: email,
-            message: JSON.stringify(orderFormObj),
-            accountExists: existStatus,
-            orderObj: JSON.stringify(order),
-
-          })
-        }).then(function(res) {
-          //console.log(data);
-          //console.log(res);
-        }).then(function(details) {
-          if(!accountExists){
-            modalActivity();
-          }else{
-            window.location.replace('https://bms-backend-setup-payou-rs8qky.herokuapp.com/login');
-          }
-
-        })
-      })
+      checkAccountEnd()
     };
     // Show the customer the error from Stripe if their card fails to charge
     var showError = function(errorMsgText) {

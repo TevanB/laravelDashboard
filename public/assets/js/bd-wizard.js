@@ -600,6 +600,78 @@ async function checkAccount(){
   })
   
 }
+async function checkAccountEnd(){
+  let query = {emailAddress: email};
+  console.log(query.emailAddress);
+  $.ajax({
+    type:"GET",
+    url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/accounts",
+    data: query,
+    dataType: "json",
+    success: function success(data){
+      if(data){
+        console.log('Account Exists');
+        accountExists = true;
+        resultt = true;
+        $('.userFormClientID').val(data);
+        $('.registerFormClientID').val(data);
+        order.client_id = data;
+        clientIDReturn.push(data);
+        console.log(data);
+
+      }
+      else{
+        accountExists = false;
+
+        resultt=false;
+      }
+
+    }
+  }).then(()=>{
+    console.log(clientIDReturn);
+
+    if(order.client_id==''){
+      console.log('order.client_id is empty');
+      let clientID = makeClientID();
+      order.client_id = clientID;
+    }
+    setupOrdersArr();
+    return fetch('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/capture-stripe-transaction', {
+          method: 'post',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            orderID: paymentIntentId,          //this may be diff, check stripe v
+            id_invoice: orderIdUnique,
+            orderType: orderPPString,
+            orderOne:orderSoloDuoString,
+            orderTwo:orderTypeString,
+            orderThree:orderInfoString,
+            clienter_id: [order.client_id],
+            price: fixedPrice,
+            client_email: email,
+            message: JSON.stringify(orderFormObj),
+            accountExists: existStatus,
+            orderObj: JSON.stringify(order),
+
+          })
+        }).then(function(res) {
+          //console.log(data);
+          //console.log(res);
+        }).then(function(details) {
+          if(!accountExists){
+            modalActivity();
+          }else{
+            window.location.replace('https://bms-backend-setup-payou-rs8qky.herokuapp.com/login');
+          }
+
+        })
+      
+
+  })
+  
+}
 
 function modalActivity(){
   $('#orderUserRegisterModal').modal({
