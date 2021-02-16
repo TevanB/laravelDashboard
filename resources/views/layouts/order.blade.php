@@ -1719,14 +1719,10 @@
       document.querySelector("button").disabled = true;
       let caReturn ='';
       caReturn = await checkAccount();
-      let clientID = makeClientID();
+
         let existStatus = false;
         let fixedPrice = orderPrice.toFixed(2);
-        //caReturn = order.client_id;
-        order.client_id = clientID;
-        //console.log(caReturn);
-        //console.log(order);
-        //console.log('arr index cr' + clientID);
+
         if(caReturn.length!=0){
           //console.log('careturn not empty');
           existStatus = true;
@@ -1734,6 +1730,8 @@
           order.client_id = caReturn[0];
         }else{
           //console.log('careturn is empty');
+          let clientID = makeClientID();
+          order.client_id = clientID;
         }
 
         //console.log(data);
@@ -1751,7 +1749,7 @@
             orderOne:orderSoloDuoString,
             orderTwo:orderTypeString,
             orderThree:orderInfoString,
-            clienter_id: [clientID],
+            clienter_id: [order.client_id],
             price: fixedPrice,
             client_email: email,
             message: JSON.stringify(orderFormObj),
