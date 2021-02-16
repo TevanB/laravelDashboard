@@ -23,7 +23,7 @@ class StripePayout
                     $accId = $accList->data[$x]->id;
                 }
             }
-            echo($accId);
+            //echo($accId);
             if($accId != ""){
                 echo(self::createAccLink($accId));
             }else{
@@ -72,6 +72,7 @@ class StripePayout
                 $id,
                 []
             );
+            echo(json_encode($curAcc));
             if($curAcc->payouts_enabled == false){
                 $account_links = \Stripe\AccountLink::create([
                     'account' => $id,
