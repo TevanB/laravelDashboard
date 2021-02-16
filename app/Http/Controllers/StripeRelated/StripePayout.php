@@ -23,7 +23,7 @@ class StripePayout
                     $accId = $accList->data[$x]->id;
                 }
             }
-            echo($accId);
+            echo(json_encode($accList));
             if($accId != ""){
                 echo($accId);
                 echo(self::createAccLink($accId));
