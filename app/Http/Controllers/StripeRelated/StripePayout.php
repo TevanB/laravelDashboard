@@ -65,15 +65,22 @@ class StripePayout
         try{
             //$json_str = file_get_contents('php://input');
             //$json_obj = json_decode($json_str);
-
-            $account_links = \Stripe\AccountLink::create([
-                'account' => $id,
-                'refresh_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
-                'return_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
-                'type' => 'account_onboarding',
-                'collect' => 'eventually_due'
-            ]);
-            echo($account_links->url);
+            $curAcc = $stripe->accounts->retrieve(
+                $id,
+                []
+            );
+            if($curAcc->payouts_enabled == false){
+                $account_links = \Stripe\AccountLink::create([
+                    'account' => $id,
+                    'refresh_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
+                    'return_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
+                    'type' => 'account_onboarding',
+                    'collect' => 'eventually_due'
+                ]);
+                echo($account_links->url);
+            }else{
+                echo("payouts do be workin");
+            }
 
         }catch(Error $e){
             http_response_code(500);
