@@ -71,7 +71,7 @@ class StripePayout
                 'return_url' => 'https://end-setup-payou-rs8qky.herokuapp.comsetup-payou-rs8qky.herokuapp.com//profile',
                 'type' => 'account_onboarding',
             ]);
-            echo($account_links);
+            echo($account_links->url);
 
         }catch(Error $e){
             http_response_code(500);
