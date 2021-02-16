@@ -594,9 +594,11 @@ async function checkAccount(){
       }
 
     }
-  });
-  console.log(clientIDReturn);
-  return clientIDReturn;
+  }).then(()=>{
+    console.log(clientIDReturn);
+    return clientIDReturn;
+  })
+  
 }
 
 function modalActivity(){
