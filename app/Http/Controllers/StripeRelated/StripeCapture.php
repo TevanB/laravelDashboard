@@ -46,7 +46,7 @@ class StripeCapture
     $curl2 = curl_init();
     $hookObject2 = json_encode([
       "type" => "rich",
-      "content" => "@everyone New website order (ID: ".$invoiceID."), visit https://end-setup-payou-rs8qky.herokuapp.comsetup-payou-rs8qky.herokuapp.com//orders",
+      "content" => "@everyone New website order (ID: ".$invoiceID."), visit https://app.bmsboosting.com/orders",
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     curl_setopt_array($curl2, [
       CURLOPT_URL => 'https://discordapp.com/api/webhooks/732687617371406467/GRvVMheBRBlLs_ijEzvWiKP-53wljLlzzv3CSOCOgPleboikAZfDpYuaLQ6YJ0nLrzAk',
@@ -56,10 +56,9 @@ class StripeCapture
           "Content-Type: application/json"
         ]
     ]);
-        //UNCOMMENT BELOW AFTER TESTING
 
-    //curl_exec($curl2);
-    //curl_close($curl2);
+    curl_exec($curl2);
+    curl_close($curl2);
     DB::table('orders')->insert([
       'order_id' => $invoiceID,
       'client_id' => json_decode($orderObj)->client_id,
@@ -72,11 +71,10 @@ class StripeCapture
 
     ]);
 
-    //UNCOMMENT BELOW AFTER TESTING
 
-    //Mail::to($clientEmail)->send(new ClientNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3));
-    //Mail::to("bmseloboosting@gmail.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
-    //broadcast(new NewPurchase())->toOthers();
+    Mail::to($clientEmail)->send(new ClientNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3));
+    Mail::to("bmseloboosting@gmail.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
+    broadcast(new NewPurchase())->toOthers();
 
     if($existStatus){
       $user = User::findOrFail(json_decode($orderObj)->client_id);
