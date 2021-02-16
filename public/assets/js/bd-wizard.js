@@ -652,7 +652,7 @@ async function checkAccountEnd(paymentIntentId){
             price: orderPrice.toFixed(2),
             client_email: email,
             message: JSON.stringify(orderFormObj),
-            accountExists: existStatus,
+            accountExists: accountExists,
             orderObj: JSON.stringify(order),
 
           })
