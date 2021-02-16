@@ -44,7 +44,7 @@ class StripePayout
                     'currency' => 'usd',
                     'destination' => $bank_acc_id,
                     'source_type' => 'bank_account',
-                    'stripe_account' => $accId
+                    'stripe_account' => array($accId)
                 ]);
             }else{
                 //user payout obj doesn't exist
