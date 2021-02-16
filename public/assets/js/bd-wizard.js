@@ -600,7 +600,7 @@ async function checkAccount(){
   })
   
 }
-async function checkAccountEnd(){
+async function checkAccountEnd(paymentIntentId){
   let query = {emailAddress: email};
   console.log(query.emailAddress);
   $.ajax({
