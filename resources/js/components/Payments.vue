@@ -1040,15 +1040,24 @@
                 email: person.email,
                 amount: (person.payout - (person.payout * 0.02)).toFixed(2)
               }).then((data)=>{
-                let orderArr = this.orders.data.data;
-                let userOrderArr = [];
+                if(data.data!='false'){
+                  let orderArr = this.orders.data.data;
+                  let userOrderArr = [];
 
-                axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/payouts/'+person.id).then((data)=>{
-                  toast.fire({
-                    icon: 'success',
-                    title: 'User Payout Complete'
-                  })
-                });
+                  axios.put('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/payouts/'+person.id).then((data)=>{
+                    toast.fire({
+                      icon: 'success',
+                      title: 'User Payout Complete'
+                    })
+                  });
+                }else{
+                  swal.fire(
+                    'Worker Setup Error!',
+                    'Your payout to ' + person.email + " has not been executed, they haven't setup their payout account",
+                    'error'
+                  )
+                }
+                
               });
               
 
