@@ -244,7 +244,10 @@
           },
           payoutDash(){
             //redirect to url with stripe dashboard
-            axios.post('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/user-stripe-dash').then((data)=>{
+            axios.post('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/user-stripe-dash',
+            {
+              email:this.form.email
+            }).then((data)=>{
               conosle.log(data.data);
               window.location.replace(data.data.url);
             });
