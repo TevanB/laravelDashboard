@@ -1717,19 +1717,21 @@
         );
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
-      let caReturn ='';
-      caReturn = await checkAccount();
-
+      //let caReturn ='';
+      //caReturn = await checkAccount();
+      checkAccount().then((caReturn)=>{
+        console.log(caReturn)
+      
         let existStatus = false;
         let fixedPrice = orderPrice.toFixed(2);
 
         if(caReturn.length!=0){
-          //console.log('careturn not empty');
+          console.log('careturn not empty');
           existStatus = true;
           clientID = caReturn[0];
           order.client_id = caReturn[0];
         }else{
-          //console.log('careturn is empty');
+          console.log('careturn is empty');
           let clientID = makeClientID();
           order.client_id = clientID;
         }
@@ -1768,6 +1770,7 @@
           }
 
         })
+      })
     };
     // Show the customer the error from Stripe if their card fails to charge
     var showError = function(errorMsgText) {
