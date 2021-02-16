@@ -248,8 +248,8 @@
             {
               email:this.form.email
             }).then((data)=>{
-              console.log(data.data);
-              window.location.replace(data.data.url);
+              console.log(data);
+              //window.location.replace(data.data.url);
             });
           },
           requestAllPayouts(){
