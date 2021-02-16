@@ -9,14 +9,14 @@ class StripePayout
 
 
     public function payoutUser($debug=false){
-        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
+        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
         try{
             $json_str = file_get_contents('php://input');
             $json_obj = json_decode($json_str);
             $user_email = $json_obj->email;
             $amount = $json_obj->amount;
             $stripe = new \Stripe\StripeClient(
-                'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+                env('STRIPE_S_KEY')
               );
             $accList = $stripe->accounts->all();
             $accId = "";
@@ -59,12 +59,12 @@ class StripePayout
         }
     }
     public function visitPayoutDash($debug=false){
-        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
+        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
         try{
             $json_str = file_get_contents('php://input');
             $json_obj = json_decode($json_str);
             $stripe = new \Stripe\StripeClient(
-                'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+                env('STRIPE_S_KEY')
               );
             $accList = $stripe->accounts->all();
             $accId = "";
@@ -85,14 +85,14 @@ class StripePayout
         }
     }
     public function createAcc($debug=false){
-        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
+        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
         try{
             $json_str = file_get_contents('php://input');
             $json_obj = json_decode($json_str);
 
 
             $stripe = new \Stripe\StripeClient(
-                'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+                env('STRIPE_S_KEY')
               );
             $newAcc = $stripe->accounts->create([
             'type' => 'express',
@@ -111,12 +111,12 @@ class StripePayout
         }
     }
     public function createAccLink($id){
-        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
+        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
         try{
             //$json_str = file_get_contents('php://input');
             //$json_obj = json_decode($json_str);
             $stripe = new \Stripe\StripeClient(
-                'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+                env('STRIPE_S_KEY')
               );
             $curAcc = $stripe->accounts->retrieve(
                 $id,

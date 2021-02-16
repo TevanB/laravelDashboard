@@ -9,14 +9,14 @@ class StripeCreate
 
     public static function createOrder($debug=false){
         //\Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
-        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
+        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
         header('Content-Type: application/json');
         try {
         // retrieve JSON from POST body
         $json_str = file_get_contents('php://input');
         $json_obj = json_decode($json_str);
         $stripe = new \Stripe\StripeClient(
-            'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+            env('STRIPE_S_KEY')
           );
         $paymentIntent = $stripe->paymentIntents->create([
             'amount' => $json_obj->price * 100,
@@ -28,7 +28,6 @@ class StripeCreate
         echo json_encode($output);
         } catch (Error $e) {
         http_response_code(500);
-        echo json_encode(['error' => $e->getMessage()]);
         }
 }
 }
