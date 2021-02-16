@@ -23,6 +23,7 @@ class StripePayout
                     $accId = $accList->data[$x]->id;
                 }
             }
+            echo($accId);
             if($accId != ""){
                 echo(self::createAccLink($accId));
             }else{
@@ -67,9 +68,10 @@ class StripePayout
 
             $account_links = \Stripe\AccountLink::create([
                 'account' => $id,
-                'refresh_url' => 'https://end-setup-payou-rs8qky.herokuapp.comsetup-payou-rs8qky.herokuapp.com//profile',
-                'return_url' => 'https://end-setup-payou-rs8qky.herokuapp.comsetup-payou-rs8qky.herokuapp.com//profile',
+                'refresh_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
+                'return_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
                 'type' => 'account_onboarding',
+                'collect' => 'eventually_due'
             ]);
             echo($account_links->url);
 
