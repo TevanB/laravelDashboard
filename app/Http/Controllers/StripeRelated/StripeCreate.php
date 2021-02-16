@@ -8,8 +8,8 @@ class StripeCreate
 {
 
     public static function createOrder($debug=false){
-        \Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
-
+        //\Stripe\Stripe::setApiKey(env('STRIPE_S_KEY'));
+        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
         header('Content-Type: application/json');
         try {
         // retrieve JSON from POST body

@@ -56,8 +56,10 @@ class StripeCapture
           "Content-Type: application/json"
         ]
     ]);
-    curl_exec($curl2);
-    curl_close($curl2);
+        //UNCOMMENT BELOW AFTER TESTING
+
+    //curl_exec($curl2);
+    //curl_close($curl2);
     DB::table('orders')->insert([
       'order_id' => $invoiceID,
       'client_id' => json_decode($orderObj)->client_id,
@@ -70,11 +72,11 @@ class StripeCapture
 
     ]);
 
+    //UNCOMMENT BELOW AFTER TESTING
 
-    Mail::to($clientEmail)->send(new ClientNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3));
-    Mail::to("bmseloboosting@gmail.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
-
-    broadcast(new NewPurchase())->toOthers();
+    //Mail::to($clientEmail)->send(new ClientNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3));
+    //Mail::to("bmseloboosting@gmail.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
+    //broadcast(new NewPurchase())->toOthers();
 
     if($existStatus){
       $user = User::findOrFail(json_decode($orderObj)->client_id);
