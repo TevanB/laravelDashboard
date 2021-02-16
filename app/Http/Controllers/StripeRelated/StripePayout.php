@@ -72,7 +72,7 @@ class StripePayout
                 $id,
                 []
             );
-            echo(json_encode($curAcc->id));
+            //echo(json_encode($curAcc->id));
             if($curAcc->payouts_enabled == false){
                 $account_links = \Stripe\AccountLink::create([
                     'account' => $id,
