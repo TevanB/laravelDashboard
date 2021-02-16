@@ -1720,12 +1720,12 @@
       let caReturn ='';
       caReturn = await checkAccount();
       
-        console.log(caReturn)
+        console.log(order.client_id)
       
         let existStatus = false;
         let fixedPrice = orderPrice.toFixed(2);
 
-        if(caReturn.length!=0){
+        /*if(caReturn.length!=0){
           console.log('careturn not empty');
           existStatus = true;
           clientID = caReturn[0];
@@ -1734,8 +1734,12 @@
           console.log('careturn is empty');
           let clientID = makeClientID();
           order.client_id = clientID;
+        }*/
+        if(order.client_id==''){
+          console.log('careturn is empty');
+          let clientID = makeClientID();
+          order.client_id = clientID;
         }
-
         //console.log(data);
         setupOrdersArr();
 
