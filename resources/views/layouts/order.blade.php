@@ -1614,7 +1614,7 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AUhiAnfqWuMkr2u63RKODnJQojrQ6YmwhOUaU7fEjFQRDfEH5SIXulUKxQnMUloUR7Tv6MzaYX83M8xA">
     </script>
     <script>
-      var stripe = Stripe("pk_live_51I4xTLCBjNIgSDtBbEuNZoqjXvEWLz95hNIU2rDoljw8ZDO3UJqaorFzlK5ia26Y0oUQLhbbh3xgE2swrJCLYDRM00sUVI6AeC");
+      var stripe = Stripe("pk_test_51I4xTLCBjNIgSDtBs3k0CXY2LeWjbcUBBXXwSYyktYGJDVml0op3k82XsdEfplkqDHgpirUKaV4wlU5azhKCe3CA0021ubCldD");
       var elements = stripe.elements();
       var style = {
         base: {
