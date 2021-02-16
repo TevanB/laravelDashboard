@@ -23,7 +23,7 @@ class StripePayout
             'email' => $json_obj->email,
             ]);
 
-            echo(createAccLink($newAcc->id));
+            echo($this->createAccLink($newAcc->id));
 
             //echo($account);               //Call createAccLink
 
@@ -57,6 +57,7 @@ class StripePayout
         try{
             $json_str = file_get_contents('php://input');
             $json_obj = json_decode($json_str);
+            
             $stripe = new \Stripe\StripeClient(
                 'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
               );
@@ -68,9 +69,9 @@ class StripePayout
                 }
             }
             if($accId != ""){
-                echo(createAccLink($accId));
+                echo($this->createAccLink($accId));
             }else{
-                echo(createAcc());
+                echo($this->createAcc());
             }
         }catch(Error $e){
             http_response_code(500);
