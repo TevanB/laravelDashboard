@@ -15,7 +15,10 @@ class StripeCreate
         // retrieve JSON from POST body
         $json_str = file_get_contents('php://input');
         $json_obj = json_decode($json_str);
-        $paymentIntent = \Stripe\PaymentIntent::create([
+        $stripe = new \Stripe\StripeClient(
+            'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+          );
+        $paymentIntent = $stripe->paymentIntents->create([
             'amount' => $json_obj->price * 100,
             'currency' => 'usd',
         ]);
