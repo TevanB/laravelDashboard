@@ -1718,7 +1718,7 @@
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
       //let caReturn ='';
-      checkAccountEnd()
+      checkAccountEnd(paymentIntentId)
     };
     // Show the customer the error from Stripe if their card fails to charge
     var showError = function(errorMsgText) {
