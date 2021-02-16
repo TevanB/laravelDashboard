@@ -248,7 +248,7 @@
             {
               email:this.form.email
             }).then((data)=>{
-              conosle.log(data.data);
+              console.log(data.data);
               window.location.replace(data.data.url);
             });
           },
