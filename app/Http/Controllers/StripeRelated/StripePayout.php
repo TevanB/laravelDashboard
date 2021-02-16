@@ -32,11 +32,18 @@ class StripePayout
                     $accId,
                     []
                 );
-                
+                $bank_acc_id = "";
+                for ($x = 0; $x < count($curAcc->external_accounts->data); $x++) {
+                    if("bank_account" == $curAcc->external_accounts->data[$x]->object){
+                        $bank_acc_id = $curAcc->external_accounts->data[$x]->id;
+                        break;
+                    }
+                }
                 $stripe->payouts->create([
                     'amount' => $amount,
                     'currency' => 'usd',
-                    'destination' => $accId
+                    'destination' => $bank_acc_id,
+                    'source_type' => 'bank_account'
                 ]);
             }else{
                 //user payout obj doesn't exist
