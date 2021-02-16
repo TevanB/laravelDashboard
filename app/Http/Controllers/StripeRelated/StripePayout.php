@@ -8,7 +8,7 @@ class StripePayout
 {
 
 
-    public static function visitPayoutDash($debug=false){
+    public function visitPayoutDash($debug=false){
         \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
         try{
             $json_str = file_get_contents('php://input');
@@ -33,7 +33,7 @@ class StripePayout
             echo json_encode(['error' => $e->getMessage()]);
         }
     }
-    public static function createAcc($debug=false){
+    public function createAcc($debug=false){
         \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
         try{
             $json_str = file_get_contents('php://input');
@@ -59,7 +59,7 @@ class StripePayout
             echo json_encode(['error' => $e->getMessage()]);
         }
     }
-    public static function createAccLink($id){
+    public function createAccLink($id){
         \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
         try{
             //$json_str = file_get_contents('php://input');
