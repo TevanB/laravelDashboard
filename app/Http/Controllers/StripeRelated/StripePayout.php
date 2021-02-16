@@ -25,6 +25,7 @@ class StripePayout
             }
             echo($accId);
             if($accId != ""){
+                echo($accId);
                 echo(self::createAccLink($accId));
             }else{
                 echo(self::createAcc());

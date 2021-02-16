@@ -249,7 +249,7 @@
               email:this.form.email
             }).then((data)=>{
               console.log(data);
-              window.location.replace(data.data);
+              //window.location.replace(data.data);
             });
           },
           requestAllPayouts(){
