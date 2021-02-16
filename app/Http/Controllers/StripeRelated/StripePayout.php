@@ -8,6 +8,50 @@ class StripePayout
 {
 
 
+    public function payoutUser($debug=false){
+        \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
+        try{
+            $json_str = file_get_contents('php://input');
+            $json_obj = json_decode($json_str);
+            $user_email = $json_obj->email;
+            $amount = $json_obj->amount;
+            $stripe = new \Stripe\StripeClient(
+                'sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963'
+              );
+            $accList = $stripe->accounts->all();
+            $accId = "";
+            for ($x = 0; $x < count($accList->data); $x++) {
+                if($user_email == $accList->data[$x]->email){
+                    $accId = $accList->data[$x]->id;
+                }
+            }
+            //echo($accId);
+            if($accId != ""){
+                //user payout obj exists
+                $curAcc = $stripe->accounts->retrieve(
+                    $accId,
+                    []
+                );
+                $bank_acc_id = "";
+                for ($x = 0; $x < count($bank_acc_id->external_acounts->data); $x++) {
+                    if("bank_account" == $bank_acc_id->external_acounts->data[$x]->object){
+                        $bank_acc_id = $bank_acc_id->external_acounts->data[$x]->id;
+                    }
+                }
+                $stripe->payouts->create([
+                    'amount' => $amount,
+                    'currency' => 'usd',
+                    'destination' => $bank_acc_id
+                ]);
+            }else{
+                //user payout obj doesn't exist
+                echo("false");
+            }
+        }catch(Error $e){
+            http_response_code(500);
+            echo json_encode(['error' => $e->getMessage()]);
+        }
+    }
     public function visitPayoutDash($debug=false){
         \Stripe\Stripe::setApiKey('sk_test_51I4xTLCBjNIgSDtBbDv1cPl9TO0vag9FwJp5GQ0I1pFlo8n7a16uuYVmN6RUfDBvu6jRwrHcNFZ8qAdQZ4blh4HR000HgbL963');
         try{
