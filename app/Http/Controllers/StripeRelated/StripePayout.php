@@ -19,13 +19,11 @@ class StripePayout
             $accList = $stripe->accounts->all();
             $accId = "";
             for ($x = 0; $x < count($accList->data); $x++) {
-                if($json_obj->email == $accList->data[$x]){
+                if($json_obj->email == $accList->data[$x]->email){
                     $accId = $accList->data[$x]->id;
                 }
             }
-            echo(json_encode($accList));
             if($accId != ""){
-                echo($accId);
                 echo(self::createAccLink($accId));
             }else{
                 echo(self::createAcc());
