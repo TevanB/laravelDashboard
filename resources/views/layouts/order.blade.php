@@ -1717,9 +1717,9 @@
         );
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
-      //let caReturn ='';
-      //caReturn = await checkAccount();
-      checkAccount().then((caReturn)=>{
+      let caReturn ='';
+      caReturn = await checkAccount();
+      
         console.log(caReturn)
       
         let existStatus = false;
@@ -1770,7 +1770,7 @@
           }
 
         })
-      })
+      
     };
     // Show the customer the error from Stripe if their card fails to charge
     var showError = function(errorMsgText) {
