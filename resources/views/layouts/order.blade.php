@@ -1717,8 +1717,8 @@
         );
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
-      let caReturn ='';
-      caReturn = await checkAccount();
+      //let caReturn ='';
+      checkAccount().then(()=>{
       
         console.log(order.client_id)
       
@@ -1736,7 +1736,7 @@
           order.client_id = clientID;
         }*/
         if(order.client_id==''){
-          console.log('careturn is empty');
+          console.log('order.client_id is empty');
           let clientID = makeClientID();
           order.client_id = clientID;
         }
@@ -1774,7 +1774,7 @@
           }
 
         })
-      
+      })
     };
     // Show the customer the error from Stripe if their card fails to charge
     var showError = function(errorMsgText) {
