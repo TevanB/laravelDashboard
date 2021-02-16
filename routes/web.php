@@ -23,11 +23,11 @@ Route::get('/', function () {
 });
 
 Route::get( '/logged-in', function(){
-  return redirect('https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard');
+  return redirect('https://app.bmsboosting.com/dashboard');
 });
 
 Route::get('/resources/js/app.js', function () {
-    return redirect('https://bms-backend-setup-payou-rs8qky.herokuapp.com/dashboard');
+    return redirect('https://app.bmsboosting.com/dashboard');
 });
 
 

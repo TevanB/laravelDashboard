@@ -87,7 +87,7 @@
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com">Home</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link text-light menuFont" href="https://bms-backend-setup-payou-rs8qky.herokuapp.com/boosting">{{ __('LoL Boosting') }}</a>
+                          <a class="nav-link text-light menuFont" href="https://app.bmsboosting.com/boosting">{{ __('LoL Boosting') }}</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link text-light menuFont" href="https://bmsboosting.com/tft-elo-boosting">{{ __('TFT Boosting') }}</a>

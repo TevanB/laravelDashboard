@@ -10,7 +10,7 @@ import moment from 'moment';
             let Dates = new Array();
             let Prices = new Array();
 
-            axios.get('https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/orders').then((response)=>{
+            axios.get('https://app.bmsboosting.com/api/orders').then((response)=>{
               let data = response.data.data;
               if(data){
                 for(let i=0; i<data.length; i++){

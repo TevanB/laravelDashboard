@@ -78,7 +78,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item">
-                          <a class="nav-link" href="https://bms-backend-setup-payou-rs8qky.herokuapp.com/boosting">{{ __('Boosting') }}</a>
+                          <a class="nav-link" href="https://app.bmsboosting.com/boosting">{{ __('Boosting') }}</a>
                       </li>
                     </ul>
 

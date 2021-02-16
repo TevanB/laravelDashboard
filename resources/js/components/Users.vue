@@ -115,7 +115,7 @@
     },
     data(){
      return{
-       url: "https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/users",
+       url: "https://app.bmsboosting.com/api/users",
        data: {},
        tableProps: {
            search: '',

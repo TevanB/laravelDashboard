@@ -126,8 +126,8 @@ class StripePayout
             if($curAcc->payouts_enabled == false){
                 $account_links = \Stripe\AccountLink::create([
                     'account' => $id,
-                    'refresh_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
-                    'return_url' => 'https://bms-backend-setup-payou-rs8qky.herokuapp.com/profile',
+                    'refresh_url' => 'https://app.bmsboosting.com
+                    'return_url' => 'https://app.bmsboosting.com
                     'type' => 'account_onboarding',
                     'collect' => 'eventually_due'
                 ]);
