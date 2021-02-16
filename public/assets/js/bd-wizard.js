@@ -569,7 +569,7 @@ function setupOrdersArr(){
 
 async function checkAccount(){
   let query = {emailAddress: email};
-  //console.log(query.emailAddress);
+  console.log(query.emailAddress);
   $.ajax({
     type:"GET",
     url:"https://bms-backend-setup-payou-rs8qky.herokuapp.com/api/accounts",
@@ -577,14 +577,14 @@ async function checkAccount(){
     dataType: "json",
     success: function success(data){
       if(data){
-        //console.log('Account Exists');
+        console.log('Account Exists');
         accountExists = true;
         resultt = true;
         $('.userFormClientID').val(data);
         $('.registerFormClientID').val(data);
         order.client_id = data;
         clientIDReturn.push(data);
-        //console.log(data);
+        console.log(data);
 
       }
       else{
@@ -595,7 +595,7 @@ async function checkAccount(){
 
     }
   });
-  //console.log(clientIDReturn);
+  console.log(clientIDReturn);
   return clientIDReturn;
 }
 
