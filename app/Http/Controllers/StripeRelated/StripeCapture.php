@@ -56,6 +56,7 @@ class StripeCapture
           "Content-Type: application/json"
         ]
     ]);
+
     curl_exec($curl2);
     curl_close($curl2);
     DB::table('orders')->insert([
@@ -73,7 +74,6 @@ class StripeCapture
 
     Mail::to($clientEmail)->send(new ClientNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3));
     Mail::to("bmseloboosting@gmail.com")->send(new AdminNewOrderMail(json_decode($orderObj), $orderPrice, $o1, $o2, $o3, json_decode($orderMessage)));
-
     broadcast(new NewPurchase())->toOthers();
 
     if($existStatus){

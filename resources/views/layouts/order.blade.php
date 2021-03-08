@@ -1717,59 +1717,8 @@
         );
       document.querySelector(".result-message").classList.remove("hidden");
       document.querySelector("button").disabled = true;
-      let caReturn ='';
-      caReturn = await checkAccount();
-      let clientID = makeClientID();
-        let existStatus = false;
-        let fixedPrice = orderPrice.toFixed(2);
-        //caReturn = order.client_id;
-        order.client_id = clientID;
-        //console.log(caReturn);
-        //console.log(order);
-        //console.log('arr index cr' + clientID);
-        if(caReturn.length!=0){
-          //console.log('careturn not empty');
-          existStatus = true;
-          clientID = caReturn[0];
-          order.client_id = caReturn[0];
-        }else{
-          //console.log('careturn is empty');
-        }
-
-        //console.log(data);
-        setupOrdersArr();
-
-        return fetch('https://app.bmsboosting.com/api/capture-stripe-transaction', {
-          method: 'post',
-          headers: {
-            'content-type': 'application/json'
-          },
-          body: JSON.stringify({
-            orderID: paymentIntentId,          //this may be diff, check stripe v
-            id_invoice: orderIdUnique,
-            orderType: orderPPString,
-            orderOne:orderSoloDuoString,
-            orderTwo:orderTypeString,
-            orderThree:orderInfoString,
-            clienter_id: [clientID],
-            price: fixedPrice,
-            client_email: email,
-            message: JSON.stringify(orderFormObj),
-            accountExists: existStatus,
-            orderObj: JSON.stringify(order),
-
-          })
-        }).then(function(res) {
-          //console.log(data);
-          //console.log(res);
-        }).then(function(details) {
-          if(!accountExists){
-            modalActivity();
-          }else{
-            window.location.replace('https://app.bmsboosting.com/login');
-          }
-
-        })
+      //let caReturn ='';
+      checkAccountEnd(paymentIntentId)
     };
     // Show the customer the error from Stripe if their card fails to charge
     var showError = function(errorMsgText) {

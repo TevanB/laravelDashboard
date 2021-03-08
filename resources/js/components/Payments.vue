@@ -1036,52 +1036,32 @@
               console.log(data);
 
             if(person.payout > 0){
-              const config = {
-                  method: 'post',
-                  url: 'https://api.paypal.com/v1/payments/payouts',
-                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer '+data},
-                  data:{
-                    'sender_batch_header': {
-                      'sender_batch_id': Date.now(),
-                      'recipient_type': 'EMAIL',
-                      'email_subject': 'You have money!',
-                      'email_message': 'You have received a payout from BMS Boosting. Good job on your orders!',
-                    },
-                    'items':[
-                      {
-                        'amount':{
-                          'value': (person.payout - (person.payout * 0.02)).toFixed(2),
-                          'currency': 'USD'
-                        },
-                        'recipient_wallet': 'PAYPAL',
-                        'receiver': person.email,
-                      }
-                    ]
-                  }
+              axios.post('https://app.bmsboosting.com/api/stripe-payout', {
+                email: person.email,
+                amount: (person.payout - (person.payout * 0.02)).toFixed(2)
+              }).then((data)=>{
+                if(data.data!='false'){
+                  let orderArr = this.orders.data.data;
+                  let userOrderArr = [];
 
-              };
-
-              axios(config).then((data)=>{
-                let orderArr = this.orders.data.data;
-                let userOrderArr = [];
-
-                axios.put('https://app.bmsboosting.com/api/payouts/'+person.id).then((data)=>{
-                  toast.fire({
-                    icon: 'success',
-                    title: 'User Payout Complete'
-                  })
-                });
-
-                //person.payout = 0;
-                /*for(let i=0; i<person.current_orders_arr.length; i++){
-                  if(person.current_orders_arr[i].payout_status !== 'completed'){
-                    person.current_orders_arr[i].payout_status = 'completed';
-                  }
-                }*/
-                //axios.put('https://bms-dash.herokuapp.com/api/user/'+person.id, person);
-
-
+                  axios.put('https://app.bmsboosting.com/api/payouts/'+person.id).then((data)=>{
+                    toast.fire({
+                      icon: 'success',
+                      title: 'User Payout Complete'
+                    })
+                  });
+                }else{
+                  swal.fire(
+                    'Worker Setup Error!',
+                    'Your payout to ' + person.email + " has not been executed, they haven't setup their payout account",
+                    'error'
+                  )
+                }
+                
               });
+              
+
+              
             }else{
               swal.fire(
                 'Payout Amount Error!',

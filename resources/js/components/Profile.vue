@@ -213,15 +213,11 @@
               client_id: '',
               booster_id: '',
               created_at: '',
-
             }),
           }
         },
         methods:{
           updateInfo(){
-
-
-
             //axios.post("api/profile", this.form);
             axios.put("api/profile", this.form).then(()=>{
               swal.fire(
@@ -231,7 +227,6 @@
               ).then((result)=>{
                 if(result.value){
                   this.refreshPage();
-
                 }
               });
             }).catch(()=>{
@@ -241,10 +236,6 @@
                 'error'
               )
             });
-
-
-
-
           },
           loadOrders(){
             if(this.$gate.isWorkerOrAdmin){
@@ -253,9 +244,12 @@
           },
           payoutDash(){
             //redirect to url with stripe dashboard
-            axios.post('https://app.bmsboosting.com/api/user-stripe-dash').then((data)=>{
-              conosle.log(data);
-              window.location.replace(data);
+            axios.post('https://app.bmsboosting.com/api/user-stripe-dash',
+            {
+              email:this.form.email
+            }).then((data)=>{
+              console.log(data);
+              window.location.replace(data.data);
             });
           },
           requestAllPayouts(){
@@ -293,7 +287,6 @@
               order.payout_status = 'requested';
               //console.log(order);
               axios.put('https://app.bmsboosting.com/api/orders/'+order.order_id, order).then(()=>{
-
               });
               for(let i=0; i<this.user.current_orders_arr.length; i++){
                 if(this.user.current_orders_arr[i].order_id === order.order_id){
@@ -326,7 +319,6 @@
           },
           getUser(){
             axios.get("https://app.bmsboosting.com/api/me").then((data)=>{
-
               this.user = data.data;
               ////console.log(this.user);
             });
@@ -352,7 +344,6 @@
                 this.form.photo=reader.result;
               }
               reader.readAsDataURL(file);
-
             }else{
               toast.fire({
                 icon: 'error',
@@ -383,31 +374,18 @@
                   break;
                 }
               }
-
-
-
               });
         },
-
         created(){
-
           this.loadOrders();
           Fire.$on('AfterCreate', ()=>{
             this.loadOrders();
           });
-
           this.getUser();
-
           axios.get("api/me").then((data)=>(this.form.fill(data.data)));
           Fire.$on('AfterCreate', ()=>{
             axios.get("api/me").then((data)=>(this.form.fill(data.data)));
             });
-
         }
-
-
-
 };
-
-
 </script>
