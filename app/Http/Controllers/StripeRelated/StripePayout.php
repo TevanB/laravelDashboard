@@ -14,7 +14,7 @@ class StripePayout
             $json_str = file_get_contents('php://input');
             $json_obj = json_decode($json_str);
             $user_email = $json_obj->email;
-            $amount = $json_obj->amount;
+            $amount = floor($json_obj->amount);
             $stripe = new \Stripe\StripeClient(
                 env('STRIPE_S_KEY')
               );
