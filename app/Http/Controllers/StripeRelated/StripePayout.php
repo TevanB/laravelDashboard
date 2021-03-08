@@ -43,8 +43,7 @@ class StripePayout
                     'amount' => $amount,
                     'currency' => 'usd',
                     'destination' => $bank_acc_id,
-                    'source_type' => 'bank_account',
-                    'method' => 'instant'
+                    'source_type' => 'bank_account'
                     
                 ],
                 ['stripe_account' => $accId]
