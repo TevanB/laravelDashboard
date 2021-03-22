@@ -128,7 +128,10 @@ class StripePayout
                     'refresh_url' => 'https://app.bmsboosting.com',
                     'return_url' => 'https://app.bmsboosting.com',
                     'type' => 'account_onboarding',
-                    'collect' => 'eventually_due'
+                    'collect' => 'eventually_due',
+                    'tos_acceptance'=>[
+                        'service_agreement' => ['requested' => true],
+                    ]
                 ]);
                 echo($account_links->url);
             }else{
