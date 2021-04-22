@@ -95,10 +95,9 @@ class StripePayout
               );
             $newAcc = $stripe->accounts->create([
             'type' => 'express',
+            'country' => 'US',
             'email' => $json_obj->email,
-            'tos_acceptance' => [
-                'service_agreement' => 'recipient',
-            ],
+            
             ]);
 
             echo(self::createAccLink($newAcc->id));
